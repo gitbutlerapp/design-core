@@ -1,4 +1,4 @@
-# Design Tokens Craft
+# Design Tokens
 
 The place where we generate design tokens for the app.
 In order to generate the tokens, we use [Cobalt-UI](https://cobalt-ui.pages.dev/guides/getting-started) packages.
