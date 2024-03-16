@@ -10,7 +10,8 @@ export default {
           mode: "dark",
           selectors: [":root.dark"]
         }
-      ]
+      ],
+      p3: false
     })
   ]
 };

@@ -1,7 +1,10 @@
 {
+  "scripts": {
+    "build": "npx co build"
+  },
   "devDependencies": {
-    "@cobalt-ui/cli": "^1.6.2",
-    "@cobalt-ui/plugin-css": "^1.6.2",
-    "@cobalt-ui/plugin-js": "^1.4.2"
+    "@cobalt-ui/cli": "^1.8.0",
+    "@cobalt-ui/plugin-css": "^1.7.3",
+    "@cobalt-ui/plugin-js": "^1.4.3"
   }
 }
