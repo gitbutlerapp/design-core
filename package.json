@@ -14,14 +14,14 @@
     "type": "git",
     "url": "https://github.com/gitbutlerapp/design-tokens.git"
   },
-  "main": "./tokens/design-tokens.css",
+  "main": "./tokens/tokens.css",
   "exports": {
-    ".": "./tokens/design-tokens.css",
-    "./css": "./tokens/design-tokens.css",
-    "./tokens.json": "./design-tokens.json"
+    ".": "./tokens/tokens.css",
+    "./css": "./tokens/tokens.css",
+    "./tokens.json": "./tokens/tokens.json"
   },
   "scripts": {
-    "build": "npx tz build && prettier --write ./design-tokens.json ./tokens/design-tokens.css",
+    "build": "npx tz build",
     "dev": "npx tz build --watch",
     "prepublishOnly": "npm run build"
   },
@@ -33,7 +33,6 @@
   },
   "files": [
     "tokens/",
-    "design-tokens.json",
     "README.md"
   ],
   "publishConfig": {
