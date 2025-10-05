@@ -1,5 +1,5 @@
 {
-  "name": "@gitbutler/design-tokens",
+  "name": "@gitbutler/design-core",
   "version": "1.0.0",
   "type": "module",
   "description": "Design tokens for GitButler applications",
