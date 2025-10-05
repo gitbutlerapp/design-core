@@ -1,10 +1,42 @@
 {
+  "name": "@gitbutler/design-tokens",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Design tokens for GitButler applications",
+  "keywords": [
+    "design-tokens",
+    "css",
+    "terrazzo",
+    "gitbutler"
+  ],
+  "homepage": "https://github.com/gitbutlerapp/design-tokens",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitbutlerapp/design-tokens.git"
+  },
+  "main": "./tokens/design-tokens.css",
+  "exports": {
+    ".": "./tokens/design-tokens.css",
+    "./css": "./tokens/design-tokens.css",
+    "./tokens.json": "./design-tokens.json"
+  },
   "scripts": {
-    "build": "npx co build"
+    "build": "npx tz build && prettier --write ./design-tokens.json ./tokens/design-tokens.css",
+    "dev": "npx tz build --watch",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@cobalt-ui/cli": "^1.8.0",
-    "@cobalt-ui/plugin-css": "^1.7.3",
-    "@cobalt-ui/plugin-js": "^1.4.3"
+    "@terrazzo/cli": "0.6.0",
+    "@terrazzo/parser": "0.6.0",
+    "@terrazzo/plugin-css": "0.6.0",
+    "prettier": "^3.0.0"
+  },
+  "files": [
+    "tokens/",
+    "design-tokens.json",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
   }
 }
