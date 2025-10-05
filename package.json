@@ -1,6 +1,6 @@
 {
   "name": "@gitbutler/design-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "Design tokens for GitButler applications",
   "keywords": [
@@ -16,8 +16,7 @@
   },
   "main": "./tokens/tokens.css",
   "exports": {
-    ".": "./tokens/tokens.css",
-    "./css": "./tokens/tokens.css",
+    "./tokens": "./tokens/tokens.css",
     "./tokens.json": "./tokens/tokens.json",
     "./fonts": "./fonts/fonts.css",
     "./fonts/*": "./fonts/*"
