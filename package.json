@@ -18,7 +18,9 @@
   "exports": {
     ".": "./tokens/tokens.css",
     "./css": "./tokens/tokens.css",
-    "./tokens.json": "./tokens/tokens.json"
+    "./tokens.json": "./tokens/tokens.json",
+    "./fonts": "./fonts/fonts.css",
+    "./fonts/*": "./fonts/*"
   },
   "scripts": {
     "build": "npx tz build",
@@ -33,6 +35,7 @@
   },
   "files": [
     "tokens/",
+    "fonts/",
     "README.md"
   ],
   "publishConfig": {
