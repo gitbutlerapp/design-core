@@ -15,13 +15,13 @@ npm install @gitbutler/design-core
 Import the design tokens CSS file:
 
 ```css
-@import '@gitbutler/design-core/tokens';
+@import "@gitbutler/design-core/tokens";
 ```
 
 Or in JavaScript/TypeScript:
 
 ```javascript
-import '@gitbutler/design-core/tokens';
+import "@gitbutler/design-core/tokens";
 ```
 
 This provides CSS custom properties for colors, spacing, typography, and other design tokens with automatic light/dark mode support.
@@ -31,7 +31,7 @@ This provides CSS custom properties for colors, spacing, typography, and other d
 Import the raw design tokens data:
 
 ```javascript
-import tokens from '@gitbutler/design-core/tokens.json';
+import tokens from "@gitbutler/design-core/tokens.json";
 ```
 
 ### Fonts
@@ -39,16 +39,16 @@ import tokens from '@gitbutler/design-core/tokens.json';
 Import all fonts:
 
 ```css
-@import '@gitbutler/design-core/fonts';
+@import "@gitbutler/design-core/fonts";
 ```
 
 Or import individual font families:
 
 ```css
-@import '@gitbutler/design-core/fonts/inter/Inter-Regular.woff2';
-@import '@gitbutler/design-core/fonts/geist-mono/GeistMono-Regular.woff2';
-@import '@gitbutler/design-core/fonts/but-head/But-Head-Regular.woff2';
-@import '@gitbutler/design-core/fonts/pp-editorial/PPEditorialNew-Regular.woff2';
+@import "@gitbutler/design-core/fonts/inter/Inter-Regular.woff2";
+@import "@gitbutler/design-core/fonts/geist-mono/GeistMono-Regular.woff2";
+@import "@gitbutler/design-core/fonts/but-head/But-Head-Regular.woff2";
+@import "@gitbutler/design-core/fonts/pp-editorial/PPEditorialNew-Regular.woff2";
 ```
 
 ## Available Exports
