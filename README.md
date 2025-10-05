@@ -1,47 +1,81 @@
-# GitButler Design Tokens
+# @gitbutler/design-core
 
-The official design tokens repository for GitButler applications.
-We use [Terrazzo](https://terrazzo.app/) to generate CSS custom properties from design tokens.
+Design tokens and fonts for GitButler applications. This package provides CSS custom properties, design tokens in JSON format, and web fonts used across GitButler products.
 
 ## Installation
 
 ```bash
-npm install
+npm install @gitbutler/design-core
 ```
 
 ## Usage
 
-Place your tokens in the root of the project in a file called `design-tokens.json` and run:
+### Design Tokens (CSS)
 
-```bash
-npm run build
+Import the design tokens CSS file:
+
+```css
+@import '@gitbutler/design-core/tokens';
 ```
 
-This will generate a `tokens` folder with the tokens in CSS format.
+Or in JavaScript/TypeScript:
 
-For development with automatic rebuilding:
+```javascript
+import '@gitbutler/design-core/tokens';
+```
+
+This provides CSS custom properties for colors, spacing, typography, and other design tokens with automatic light/dark mode support.
+
+### Design Tokens (JSON)
+
+Import the raw design tokens data:
+
+```javascript
+import tokens from '@gitbutler/design-core/tokens.json';
+```
+
+### Fonts
+
+Import all fonts:
+
+```css
+@import '@gitbutler/design-core/fonts';
+```
+
+Or import individual font families:
+
+```css
+@import '@gitbutler/design-core/fonts/inter/Inter-Regular.woff2';
+@import '@gitbutler/design-core/fonts/geist-mono/GeistMono-Regular.woff2';
+@import '@gitbutler/design-core/fonts/but-head/But-Head-Regular.woff2';
+@import '@gitbutler/design-core/fonts/pp-editorial/PPEditorialNew-Regular.woff2';
+```
+
+## Available Exports
+
+- `@gitbutler/design-core/tokens` - CSS custom properties
+- `@gitbutler/design-core/tokens.json` - Design tokens as JSON
+- `@gitbutler/design-core/fonts` - All font CSS declarations
+- `@gitbutler/design-core/fonts/*` - Individual font files
+
+## Included Fonts
+
+- **Inter** - Primary UI font family
+- **Geist Mono** - Monospace font for code
+- **But Head** - Brand display font
+- **PP Editorial** - Editorial content font
+
+## Development
+
+This package uses [Terrazzo](https://terrazzo.app/) to generate CSS custom properties from design tokens.
 
 ```bash
+# Install dependencies
+npm install
+
+# Build tokens
+npm run build
+
+# Watch for changes
 npm run dev
 ```
-
-## Output
-
-The build process generates:
-- `tokens/design-tokens.css` - CSS custom properties with light and dark mode support
-- Formatted JSON and CSS files with prettier
-
-## Integration
-
-To use these tokens in your application:
-
-1. Import the generated CSS file
-2. Reference the CSS custom properties in your stylesheets
-3. The tokens support both light and dark themes through CSS selectors
-
-## Configuration
-
-The Terrazzo configuration is in `terrazzo.config.js` and includes:
-- Pixel to rem conversion for dimension tokens
-- Dark mode selector support (`:root.dark`)
-- Custom variable naming (removes `fx.` prefixes)
