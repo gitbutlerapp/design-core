@@ -1,0 +1,36 @@
+/**
+ * GitButler Base Styles
+ * 
+ * This file contains foundational CSS styles including resets, basic typography,
+ * and common element styling that serves as a base for GitButler applications.
+ * 
+ * USAGE:
+ * Import this file: @import '@gitbutler/design-core/base';
+ * Or in JS: import '@gitbutler/design-core/base';
+ */
+
+/* CSS Reset and Normalization */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--clr-text-1);
+  font-family: var;
+}

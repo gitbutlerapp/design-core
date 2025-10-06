@@ -51,12 +51,36 @@ Or import individual font families:
 @import "@gitbutler/design-core/fonts/pp-editorial/PPEditorialNew-Regular.woff2";
 ```
 
+### Core Styles
+
+Import the core CSS styles:
+
+```css
+@import "@gitbutler/design-core/core";
+```
+
+### Style Utilities
+
+Import individual style utilities:
+
+```css
+@import "@gitbutler/design-core/styles"; /* Base styles */
+@import "@gitbutler/design-core/styles/base"; /* Base styles */
+@import "@gitbutler/design-core/styles/reset"; /* CSS reset */
+@import "@gitbutler/design-core/styles/text"; /* Text utilities */
+```
+
 ## Available Exports
 
 - `@gitbutler/design-core/tokens` - CSS custom properties
 - `@gitbutler/design-core/tokens.json` - Design tokens as JSON
 - `@gitbutler/design-core/fonts` - All font CSS declarations
 - `@gitbutler/design-core/fonts/*` - Individual font files
+- `@gitbutler/design-core/core` - Core CSS styles
+- `@gitbutler/design-core/styles` - Base style utilities
+- `@gitbutler/design-core/styles/base` - Base styles
+- `@gitbutler/design-core/styles/reset` - CSS reset
+- `@gitbutler/design-core/styles/text` - Text utilities
 
 ## Included Fonts
 
