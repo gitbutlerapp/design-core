@@ -70,6 +70,49 @@ Import individual style utilities:
 @import "@gitbutler/design-core/styles/text"; /* Text utilities */
 ```
 
+### Utility Classes
+
+Import all utility classes at once:
+
+```css
+@import "@gitbutler/design-core/utility";
+```
+
+Or in JavaScript/TypeScript:
+
+```javascript
+import "@gitbutler/design-core/utility";
+```
+
+Or import individual utility class files:
+
+```css
+@import "@gitbutler/design-core/utility/general"; /* Border radius, colors, borders */
+@import "@gitbutler/design-core/utility/helpers"; /* Scrollbar helpers, stack utilities */
+@import "@gitbutler/design-core/utility/layout"; /* Spacing, positioning, flexbox, overflow, text alignment */
+```
+
+**General utilities** include:
+
+- Border radius (`.radius-s`, `.radius-m`, `.radius-ml`, `.radius-l`)
+- Background colors (`.clr-bg-1`, `.clr-bg-2`, `.clr-bg-3` and their muted variants)
+- Borders (`.clr-border-1`, `.clr-border-2`, `.clr-border-3`)
+- Text colors (`.clr-text-1`, `.clr-text-2`, `.clr-text-3`)
+
+**Helper utilities** include:
+
+- Scrollbar utilities (`.hide-native-scrollbar`, `.scrollbar`)
+- Stack layouts (`.stack-v`, `.stack-h`)
+
+**Layout utilities** include:
+
+- Spacing (margin, padding, gap in 2px increments from 2px to 48px)
+- Positioning (`.relative`, `.absolute`, `.fixed`, `.sticky`, positioning utilities)
+- Size (`.full-width`, `.full-height`)
+- Flexbox (`.flex`, `.flex-col`, alignment and justify utilities, flex grow/shrink)
+- Overflow (`.overflow-hidden`, `.overflow-auto`, `.overflow-scroll`, `.overflow-visible`)
+- Text alignment (`.text-center`, `.text-left`, `.text-right`, `.text-nowrap`)
+
 ## Available Exports
 
 - `@gitbutler/design-core/tokens` - CSS custom properties
@@ -81,6 +124,10 @@ Import individual style utilities:
 - `@gitbutler/design-core/styles/base` - Base styles
 - `@gitbutler/design-core/styles/reset` - CSS reset
 - `@gitbutler/design-core/styles/text` - Text utilities
+- `@gitbutler/design-core/utility` - All utility classes (combined)
+- `@gitbutler/design-core/utility/general` - General utility classes (borders, colors)
+- `@gitbutler/design-core/utility/helpers` - Helper utility classes (scrollbar, stacks)
+- `@gitbutler/design-core/utility/layout` - Layout utility classes (spacing, flexbox, positioning)
 
 ## Included Fonts
 

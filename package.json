@@ -1,6 +1,6 @@
 {
   "name": "@gitbutler/design-core",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "description": "Design tokens for GitButler applications",
   "keywords": [
@@ -24,7 +24,11 @@
     "./styles": "./styles/base.css",
     "./styles/base": "./styles/base.css",
     "./styles/reset": "./styles/reset.css",
-    "./styles/text": "./styles/text.css"
+    "./styles/text": "./styles/text.css",
+    "./utility": "./utility/utility.css",
+    "./utility/general": "./utility/general.css",
+    "./utility/helpers": "./utility/helpers.css",
+    "./utility/layout": "./utility/layout.min.css"
   },
   "scripts": {
     "build": "npx tz build",
@@ -41,6 +45,7 @@
     "tokens/",
     "fonts/",
     "styles/",
+    "utility/",
     "core.css",
     "README.md"
   ],
