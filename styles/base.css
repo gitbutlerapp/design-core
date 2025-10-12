@@ -32,5 +32,5 @@ html {
 body {
   overflow-x: hidden;
   color: var(--clr-text-1);
-  font-family: var;
+  font-family: var(--font-default);
 }
