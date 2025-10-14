@@ -14,11 +14,6 @@
  */
 
 @font-face {
-  src: url("pp-editorial/PPEditorialNew-Regular.woff2") format("woff2");
-  font-family: "PP Editorial New";
-}
-
-@font-face {
   font-style: normal;
   font-weight: 400;
   src: url("but-head/But-Head-Regular.woff2") format("woff2");

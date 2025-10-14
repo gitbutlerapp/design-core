@@ -48,7 +48,6 @@ Or import individual font families:
 @import "@gitbutler/design-core/fonts/inter/Inter-Regular.woff2";
 @import "@gitbutler/design-core/fonts/geist-mono/GeistMono-Regular.woff2";
 @import "@gitbutler/design-core/fonts/but-head/But-Head-Regular.woff2";
-@import "@gitbutler/design-core/fonts/pp-editorial/PPEditorialNew-Regular.woff2";
 ```
 
 ### Core Styles
