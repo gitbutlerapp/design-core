@@ -12,12 +12,10 @@
  * - All design tokens (tokens/tokens.css)
  */
 
-/* reset */
-@import "./styles/reset.css";
-/* Import design tokens */
-@import "./tokens/tokens.css";
 /* Import font definitions */
 @import "./fonts/fonts.css";
-/* Base styles */
-@import "./styles/base.css";
+/* base */
+@import "./styles/reset.css";
 @import "./styles/text.css";
+/* Import design tokens */
+@import "./tokens/tokens.css";

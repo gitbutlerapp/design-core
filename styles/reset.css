@@ -18,6 +18,12 @@
     text-rendering: optimizeLegibility;
   }
 
+  body {
+    overflow-x: hidden;
+    color: var(--clr-text-1);
+    font-family: var(--font-default);
+  }
+
   /* elements */
   hr {
     height: 0;
@@ -55,9 +61,7 @@
   pre,
   samp {
     font-size: 1em;
-    font-family:
-      Söhne Mono,
-      monospace;
+    font-family: var(--font-mono);
     font-variation-settings: normal;
     font-feature-settings: normal;
   }
