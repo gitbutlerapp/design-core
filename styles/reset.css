@@ -11,16 +11,11 @@
 
   html {
     overscroll-behavior: none;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-    line-height: inherit;
-    line-height: inherit;
-    font-family:
-      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-      Arial, "Noto Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   /* elements */
@@ -100,6 +95,7 @@
   textarea {
     margin: 0;
     padding: 0;
+    border: 0;
     color: inherit;
     font-weight: inherit;
     font-size: 100%;
@@ -108,6 +104,7 @@
     font-variation-settings: inherit;
     font-feature-settings: inherit;
     letter-spacing: inherit;
+    background: transparent;
   }
 
   button,
@@ -122,6 +119,8 @@
     -webkit-appearance: button;
     background-image: none;
     background-color: transparent;
+    outline: none;
+    touch-action: manipulation;
   }
 
   :-moz-focusring {
@@ -217,8 +216,10 @@
     cursor: pointer;
   }
 
+  [role="button"]:disabled,
+  button:disabled,
   :disabled {
-    cursor: default;
+    cursor: not-allowed;
   }
 
   audio,
