@@ -591,8 +591,8 @@
   --clr-theme-pop-soft-hover: var(--clr-core-pop-20);
   --clr-theme-purp-bg: var(--clr-core-purp-5);
   --clr-theme-purp-bg-muted: var(--clr-core-purp-10);
-  --clr-theme-purp-element: var(--clr-core-purp-40);
-  --clr-theme-purp-element-hover: var(--clr-core-purp-30);
+  --clr-theme-purp-element: var(--clr-core-purp-50);
+  --clr-theme-purp-element-hover: var(--clr-core-purp-40);
   --clr-theme-purp-on-element: var(--clr-core-purp-90);
   --clr-theme-purp-on-soft: var(--clr-core-purp-90);
   --clr-theme-purp-soft: var(--clr-core-purp-10);
