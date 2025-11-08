@@ -36,9 +36,9 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@terrazzo/cli": "0.6.0",
-    "@terrazzo/parser": "0.6.0",
-    "@terrazzo/plugin-css": "0.6.0",
+    "@terrazzo/cli": "0.10.3",
+    "@terrazzo/parser": "0.10.4",
+    "@terrazzo/plugin-css": "0.10.4",
     "prettier": "^3.0.0"
   },
   "files": [
