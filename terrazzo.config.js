@@ -28,7 +28,6 @@ export default defineConfig({
           selectors: [":root.dark"]
         }
       ],
-      p3: false,
       transform: pxToRem,
       generateName(variableId) {
         return clearFxPrefix(variableId);
