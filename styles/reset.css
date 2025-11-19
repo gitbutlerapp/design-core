@@ -219,6 +219,7 @@
 
   [role="button"],
   button {
+    text-align: left;
     cursor: pointer;
   }
 
