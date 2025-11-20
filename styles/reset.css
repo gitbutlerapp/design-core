@@ -251,11 +251,6 @@
   }
 
   /* Focus outline for keyboard navigation */
-  input[type="radio"],
-  input[type="checkbox"] {
-    appearance: none;
-  }
-
   a:focus-visible,
   button:focus-visible,
   input:focus-visible,
@@ -269,5 +264,21 @@
   .focus-visible:focus-visible {
     outline: 2px solid var(--clr-theme-pop-element);
     outline-offset: -2px;
+  }
+
+  /* Contrasting outline for elements on similar backgrounds */
+  button:focus-visible:is([class*="pop"], [class*="theme"], [class*="success"]),
+  [role="button"]:focus-visible:is(
+      [class*="pop"],
+      [class*="theme"],
+      [class*="success"]
+    ),
+  input[type="checkbox"]:checked:focus-visible,
+  input[type="radio"]:checked:focus-visible {
+    outline-color: color-mix(
+      in srgb,
+      var(--clr-theme-pop-element) 60%,
+      var(--clr-text-1)
+    );
   }
 }
