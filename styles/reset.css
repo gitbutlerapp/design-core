@@ -251,6 +251,11 @@
   }
 
   /* Focus outline for keyboard navigation */
+  input[type="radio"],
+  input[type="checkbox"] {
+    appearance: none;
+  }
+
   a:focus-visible,
   button:focus-visible,
   input:focus-visible,
