@@ -1,2 +1,11 @@
+# Dependencies and lock files
+node_modules
+pnpm-lock.yaml
+
+# Generated files (from terrazzo build)
+tokens/tokens.css
+tokens/tokens.json
+
 # Minified files should not be formatted
 utility-classes/layout.min.css
+*.min.css

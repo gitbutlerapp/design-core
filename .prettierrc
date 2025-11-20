@@ -1,0 +1,15 @@
+{
+	"semi": true,
+	"singleQuote": false,
+	"tabWidth": 4,
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": "*.css",
+			"options": {
+				"printWidth": 100,
+				"singleQuote": false
+			}
+		}
+	]
+}
