@@ -249,4 +249,20 @@
   [hidden] {
     display: none;
   }
+
+  /* Focus outline for keyboard navigation */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible,
+  [role="button"]:focus-visible,
+  [role="link"]:focus-visible,
+  details:focus-visible,
+  summary:focus-visible,
+  .focus-visible:focus-visible {
+    outline: 2px solid var(--clr-theme-pop-element);
+    outline-offset: -2px;
+  }
 }
