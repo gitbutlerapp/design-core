@@ -90,10 +90,31 @@ pre {
 }
 
 .capitalize {
-	display: inline-block;
+	text-transform: capitalize;
 }
+
 .capitalize:first-letter {
 	text-transform: capitalize;
+}
+
+/* TEXT LINKS */
+
+.link-hover-2,
+.link-hover-3 {
+	cursor: pointer;
+	transition: color var(--transition-fast);
+}
+
+.link-hover-2 {
+	&:hover {
+		color: var(--clr-text-1);
+	}
+}
+
+.link-hover-3 {
+	&:hover {
+		color: var(--clr-text-2);
+	}
 }
 
 /* OPACITY */
@@ -126,7 +147,6 @@ pre {
 }
 
 /* ANIMATION */
-
 .wiggle-animation {
 	animation: wiggle-animation 0.35s forwards;
 }
