@@ -147,5 +147,19 @@ npm install
 npm run build
 
 # Watch for changes
-npm run dev
+npm run dev:tokens
 ```
+
+## Color Generator Tool
+
+An interactive SvelteKit application for designing and testing color scales is available in the [`color-generator/`](./color-generator) directory.
+
+```bash
+# Start the color generator
+npm run dev:generator
+
+# Build the color generator
+npm run build:generator
+```
+
+See [color-generator/README.md](./color-generator/README.md) for more details.
