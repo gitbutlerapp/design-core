@@ -28,12 +28,7 @@ export function getSaturationMultiplier(
 ): number {
 	if (scaleId === "ntrl") return 1.0;
 
-	if (shade >= 90) return 0.3;
-	if (shade >= 70) return 0.75;
-	if (shade >= 50) return 1.0;
-	if (shade >= 30) return 0.95;
-	if (shade >= 10) return 0.7;
-	return 0.5;
+	return 1;
 }
 
 export function generateScale(

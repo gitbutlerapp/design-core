@@ -33,8 +33,7 @@
 	data-scale={scaleId}
 	data-shade={shade.value}
 	onclick={handleCopyColor}
-	role="button"
-	tabindex="0"
+	role="presentation"
 >
 	<div class="color-swatch" style="background-color: {color}">
 		<div
@@ -59,8 +58,6 @@
 
 <style>
 	.color-card {
-		border: 1px solid var(--clr-border-3);
-		border-radius: 8px;
 		overflow: hidden;
 		transition:
 			transform 0.2s,
@@ -84,7 +81,7 @@
 	}
 
 	.shade-number {
-		font-size: 18px;
+		font-size: 14px;
 		font-weight: 600;
 		margin-bottom: 4px;
 		color: var(--clr-text-1);

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ColorCard from './ColorCard.svelte';
-	import ScaleControls from './ScaleControls.svelte';
-	import type { ColorScale, Shade } from '../types/color';
+	import ColorCard from "./ColorCard.svelte";
+	import ScaleControls from "./ScaleControls.svelte";
+	import type { ColorScale, Shade } from "../types/color";
 
 	interface Props {
 		scale: ColorScale;
@@ -22,7 +22,7 @@
 		hue,
 		onHueChange,
 		onSaturationChange,
-		onCopyJSON
+		onCopyJSON,
 	}: Props = $props();
 </script>
 
@@ -38,7 +38,7 @@
 
 	<div class="scale-grid">
 		{#each shades as shade (shade.value)}
-			{@const color = colors[shade.value] || '#000'}
+			{@const color = colors[shade.value] || "#000"}
 			<ColorCard {shade} {color} scaleId={scale.id} />
 		{/each}
 	</div>
@@ -51,13 +51,6 @@
 
 	.scale-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-		gap: 12px;
-	}
-
-	@media (max-width: 768px) {
-		.scale-grid {
-			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-		}
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	}
 </style>
