@@ -22,15 +22,6 @@ export const lightnessMap: Record<number, number> = {
 	0: 0.04,
 };
 
-export function getSaturationMultiplier(
-	shade: number,
-	scaleId: string,
-): number {
-	if (scaleId === "ntrl") return 1.0;
-
-	return 1;
-}
-
 export function generateScale(
 	scales: ColorScale[],
 	shades: Shade[],
@@ -51,11 +42,7 @@ export function generateScale(
 
 		for (const shade of shades) {
 			const lightness = lightnessMap[shade.value];
-			const satMultiplier = getSaturationMultiplier(
-				shade.value,
-				scale.id,
-			);
-			const saturation = baseSaturation * satMultiplier;
+			const saturation = baseSaturation;
 
 			const rgb = hslToRgb(scaleHue, saturation, lightness);
 			result[scale.id][shade.value] = rgbToHex(rgb.r, rgb.g, rgb.b);
