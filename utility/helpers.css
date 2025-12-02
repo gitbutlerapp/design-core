@@ -90,7 +90,8 @@ pre {
 }
 
 .capitalize {
-	text-transform: capitalize;
+	/* Works only if the element is block-level */
+	display: block;
 }
 
 .capitalize:first-letter {
