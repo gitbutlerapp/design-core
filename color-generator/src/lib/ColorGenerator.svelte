@@ -6,6 +6,7 @@
 		SCALES,
 		SHADES,
 		DEFAULT_SATURATIONS,
+		DEFAULT_SHADE_50_LIGHTNESS,
 	} from "./constants/colorScales";
 	import SemanticZones from "./components/SemanticZones.svelte";
 	import ColorScaleDisplay from "./components/ColorScaleDisplay.svelte";
@@ -22,12 +23,22 @@
 		succ: null,
 		purp: null,
 	});
+	let scaleShade50Lightness: Record<string, number> = $state({
+		...DEFAULT_SHADE_50_LIGHTNESS,
+	});
 
 	const baseHue = 180;
 
 	// Generate colors reactively whenever dependencies change
 	let currentColors = $derived(
-		generateScale(SCALES, SHADES, scaleSaturations, scaleHues, baseHue),
+		generateScale(
+			SCALES,
+			SHADES,
+			scaleSaturations,
+			scaleHues,
+			baseHue,
+			scaleShade50Lightness,
+		),
 	);
 
 	function updateScaleHue(scaleId: string, hexColor: string) {
@@ -39,6 +50,10 @@
 
 	function updateScaleSaturation(scaleId: string, value: number) {
 		scaleSaturations[scaleId] = value;
+	}
+
+	function updateScaleShade50Lightness(scaleId: string, value: number) {
+		scaleShade50Lightness[scaleId] = value;
 	}
 
 	function copyScaleJSON(scaleId: string) {
@@ -63,9 +78,11 @@
 				shades={SHADES}
 				colors={currentColors[scale.id] || {}}
 				bind:saturation={scaleSaturations[scale.id]}
+				bind:shade50Lightness={scaleShade50Lightness[scale.id]}
 				hue={scaleHues[scale.id]}
 				onHueChange={updateScaleHue}
 				onSaturationChange={updateScaleSaturation}
+				onShade50LightnessChange={updateScaleShade50Lightness}
 				onCopyJSON={copyScaleJSON}
 			/>
 		{/each}

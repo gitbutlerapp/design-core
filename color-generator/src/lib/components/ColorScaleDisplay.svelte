@@ -8,9 +8,11 @@
 		shades: Shade[];
 		colors: Record<number, string>;
 		saturation: number;
+		shade50Lightness: number;
 		hue: number | null;
 		onHueChange: (scaleId: string, hexColor: string) => void;
 		onSaturationChange: (scaleId: string, value: number) => void;
+		onShade50LightnessChange: (scaleId: string, value: number) => void;
 		onCopyJSON: (scaleId: string) => void;
 	}
 
@@ -19,9 +21,11 @@
 		shades,
 		colors,
 		saturation = $bindable(),
+		shade50Lightness = $bindable(),
 		hue,
 		onHueChange,
 		onSaturationChange,
+		onShade50LightnessChange,
 		onCopyJSON,
 	}: Props = $props();
 </script>
@@ -30,9 +34,11 @@
 	<ScaleControls
 		{scale}
 		bind:saturation
+		bind:shade50Lightness
 		{hue}
 		{onHueChange}
 		{onSaturationChange}
+		{onShade50LightnessChange}
 		{onCopyJSON}
 	/>
 
