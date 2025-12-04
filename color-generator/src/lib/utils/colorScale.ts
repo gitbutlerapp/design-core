@@ -69,7 +69,7 @@ function calculateLightness(
 		if (isNeutral) {
 			return 0.9 + (t - 0.8) * 0.5; // Maps 80-100 to 0.91-1.0 (original)
 		} else {
-			return 0.9 + (t - 0.8) * 0.42; // Maps 80-100 to 0.88-0.98 (slightly darker)
+			return 0.9 + (t - 0.8) * 0.45; // Maps 80-100 to 0.88-0.98 (slightly darker)
 		}
 	} else if (shade >= 50) {
 		// Soft zone: power curve for perceptual evenness
