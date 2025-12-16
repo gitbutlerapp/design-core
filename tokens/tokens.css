@@ -6,9 +6,8 @@
   --clr-art-scene-bg: color(srgb 0.8392156862745098 0.9411764705882353 0.9333333333333333);
   --clr-art-scene-fill: color(srgb 0.9882352941176471 0.9882352941176471 0.9450980392156862);
   --clr-art-scene-outline: color(srgb 0.2784313725490196 0.3137254901960784 0.3137254901960784);
-  --clr-art-spot-fill-1: var(--clr-core-gray-80);
-  --clr-art-spot-fill-2: var(--clr-core-gray-70);
-  --clr-art-spot-fill-pop-1: var(--clr-core-pop-70);
+  --clr-art-spot-fill: var(--clr-core-gray-70);
+  --clr-art-spot-fill-pop: var(--clr-core-pop-70);
   --clr-bg-1: var(--clr-core-gray-100);
   --clr-bg-1-muted: var(--clr-core-gray-95);
   --clr-bg-2: var(--clr-core-gray-90);
@@ -267,9 +266,8 @@
   --clr-art-scene-bg: color(srgb 0.1568627450980392 0.403921568627451 0.39215686274509803);
   --clr-art-scene-fill: color(srgb 0.8470588235294118 0.8901960784313725 0.7568627450980392);
   --clr-art-scene-outline: color(srgb 0.0784313725490196 0.13333333333333333 0.13333333333333333);
-  --clr-art-spot-fill-1: var(--clr-core-gray-30);
-  --clr-art-spot-fill-2: var(--clr-core-gray-40);
-  --clr-art-spot-fill-pop-1: var(--clr-core-pop-30);
+  --clr-art-spot-fill: var(--clr-core-gray-40);
+  --clr-art-spot-fill-pop: var(--clr-core-pop-30);
   --clr-bg-1: var(--clr-core-gray-10);
   --clr-bg-1-muted: var(--clr-core-gray-20);
   --clr-bg-2: var(--clr-core-gray-5);
