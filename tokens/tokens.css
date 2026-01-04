@@ -54,8 +54,8 @@
   --clr-commit-remote: var(--clr-core-pop-50);
   --clr-commit-shadow: var(--clr-core-pop-60);
   --clr-commit-upstream: var(--clr-core-warn-50);
-  --clr-core-danger-5: color(srgb 0.3411764705882353 0.10196078431372549 0.06666666666666667);
-  --clr-core-danger-10: color(srgb 0.396078431372549 0.11764705882352941 0.07450980392156863);
+  --clr-core-danger-5: color(srgb 0.3058823529411765 0.09019607843137255 0.058823529411764705);
+  --clr-core-danger-10: color(srgb 0.37254901960784315 0.10980392156862745 0.07058823529411765);
   --clr-core-danger-20: color(srgb 0.43137254901960786 0.12941176470588237 0.08235294117647059);
   --clr-core-danger-30: color(srgb 0.5725490196078431 0.16862745098039217 0.10980392156862745);
   --clr-core-danger-40: color(srgb 0.6980392156862745 0.20784313725490197 0.13333333333333333);
@@ -66,8 +66,8 @@
   --clr-core-danger-90: color(srgb 0.9764705882352941 0.9137254901960784 0.9019607843137255);
   --clr-core-danger-95: color(srgb 0.984313725490196 0.9490196078431372 0.9450980392156862);
   --clr-core-gray-0: color(srgb 0 0 0);
-  --clr-core-gray-5: color(srgb 0.12549019607843137 0.11372549019607843 0.10588235294117647);
-  --clr-core-gray-10: color(srgb 0.1607843137254902 0.14901960784313725 0.13725490196078433);
+  --clr-core-gray-5: color(srgb 0.10980392156862745 0.09803921568627451 0.09019607843137255);
+  --clr-core-gray-10: color(srgb 0.15294117647058825 0.13725490196078433 0.12941176470588237);
   --clr-core-gray-20: color(srgb 0.22745098039215686 0.20784313725490197 0.19607843137254902);
   --clr-core-gray-30: color(srgb 0.30980392156862746 0.2823529411764706 0.26666666666666666);
   --clr-core-gray-40: color(srgb 0.38823529411764707 0.3568627450980392 0.3333333333333333);
@@ -78,8 +78,8 @@
   --clr-core-gray-90: color(srgb 0.9529411764705882 0.9490196078431372 0.9450980392156862);
   --clr-core-gray-95: color(srgb 0.9764705882352941 0.9764705882352941 0.9725490196078431);
   --clr-core-gray-100: color(srgb 1 1 1);
-  --clr-core-pop-5: color(srgb 0.03529411764705882 0.17254901960784313 0.17254901960784313);
-  --clr-core-pop-10: color(srgb 0.050980392156862744 0.24313725490196078 0.24313725490196078);
+  --clr-core-pop-5: color(srgb 0.027450980392156862 0.13725490196078433 0.13725490196078433);
+  --clr-core-pop-10: color(srgb 0.047058823529411764 0.2196078431372549 0.2196078431372549);
   --clr-core-pop-20: color(srgb 0.058823529411764705 0.2823529411764706 0.2823529411764706);
   --clr-core-pop-30: color(srgb 0.08627450980392157 0.403921568627451 0.403921568627451);
   --clr-core-pop-40: color(srgb 0.11372549019607843 0.5411764705882353 0.5411764705882353);
@@ -89,8 +89,8 @@
   --clr-core-pop-80: color(srgb 0.8274509803921568 0.9529411764705882 0.9529411764705882);
   --clr-core-pop-90: color(srgb 0.9058823529411765 0.9764705882352941 0.9764705882352941);
   --clr-core-pop-95: color(srgb 0.9450980392156862 0.984313725490196 0.984313725490196);
-  --clr-core-purple-5: color(srgb 0.1843137254901961 0.07450980392156863 0.2980392156862745);
-  --clr-core-purple-10: color(srgb 0.2196078431372549 0.08627450980392157 0.35294117647058826);
+  --clr-core-purple-5: color(srgb 0.16470588235294117 0.06666666666666667 0.2627450980392157);
+  --clr-core-purple-10: color(srgb 0.20784313725490197 0.08235294117647059 0.32941176470588235);
   --clr-core-purple-20: color(srgb 0.2549019607843137 0.10196078431372549 0.40784313725490196);
   --clr-core-purple-30: color(srgb 0.3568627450980392 0.1411764705882353 0.5725490196078431);
   --clr-core-purple-40: color(srgb 0.4588235294117647 0.1843137254901961 0.7333333333333333);
@@ -100,8 +100,8 @@
   --clr-core-purple-80: color(srgb 0.8901960784313725 0.8313725490196079 0.9490196078431372);
   --clr-core-purple-90: color(srgb 0.9411764705882353 0.9098039215686274 0.9725490196078431);
   --clr-core-purple-95: color(srgb 0.9647058823529412 0.9450980392156862 0.984313725490196);
-  --clr-core-safe-5: color(srgb 0.0392156862745098 0.15294117647058825 0.10588235294117647);
-  --clr-core-safe-10: color(srgb 0.054901960784313725 0.2235294117647059 0.15294117647058825);
+  --clr-core-safe-5: color(srgb 0.03137254901960784 0.12156862745098039 0.08235294117647059);
+  --clr-core-safe-10: color(srgb 0.050980392156862744 0.20392156862745098 0.1411764705882353);
   --clr-core-safe-20: color(srgb 0.07058823529411765 0.27450980392156865 0.18823529411764706);
   --clr-core-safe-30: color(srgb 0.10588235294117647 0.4196078431372549 0.28627450980392155);
   --clr-core-safe-40: color(srgb 0.1450980392156863 0.5764705882352941 0.396078431372549);
@@ -111,8 +111,8 @@
   --clr-core-safe-80: color(srgb 0.8313725490196079 0.9490196078431372 0.8980392156862745);
   --clr-core-safe-90: color(srgb 0.9098039215686274 0.9725490196078431 0.9450980392156862);
   --clr-core-safe-95: color(srgb 0.9450980392156862 0.984313725490196 0.9686274509803922);
-  --clr-core-warn-5: color(srgb 0.35294117647058826 0.21176470588235294 0.00784313725490196);
-  --clr-core-warn-10: color(srgb 0.4196078431372549 0.25098039215686274 0.011764705882352941);
+  --clr-core-warn-5: color(srgb 0.3137254901960784 0.1843137254901961 0.00784313725490196);
+  --clr-core-warn-10: color(srgb 0.396078431372549 0.23529411764705882 0.011764705882352941);
   --clr-core-warn-20: color(srgb 0.47058823529411764 0.2784313725490196 0.011764705882352941);
   --clr-core-warn-30: color(srgb 0.6431372549019608 0.3843137254901961 0.01568627450980392);
   --clr-core-warn-40: color(srgb 0.8117647058823529 0.4823529411764706 0.0196078431372549);
@@ -234,6 +234,7 @@
   --opacity-btn-outline-bg-hover: 0.25;
   --opacity-btn-solid-hover: 0.1;
   --opacity-disabled: 0.6;
+  --opacity-hover: 0.04;
   --radius-btn: var(--radius-m);
   --radius-l: 12px;
   --radius-m: 6px;
@@ -374,7 +375,7 @@
   --clr-text-2: var(--clr-core-gray-60);
   --clr-text-3: var(--clr-core-gray-40);
   --clr-theme-danger-bg: var(--clr-core-danger-5);
-  --clr-theme-danger-element: var(--clr-core-danger-30);
+  --clr-theme-danger-element: var(--clr-core-danger-40);
   --clr-theme-danger-on-element: var(--clr-core-danger-95);
   --clr-theme-danger-on-soft: var(--clr-core-danger-60);
   --clr-theme-danger-soft: var(--clr-core-danger-10);
@@ -396,7 +397,7 @@
   --clr-theme-purple-soft: var(--clr-core-purple-10);
   --clr-theme-purple-text: var(--clr-core-purple-80);
   --clr-theme-safe-bg: var(--clr-core-safe-5);
-  --clr-theme-safe-element: var(--clr-core-safe-30);
+  --clr-theme-safe-element: var(--clr-core-safe-40);
   --clr-theme-safe-on-element: var(--clr-core-safe-90);
   --clr-theme-safe-on-soft: var(--clr-core-safe-60);
   --clr-theme-safe-soft: var(--clr-core-safe-10);
@@ -409,5 +410,13 @@
   --clr-theme-warn-text: var(--clr-core-warn-80);
   --clr-tooltip-bg: var(--clr-core-gray-10);
   --clr-tooltip-border: var(--clr-core-gray-30);
+  --opacity-btn-icon-outline: 0.7;
+  --opacity-btn-icon-solid: 0.8;
+  --opacity-btn-outline: 0.4;
+  --opacity-btn-outline-bg: 0.1;
+  --opacity-btn-outline-bg-hover: 0.25;
+  --opacity-btn-solid-hover: 0.1;
+  --opacity-disabled: 0.6;
+  --opacity-hover: 0.06;
 }
 
