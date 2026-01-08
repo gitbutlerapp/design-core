@@ -1,6 +1,6 @@
 {
 	"name": "@gitbutler/design-core",
-	"version": "1.3.11",
+	"version": "1.6.1",
 	"type": "module",
 	"description": "Design tokens for GitButler applications",
 	"keywords": [
@@ -32,10 +32,13 @@
 	},
 	"scripts": {
 		"build": "npx tz build",
-		"dev": "npx tz build --watch",
-		"prepublishOnly": "npm run build",
-		"format": "prettier --write \"**/*.css\"",
-		"format:check": "prettier --check \"**/*.css\""
+		"build:tokens": "npx tz build",
+		"dev:tokens": "npx tz build --watch",
+		"prepublishOnly": "npm run build:tokens",
+		"format": "prettier --write \"**/*.{css,ts,js}\"",
+		"format:check": "prettier --check \"**/*.{css,ts,js}\"",
+		"dev:generator": "cd color-generator && pnpm dev",
+		"build:generator": "cd color-generator && pnpm build"
 	},
 	"devDependencies": {
 		"@terrazzo/cli": "0.10.3",
