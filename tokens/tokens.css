@@ -185,7 +185,7 @@
   --clr-selected-in-focus-bg: var(--clr-core-pop-90);
   --clr-selected-in-focus-element: var(--clr-core-pop-50);
   --clr-selected-in-focus-file: var(--clr-core-pop-80);
-  --clr-selected-not-in-focus-bg: var(--clr-core-gray-95);
+  --clr-selected-not-in-focus-bg: var(--clr-core-gray-90);
   --clr-selected-not-in-focus-element: var(--clr-core-gray-60);
   --clr-text-1: var(--clr-core-gray-5);
   --clr-text-2: var(--clr-core-gray-50);
