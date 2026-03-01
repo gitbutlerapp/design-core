@@ -44,7 +44,7 @@
   --clr-btn-safe-outline-text: var(--clr-core-safe-40);
   --clr-btn-warn-outline: var(--clr-core-warn-50);
   --clr-btn-warn-outline-bg: var(--clr-core-warn-70);
-  --clr-btn-warn-outline-text: var(--clr-core-warn-40);
+  --clr-btn-warn-outline-text: var(--clr-core-warn-30);
   --clr-change-icon-addition: var(--clr-core-safe-60);
   --clr-change-icon-deletion: var(--clr-core-danger-60);
   --clr-change-icon-modification: var(--clr-core-warn-60);
@@ -115,7 +115,7 @@
   --clr-core-warn-10: color(srgb 0.396078431372549 0.23529411764705882 0.011764705882352941);
   --clr-core-warn-20: color(srgb 0.47058823529411764 0.2784313725490196 0.011764705882352941);
   --clr-core-warn-30: color(srgb 0.6431372549019608 0.3843137254901961 0.01568627450980392);
-  --clr-core-warn-40: color(srgb 0.8117647058823529 0.4823529411764706 0.0196078431372549);
+  --clr-core-warn-40: color(srgb 0.8117647058823529 0.4823529411764706 0.0392156862745098);
   --clr-core-warn-50: color(srgb 0.9764705882352941 0.5803921568627451 0.023529411764705882);
   --clr-core-warn-60: color(srgb 0.9411764705882353 0.7372549019607844 0.45098039215686275);
   --clr-core-warn-70: color(srgb 0.9647058823529412 0.8352941176470589 0.6549019607843137);
@@ -196,7 +196,7 @@
   --opacity-disabled: 60%;
   --opacity-mix-btn-icon: 80%;
   --opacity-mix-btn-outline-bg: 10%;
-  --opacity-mix-btn-outline-bg-hover: 20%;
+  --opacity-mix-btn-outline-bg-hover: 25%;
   --opacity-mix-btn-outline-border: 40%;
   --opacity-mix-btn-solid-hover: 10%;
   --opacity-mix-hover: 5%;
