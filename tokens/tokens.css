@@ -194,11 +194,12 @@
   --fx-shadow-m: 0 6px 30px 0 var(--clr-drop-shadow);
   --fx-shadow-s: 0 4px 14px 0 var(--clr-drop-shadow);
   --opacity-disabled: 60%;
-  --opacity-mix-btn-icon: 80%;
   --opacity-mix-btn-outline-bg: 10%;
   --opacity-mix-btn-outline-bg-hover: 25%;
   --opacity-mix-btn-outline-border: 40%;
+  --opacity-mix-btn-outline-icon: 70%;
   --opacity-mix-btn-solid-hover: 10%;
+  --opacity-mix-btn-solid-icon: 80%;
   --opacity-mix-hover: 5%;
   --radius-btn: var(--radius-m);
   --radius-l: 12px;
