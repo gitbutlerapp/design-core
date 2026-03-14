@@ -1,6 +1,6 @@
 {
 	"name": "@gitbutler/design-core",
-	"version": "1.8.3",
+	"version": "1.9.0",
 	"type": "module",
 	"description": "Design tokens for GitButler applications",
 	"keywords": [
@@ -37,6 +37,7 @@
 		"prepublishOnly": "npm run build:tokens",
 		"format": "prettier --write \"**/*.{css,ts,js}\"",
 		"format:check": "prettier --check \"**/*.{css,ts,js}\"",
+		"dev:hue-dini": "cd tools/hue-dini && pnpm dev",
 		"dev:generator": "cd color-generator && pnpm dev",
 		"build:generator": "cd color-generator && pnpm build"
 	},
