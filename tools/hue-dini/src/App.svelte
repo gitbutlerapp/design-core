@@ -243,6 +243,26 @@
 		{/each}
 	</div>
 
+	<!-- Breakpoint labels -->
+	<div class="breakpoints">
+		<div class="bp-zone" style="flex: 2">
+			<span class="bp-label">Background</span>
+			<span class="bp-range">100–90</span>
+		</div>
+		<div class="bp-zone" style="flex: 3">
+			<span class="bp-label">Soft</span>
+			<span class="bp-range">80–60</span>
+		</div>
+		<div class="bp-zone" style="flex: 3">
+			<span class="bp-label">Foreground</span>
+			<span class="bp-range">50–30</span>
+		</div>
+		<div class="bp-zone" style="flex: 3">
+			<span class="bp-label">Text</span>
+			<span class="bp-range">20–0</span>
+		</div>
+	</div>
+
 	<!-- Gray ramp (large) -->
 	<div class="ramp ramp-large">
 		{#each sortedStops as { v }, si}
@@ -321,7 +341,7 @@
 <style>
 	.page {
 		display: grid;
-		grid-template-rows: auto auto 2fr 1fr auto;
+		grid-template-rows: auto auto auto 2fr 1fr auto;
 		gap: 16px;
 		padding: 40px;
 		min-height: 100vh;
@@ -395,6 +415,32 @@
 		transform: translate(-50%, -50%) scale(1.15);
 		box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
 		z-index: 2;
+	}
+
+	/* ── Breakpoints ── */
+	.breakpoints {
+		display: flex;
+		margin-bottom: -8px;
+	}
+
+	.bp-zone {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		padding: 0 0 6px 0;
+		border-left: 1px solid currentColor;
+		padding-left: 8px;
+		opacity: 0.4;
+	}
+
+	.bp-label {
+		font-size: 0.75rem;
+		font-weight: 500;
+	}
+
+	.bp-range {
+		font-size: 0.65rem;
+		opacity: 0.7;
 	}
 
 	/* ── Ramps ── */
