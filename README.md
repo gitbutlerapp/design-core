@@ -150,16 +150,16 @@ npm run build
 npm run dev:tokens
 ```
 
-## Color Generator Tool
+## Color Tool
 
-An interactive SvelteKit application for designing and testing color scales is available in the [`color-generator/`](./color-generator) directory.
+[hue-dini](./tools/hue-dini) is the tool used to preview and export the GitButler color palette. It applies a single shared luminance scale across all hues — gray, accent, and semantic — so shades at the same step feel visually equivalent regardless of hue.
+
+**Live:** https://gitbutlerapp.github.io/design-core/
 
 ```bash
-# Start the color generator
-npm run dev:generator
-
-# Build the color generator
-npm run build:generator
+cd tools/hue-dini
+pnpm install
+pnpm dev
 ```
 
-See [color-generator/README.md](./color-generator/README.md) for more details.
+See [tools/hue-dini/README.md](./tools/hue-dini/README.md) for more details.
