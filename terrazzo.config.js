@@ -2,32 +2,6 @@ import { defineConfig } from "@terrazzo/cli";
 import * as _ from "@terrazzo/parser";
 import css from "@terrazzo/plugin-css";
 
-function rgbToHsl(r, g, b) {
-	const max = Math.max(r, g, b);
-	const min = Math.min(r, g, b);
-	const d = max - min;
-	let h = 0;
-	const l = (max + min) / 2;
-	const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
-
-	if (d !== 0) {
-		switch (max) {
-			case r:
-				h = (((g - b) / d) % 6) * 60;
-				break;
-			case g:
-				h = ((b - r) / d + 2) * 60;
-				break;
-			default:
-				h = ((r - g) / d + 4) * 60;
-				break;
-		}
-		if (h < 0) h += 360;
-	}
-
-	return `hsl(${Math.round(h)} ${(s * 100).toFixed(1)}% ${(l * 100).toFixed(1)})%`;
-}
-
 function transformToken(token, mode) {
 	const modeValue = token.mode?.[mode];
 	if (!modeValue) return;
