@@ -7,6 +7,7 @@ function transformToken(token, mode) {
 	if (!modeValue) return;
 
 	if (token.$type === "color") {
+		if (modeValue.aliasOf) return;
 		const val = modeValue.$value;
 		if (val && val.components && val.colorSpace === "srgb") {
 			const [r, g, b] = val.components;
