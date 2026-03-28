@@ -22,7 +22,7 @@
 	let colorPresets = $state({
 		pop: "#25b1b1",
 		danger: "#d64029",
-		warning: "#f99406",
+		warn: "#f99406",
 		safe: "#2eb87e",
 		purple: "#8a43d0",
 	});
@@ -192,7 +192,7 @@
 			palette[color.label.toLowerCase()] = colorObj;
 		}
 		await navigator.clipboard.writeText(
-			JSON.stringify({ "clr-core": palette }, null, 2),
+			JSON.stringify({ core: { clr: palette } }, null, 2),
 		);
 		copied = true;
 		setTimeout(() => (copied = false), 2000);
@@ -325,7 +325,7 @@
 
 	<!-- Extra color ramps: danger, warning, safe, purple -->
 	<div class="extra-ramps">
-		{#each ["danger", "warning", "safe", "purple"] as name}
+		{#each ["danger", "warn", "safe", "purple"] as name}
 			<div class="ramp ramp-small">
 				{#each sortedStops as { v }}
 					<div

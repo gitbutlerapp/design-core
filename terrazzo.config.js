@@ -50,9 +50,12 @@ function transformToken(token, mode) {
 	}
 }
 
-function clearFxPrefix(id) {
-	if (id.includes("fx.")) {
-		return id.replace("fx.", "").replace(".", "-");
+function stripCollectionPrefix(id) {
+	const collections = ["core", "semantic", "components"];
+	for (const collection of collections) {
+		if (id.startsWith(collection + ".")) {
+			return "--" + id.slice(collection.length + 1).replaceAll(".", "-");
+		}
 	}
 }
 
@@ -69,8 +72,8 @@ export default defineConfig({
 				},
 			],
 			transform: transformToken,
-			generateName(variableId) {
-				return clearFxPrefix(variableId);
+			variableName(token) {
+				return stripCollectionPrefix(token.id);
 			},
 		}),
 	],
