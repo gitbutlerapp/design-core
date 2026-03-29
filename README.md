@@ -26,14 +26,6 @@ import "@gitbutler/design-core/tokens";
 
 This provides CSS custom properties for colors, spacing, typography, and other design tokens with automatic light/dark mode support.
 
-### Design Tokens (JSON)
-
-Import the raw design tokens data:
-
-```javascript
-import tokens from "@gitbutler/design-core/tokens.json";
-```
-
 ### Fonts
 
 Import all fonts:
@@ -115,7 +107,6 @@ Or import individual utility class files:
 ## Available Exports
 
 - `@gitbutler/design-core/tokens` - CSS custom properties
-- `@gitbutler/design-core/tokens.json` - Design tokens as JSON
 - `@gitbutler/design-core/fonts` - All font CSS declarations
 - `@gitbutler/design-core/fonts/*` - Individual font files
 - `@gitbutler/design-core/core` - Core CSS styles

@@ -1,0 +1,57 @@
+{
+  "fx": {
+    "shadow": {
+      "s": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "inset": false,
+            "color": "{semantic.shadow-clr}",
+            "offsetX": "0px",
+            "offsetY": "4px",
+            "blur": "14px",
+            "spread": "0px"
+          }
+        ]
+      },
+      "m": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "inset": false,
+            "color": "{semantic.shadow-clr}",
+            "offsetX": "0px",
+            "offsetY": "6px",
+            "blur": "30px",
+            "spread": "0px"
+          }
+        ]
+      },
+      "l": {
+        "$type": "shadow",
+        "$value": [
+          {
+            "inset": false,
+            "color": "{semantic.shadow-clr}",
+            "offsetX": "0px",
+            "offsetY": "10px",
+            "blur": "40px",
+            "spread": "0px"
+          }
+        ]
+      }
+    },
+    "$extensions": {
+      "tokens-bruecke-meta": {
+        "useDTCGKeys": true,
+        "colorMode": "hex",
+        "variableCollections": [
+          "core",
+          "components",
+          "semantic"
+        ],
+        "createdAt": "2026-03-29T22:16:17.750Z"
+      }
+    }
+  }
+}

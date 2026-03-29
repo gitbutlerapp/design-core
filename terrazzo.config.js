@@ -60,7 +60,12 @@ function stripCollectionPrefix(id) {
 }
 
 export default defineConfig({
-	tokens: "./tokens/tokens.json",
+	tokens: [
+		"./tokens/json/core.tokens.json",
+		"./tokens/json/semantic.tokens.json",
+		"./tokens/json/components.tokens.json",
+		"./tokens/json/fx.tokens.json",
+	],
 	outDir: "./tokens",
 	plugins: [
 		css({
