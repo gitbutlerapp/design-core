@@ -841,7 +841,7 @@
         "$extensions": {
           "mode": {
             "light": "{core.clr.warn.60}",
-            "dark": "{core.clr.warn.40}"
+            "dark": "{core.clr.warn.30}"
           }
         }
       },
@@ -852,7 +852,7 @@
         "$extensions": {
           "mode": {
             "light": "{core.clr.safe.60}",
-            "dark": "{core.clr.safe.40}"
+            "dark": "{core.clr.safe.30}"
           }
         }
       },
@@ -863,7 +863,7 @@
         "$extensions": {
           "mode": {
             "light": "{core.clr.danger.60}",
-            "dark": "{core.clr.danger.40}"
+            "dark": "{core.clr.danger.30}"
           }
         }
       },
@@ -888,7 +888,7 @@
           "components",
           "semantic"
         ],
-        "createdAt": "2026-03-31T20:29:33.900Z"
+        "createdAt": "2026-03-31T21:09:49.637Z"
       }
     }
   }

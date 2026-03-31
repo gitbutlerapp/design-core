@@ -1,6 +1,6 @@
 {
 	"name": "@gitbutler/design-core",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"type": "module",
 	"description": "Design tokens for GitButler applications",
 	"keywords": [
