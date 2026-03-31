@@ -46,6 +46,10 @@
   --btn-warn-outline: var(--clr-warn-50);
   --btn-warn-outline-bg: var(--clr-warn-70);
   --btn-warn-outline-text: var(--clr-warn-30);
+  --change-status-addition: var(--clr-safe-60);
+  --change-status-deletion: var(--clr-danger-60);
+  --change-status-modification: var(--clr-warn-60);
+  --change-status-rename: var(--clr-purple-60);
   --chip-danger-bg: var(--clr-danger-80);
   --chip-danger-fg: var(--clr-danger-40);
   --chip-gray-bg: var(--clr-gray-80);
@@ -251,6 +255,10 @@
   --btn-warn-outline: var(--clr-warn-50);
   --btn-warn-outline-bg: var(--clr-warn-40);
   --btn-warn-outline-text: var(--clr-warn-60);
+  --change-status-addition: var(--clr-safe-40);
+  --change-status-deletion: var(--clr-danger-40);
+  --change-status-modification: var(--clr-warn-40);
+  --change-status-rename: var(--clr-purple-40);
   --chip-danger-bg: var(--clr-danger-10);
   --chip-danger-fg: var(--clr-danger-60);
   --chip-gray-bg: var(--clr-gray-20);

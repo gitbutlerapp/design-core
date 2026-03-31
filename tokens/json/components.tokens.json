@@ -833,6 +833,52 @@
         }
       }
     },
+    "change-status": {
+      "modification": {
+        "$type": "color",
+        "$value": "{core.clr.warn.60}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.warn.60}",
+            "dark": "{core.clr.warn.40}"
+          }
+        }
+      },
+      "addition": {
+        "$type": "color",
+        "$value": "{core.clr.safe.60}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.safe.60}",
+            "dark": "{core.clr.safe.40}"
+          }
+        }
+      },
+      "deletion": {
+        "$type": "color",
+        "$value": "{core.clr.danger.60}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.danger.60}",
+            "dark": "{core.clr.danger.40}"
+          }
+        }
+      },
+      "rename": {
+        "$type": "color",
+        "$value": "{core.clr.purple.60}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.purple.60}",
+            "dark": "{core.clr.purple.40}"
+          }
+        }
+      }
+    },
     "$extensions": {
       "tokens-bruecke-meta": {
         "useDTCGKeys": true,
@@ -842,7 +888,7 @@
           "components",
           "semantic"
         ],
-        "createdAt": "2026-03-29T22:16:17.750Z"
+        "createdAt": "2026-03-31T20:29:33.900Z"
       }
     }
   }
