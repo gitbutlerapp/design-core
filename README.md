@@ -88,7 +88,7 @@ Or import individual utility class files:
 - Border radius (`.radius-s`, `.radius-m`, `.radius-ml`, `.radius-l`)
 - Background colors (`.clr-bg-1`, `.clr-bg-2`, `.clr-bg-3` and their muted variants)
 - Borders (`.clr-border-1`, `.clr-border-2`, `.clr-border-3`)
-- Text colors (`.clr-text-1`, `.clr-text-2`, `.clr-text-3`)
+- Text colors (`.text-1`, `.text-2`, `.text-3`)
 
 **Helper utilities** include:
 
