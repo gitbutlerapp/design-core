@@ -27,6 +27,8 @@
 		purple: "#8a43d0",
 	});
 
+	const darken5Coeff = 0.8;
+
 	let stops = $state(
 		(fromUrlLums?.length ? fromUrlLums : defaultLums)
 			.slice(0, 11)
@@ -78,7 +80,7 @@
 		return { h, s, l };
 	}
 
-	function toRampCss(baseHex, lum) {
+	function toRampCss(baseHex, lum, darkenCoeff = 1) {
 		const { h, s, l: baseL } = hexToHsl(baseHex);
 		const baseLPct = baseL * 100;
 		const anchor = 46;
@@ -89,7 +91,8 @@
 		const satScale =
 			scaledLum > 60 ? 1 - ((scaledLum - 60) / 40) * 0.18 : 1;
 		const finalS = clamp(s * satScale * 100);
-		return `hsl(${h.toFixed(1)} ${finalS.toFixed(1)}% ${clamp(scaledLum).toFixed(2)}%)`;
+		const finalL = clamp(scaledLum * darkenCoeff);
+		return `hsl(${h.toFixed(1)} ${finalS.toFixed(1)}% ${finalL.toFixed(2)}%)`;
 	}
 
 	// Drag logic
@@ -327,10 +330,17 @@
 	<div class="extra-ramps">
 		{#each ["danger", "warn", "safe", "purple"] as name}
 			<div class="ramp ramp-small">
-				{#each sortedStops as { v }}
+				{#each sortedStops as { v }, si}
+					{@const isDarkenTarget =
+						(name === "danger" || name === "warn") &&
+						si === sortedStops.length - 1}
 					<div
 						class="swatch"
-						style="background: {toRampCss(colorPresets[name], v)}"
+						style="background: {toRampCss(
+							colorPresets[name],
+							v,
+							isDarkenTarget ? darken5Coeff : 1,
+						)}"
 					></div>
 				{/each}
 			</div>
