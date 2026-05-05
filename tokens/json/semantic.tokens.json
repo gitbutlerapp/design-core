@@ -1,159 +1,337 @@
 {
   "semantic": {
-    "bg": {
-      "1": {
-        "$type": "color",
-        "$value": "{core.clr.gray.100}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.100}",
-            "dark": "{core.clr.gray.10}"
+    "component": {
+      "change-status": {
+        "rename": {
+          "$type": "color",
+          "$value": "{core.clr.purple.60}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.purple.60}",
+              "dark": "{core.clr.purple.40}"
+            }
+          }
+        },
+        "addition": {
+          "$type": "color",
+          "$value": "{core.clr.safe.60}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.safe.60}",
+              "dark": "{core.clr.safe.30}"
+            }
+          }
+        },
+        "modification": {
+          "$type": "color",
+          "$value": "{core.clr.warn.60}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.warn.60}",
+              "dark": "{core.clr.warn.30}"
+            }
+          }
+        },
+        "deletion": {
+          "$type": "color",
+          "$value": "{core.clr.danger.60}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.danger.60}",
+              "dark": "{core.clr.danger.30}"
+            }
           }
         }
       },
-      "2": {
-        "$type": "color",
-        "$value": "{core.clr.gray.90}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.90}",
-            "dark": "{core.clr.gray.5}"
+      "art": {
+        "spot": {
+          "fill-pop": {
+            "$type": "color",
+            "$value": "{core.clr.pop.70}",
+            "$description": "",
+            "$extensions": {
+              "mode": {
+                "light": "{core.clr.pop.70}",
+                "dark": "{core.clr.pop.30}"
+              }
+            }
+          },
+          "fill": {
+            "$type": "color",
+            "$value": "{core.clr.gray.70}",
+            "$description": "",
+            "$extensions": {
+              "mode": {
+                "light": "{core.clr.gray.70}",
+                "dark": "{core.clr.gray.40}"
+              }
+            }
+          }
+        },
+        "scene": {
+          "bg": {
+            "$type": "color",
+            "$value": "#d6f0ee",
+            "$description": "",
+            "$extensions": {
+              "mode": {
+                "light": "#d6f0ee",
+                "dark": "#286764"
+              }
+            }
+          },
+          "outline": {
+            "$type": "color",
+            "$value": "#475050",
+            "$description": "",
+            "$extensions": {
+              "mode": {
+                "light": "#475050",
+                "dark": "#142222"
+              }
+            }
+          },
+          "fill": {
+            "$type": "color",
+            "$value": "#fcfcf1",
+            "$description": "",
+            "$extensions": {
+              "mode": {
+                "light": "#fcfcf1",
+                "dark": "#d8e3c1"
+              }
+            }
           }
         }
       },
-      "3": {
-        "$type": "color",
-        "$value": "{core.clr.gray.80}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.80}",
-            "dark": "{core.clr.gray.0}"
+      "tooltip": {
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.gray.95}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.gray.95}",
+              "dark": "{core.clr.gray.10}"
+            }
+          }
+        },
+        "border": {
+          "$type": "color",
+          "$value": "{core.clr.gray.80}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.gray.80}",
+              "dark": "{core.clr.gray.30}"
+            }
           }
         }
       },
-      "overlay": {
-        "$type": "color",
-        "$value": "#d6d6d673",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "#d6d6d673",
-            "dark": "#00000080"
+      "commit": {
+        "upstream": {
+          "$type": "color",
+          "$value": "{core.clr.warn.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.warn.50}",
+              "dark": "{core.clr.warn.50}"
+            }
           }
-        }
-      },
-      "toast": {
-        "$type": "color",
-        "$value": "{core.clr.gray.5}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.5}",
-            "dark": "{core.clr.gray.95}"
+        },
+        "shadow": {
+          "$type": "color",
+          "$value": "{core.clr.pop.60}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.pop.60}",
+              "dark": "{core.clr.pop.30}"
+            }
           }
-        }
-      },
-      "mute": {
-        "$type": "color",
-        "$value": "{core.clr.gray.95}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.95}",
-            "dark": "{core.clr.gray.20}"
+        },
+        "remote": {
+          "$type": "color",
+          "$value": "{core.clr.pop.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.pop.50}",
+              "dark": "{core.clr.pop.50}"
+            }
           }
-        }
-      },
-      "pop": {
-        "$type": "color",
-        "$value": "{core.clr.pop.95}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.pop.95}",
-            "dark": "{core.clr.pop.5}"
+        },
+        "local": {
+          "$type": "color",
+          "$value": "{core.clr.gray.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.gray.50}",
+              "dark": "{core.clr.gray.50}"
+            }
           }
-        }
-      },
-      "safe": {
-        "$type": "color",
-        "$value": "{core.clr.safe.95}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.safe.95}",
-            "dark": "{core.clr.safe.5}"
-          }
-        }
-      },
-      "warn": {
-        "$type": "color",
-        "$value": "{core.clr.warn.95}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.warn.95}",
-            "dark": "{core.clr.warn.5}"
-          }
-        }
-      },
-      "danger": {
-        "$type": "color",
-        "$value": "{core.clr.danger.95}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.danger.95}",
-            "dark": "{core.clr.danger.5}"
-          }
-        }
-      },
-      "purple": {
-        "$type": "color",
-        "$value": "{core.clr.purple.95}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.purple.95}",
-            "dark": "{core.clr.purple.5}"
+        },
+        "integrated": {
+          "$type": "color",
+          "$value": "{core.clr.purple.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.purple.50}",
+              "dark": "{core.clr.purple.40}"
+            }
           }
         }
       }
     },
-    "border": {
-      "1": {
-        "$type": "color",
-        "$value": "{core.clr.gray.60}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.60}",
-            "dark": "{core.clr.gray.40}"
+    "fill": {
+      "warn": {
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.warn.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.warn.50}",
+              "dark": "{core.clr.warn.40}"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{core.clr.warn.95}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.warn.95}",
+              "dark": "{core.clr.warn.90}"
+            }
           }
         }
       },
-      "2": {
-        "$type": "color",
-        "$value": "{core.clr.gray.70}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.70}",
-            "dark": "{core.clr.gray.30}"
+      "purple": {
+        "fg": {
+          "$type": "color",
+          "$value": "{core.clr.purple.95}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.purple.95}",
+              "dark": "{core.clr.purple.90}"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.purple.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.purple.50}",
+              "dark": "{core.clr.purple.50}"
+            }
           }
         }
       },
-      "3": {
-        "$type": "color",
-        "$value": "{core.clr.gray.80}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.80}",
-            "dark": "{core.clr.gray.20}"
+      "safe": {
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.safe.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.safe.50}",
+              "dark": "{core.clr.safe.40}"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{core.clr.safe.95}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.safe.95}",
+              "dark": "{core.clr.safe.90}"
+            }
+          }
+        }
+      },
+      "gray": {
+        "fg": {
+          "$type": "color",
+          "$value": "{core.clr.gray.100}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.gray.100}",
+              "dark": "{core.clr.gray.0}"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.gray.20}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.gray.20}",
+              "dark": "{core.clr.gray.80}"
+            }
+          }
+        }
+      },
+      "danger": {
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.danger.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.danger.50}",
+              "dark": "{core.clr.danger.40}"
+            }
+          }
+        },
+        "fg": {
+          "$type": "color",
+          "$value": "{core.clr.danger.95}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.danger.95}",
+              "dark": "{core.clr.danger.95}"
+            }
+          }
+        }
+      },
+      "pop": {
+        "fg": {
+          "$type": "color",
+          "$value": "{core.clr.gray.100}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.gray.100}",
+              "dark": "{core.clr.gray.100}"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.pop.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.pop.50}",
+              "dark": "{core.clr.pop.40}"
+            }
           }
         }
       }
@@ -192,58 +370,205 @@
           }
         }
       },
-      "pop": {
+      "safe": {
         "$type": "color",
-        "$value": "{core.clr.pop.10}",
+        "$value": "{core.clr.safe.40}",
         "$description": "",
         "$extensions": {
           "mode": {
-            "light": "{core.clr.pop.10}",
-            "dark": "{core.clr.pop.80}"
+            "light": "{core.clr.safe.40}",
+            "dark": "{core.clr.safe.50}"
           }
         }
       },
       "danger": {
         "$type": "color",
-        "$value": "{core.clr.danger.10}",
+        "$value": "{core.clr.danger.50}",
         "$description": "",
         "$extensions": {
           "mode": {
-            "light": "{core.clr.danger.10}",
-            "dark": "{core.clr.danger.80}"
+            "light": "{core.clr.danger.50}",
+            "dark": "{core.clr.danger.50}"
           }
         }
       },
-      "warn": {
+      "pop": {
         "$type": "color",
-        "$value": "{core.clr.warn.10}",
+        "$value": "{core.clr.pop.40}",
         "$description": "",
         "$extensions": {
           "mode": {
-            "light": "{core.clr.warn.10}",
-            "dark": "{core.clr.warn.80}"
-          }
-        }
-      },
-      "safe": {
-        "$type": "color",
-        "$value": "{core.clr.safe.10}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.safe.10}",
-            "dark": "{core.clr.safe.80}"
+            "light": "{core.clr.pop.40}",
+            "dark": "{core.clr.pop.50}"
           }
         }
       },
       "purple": {
         "$type": "color",
-        "$value": "{core.clr.purple.10}",
+        "$value": "{core.clr.purple.40}",
         "$description": "",
         "$extensions": {
           "mode": {
-            "light": "{core.clr.purple.10}",
-            "dark": "{core.clr.purple.80}"
+            "light": "{core.clr.purple.40}",
+            "dark": "{core.clr.purple.50}"
+          }
+        }
+      },
+      "warn": {
+        "$type": "color",
+        "$value": "{core.clr.warn.40}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.warn.40}",
+            "dark": "{core.clr.warn.50}"
+          }
+        }
+      }
+    },
+    "bg": {
+      "1": {
+        "$type": "color",
+        "$value": "{core.clr.gray.100}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.100}",
+            "dark": "{core.clr.gray.10}"
+          }
+        }
+      },
+      "2": {
+        "$type": "color",
+        "$value": "{core.clr.gray.90}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.90}",
+            "dark": "{core.clr.gray.5}"
+          }
+        }
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{core.clr.gray.80}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.80}",
+            "dark": "{core.clr.gray.0}"
+          }
+        }
+      },
+      "danger": {
+        "$type": "color",
+        "$value": "{core.clr.danger.95}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.danger.95}",
+            "dark": "{core.clr.danger.5}"
+          }
+        }
+      },
+      "overlay": {
+        "$type": "color",
+        "$value": "#d6d6d673",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "#d6d6d673",
+            "dark": "#00000080"
+          }
+        }
+      },
+      "pop": {
+        "$type": "color",
+        "$value": "{core.clr.pop.95}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.pop.95}",
+            "dark": "{core.clr.pop.5}"
+          }
+        }
+      },
+      "purple": {
+        "$type": "color",
+        "$value": "{core.clr.purple.95}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.purple.95}",
+            "dark": "{core.clr.purple.5}"
+          }
+        }
+      },
+      "mute": {
+        "$type": "color",
+        "$value": "{core.clr.gray.95}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.95}",
+            "dark": "{core.clr.gray.20}"
+          }
+        }
+      },
+      "safe": {
+        "$type": "color",
+        "$value": "{core.clr.safe.95}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.safe.95}",
+            "dark": "{core.clr.safe.5}"
+          }
+        }
+      },
+      "toast": {
+        "$type": "color",
+        "$value": "{core.clr.gray.5}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.5}",
+            "dark": "{core.clr.gray.95}"
+          }
+        }
+      },
+      "warn": {
+        "$type": "color",
+        "$value": "{core.clr.warn.95}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.warn.95}",
+            "dark": "{core.clr.warn.5}"
+          }
+        }
+      }
+    },
+    "focus": {
+      "ring": {
+        "$type": "color",
+        "$value": "{core.clr.pop.50}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.pop.50}",
+            "dark": "{core.clr.pop.40}"
+          }
+        }
+      },
+      "ring-mute": {
+        "$type": "color",
+        "$value": "{core.clr.gray.60}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.60}",
+            "dark": "{core.clr.gray.40}"
           }
         }
       }
@@ -259,30 +584,8 @@
         }
       }
     },
-    "focus": {
-      "fg": {
-        "$type": "color",
-        "$value": "{core.clr.pop.50}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.pop.50}",
-            "dark": "{core.clr.pop.40}"
-          }
-        }
-      },
-      "bg": {
-        "$type": "color",
-        "$value": "{core.clr.pop.90}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.pop.90}",
-            "dark": "{core.clr.pop.10}"
-          }
-        }
-      },
-      "fg-mute": {
+    "border": {
+      "1": {
         "$type": "color",
         "$value": "{core.clr.gray.60}",
         "$description": "",
@@ -293,160 +596,25 @@
           }
         }
       },
-      "bg-mute": {
+      "2": {
         "$type": "color",
-        "$value": "{core.clr.gray.90}",
+        "$value": "{core.clr.gray.70}",
         "$description": "",
         "$extensions": {
           "mode": {
-            "light": "{core.clr.gray.90}",
+            "light": "{core.clr.gray.70}",
+            "dark": "{core.clr.gray.30}"
+          }
+        }
+      },
+      "3": {
+        "$type": "color",
+        "$value": "{core.clr.gray.80}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.80}",
             "dark": "{core.clr.gray.20}"
-          }
-        }
-      }
-    },
-    "fill": {
-      "safe": {
-        "bg": {
-          "$type": "color",
-          "$value": "{core.clr.safe.50}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.safe.50}",
-              "dark": "{core.clr.safe.40}"
-            }
-          }
-        },
-        "fg": {
-          "$type": "color",
-          "$value": "{core.clr.safe.95}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.safe.95}",
-              "dark": "{core.clr.safe.90}"
-            }
-          }
-        }
-      },
-      "warn": {
-        "bg": {
-          "$type": "color",
-          "$value": "{core.clr.warn.50}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.warn.50}",
-              "dark": "{core.clr.warn.40}"
-            }
-          }
-        },
-        "fg": {
-          "$type": "color",
-          "$value": "{core.clr.warn.95}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.warn.95}",
-              "dark": "{core.clr.warn.90}"
-            }
-          }
-        }
-      },
-      "purple": {
-        "bg": {
-          "$type": "color",
-          "$value": "{core.clr.purple.50}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.purple.50}",
-              "dark": "{core.clr.purple.50}"
-            }
-          }
-        },
-        "fg": {
-          "$type": "color",
-          "$value": "{core.clr.purple.95}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.purple.95}",
-              "dark": "{core.clr.purple.90}"
-            }
-          }
-        }
-      },
-      "pop": {
-        "bg": {
-          "$type": "color",
-          "$value": "{core.clr.pop.50}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.pop.50}",
-              "dark": "{core.clr.pop.40}"
-            }
-          }
-        },
-        "fg": {
-          "$type": "color",
-          "$value": "{core.clr.gray.100}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.gray.100}",
-              "dark": "{core.clr.gray.100}"
-            }
-          }
-        }
-      },
-      "danger": {
-        "bg": {
-          "$type": "color",
-          "$value": "{core.clr.danger.50}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.danger.50}",
-              "dark": "{core.clr.danger.40}"
-            }
-          }
-        },
-        "fg": {
-          "$type": "color",
-          "$value": "{core.clr.danger.95}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.danger.95}",
-              "dark": "{core.clr.danger.95}"
-            }
-          }
-        }
-      },
-      "gray": {
-        "bg": {
-          "$type": "color",
-          "$value": "{core.clr.gray.20}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.gray.20}",
-              "dark": "{core.clr.gray.80}"
-            }
-          }
-        },
-        "fg": {
-          "$type": "color",
-          "$value": "{core.clr.gray.100}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.gray.100}",
-              "dark": "{core.clr.gray.0}"
-            }
           }
         }
       }
@@ -457,10 +625,9 @@
         "colorMode": "hex",
         "variableCollections": [
           "core",
-          "components",
           "semantic"
         ],
-        "createdAt": "2026-03-29T22:16:17.750Z"
+        "createdAt": "2026-05-05T21:29:24.973Z"
       }
     }
   }
