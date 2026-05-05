@@ -153,6 +153,10 @@
   --text-weight-semibold: 550;
   --tooltip-bg: light-dark(var(--clr-gray-95), var(--clr-gray-10));
   --tooltip-border: light-dark(var(--clr-gray-80), var(--clr-gray-30));
+  /* shadow vars */
+  --shadow-s: 0px 4px 14px 0px var(--shadow-clr);
+  --shadow-m: 0px 6px 30px 0px var(--shadow-clr);
+  --shadow-l: 0px 10px 40px 0px var(--shadow-clr);
 }
 
 :root.light {

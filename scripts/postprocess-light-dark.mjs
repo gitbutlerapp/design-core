@@ -1,8 +1,10 @@
 import { spawn } from "node:child_process";
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { generateShadowVars } from "./generate-shadow-vars.mjs";
 
 const TOKENS_CSS_PATH = resolve("tokens/tokens.css");
+
 const isWatchMode = process.argv.includes("--watch");
 
 function getBlock(css, selector) {
@@ -78,7 +80,8 @@ function buildLightDarkCss(sourceCss) {
 
 function postprocessTokens() {
 	const sourceCss = readFileSync(TOKENS_CSS_PATH, "utf8");
-	const outputCss = buildLightDarkCss(sourceCss);
+	const withLightDark = buildLightDarkCss(sourceCss);
+	const outputCss = generateShadowVars(withLightDark);
 	if (outputCss !== sourceCss) {
 		writeFileSync(TOKENS_CSS_PATH, outputCss, "utf8");
 	}
