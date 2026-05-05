@@ -10,9 +10,23 @@ npm install @gitbutler/design-core
 
 ## Usage
 
+### Single Import
+
+The easiest way to get everything — fonts, CSS reset, text utilities, and design tokens:
+
+```css
+@import "@gitbutler/design-core/core";
+```
+
+Or in JavaScript/TypeScript:
+
+```javascript
+import "@gitbutler/design-core/core";
+```
+
 ### Design Tokens (CSS)
 
-Import the design tokens CSS file:
+Import only the design tokens CSS file:
 
 ```css
 @import "@gitbutler/design-core/tokens";
@@ -28,103 +42,51 @@ This provides CSS custom properties for colors, spacing, typography, and other d
 
 ### Fonts
 
-Import all fonts:
+Import all font declarations:
 
 ```css
 @import "@gitbutler/design-core/fonts";
 ```
 
-Or import individual font families:
+Or reference individual font files directly:
 
 ```css
-@import "@gitbutler/design-core/fonts/inter/Inter-Regular.woff2";
-@import "@gitbutler/design-core/fonts/geist-mono/GeistMono-Regular.woff2";
+@import "@gitbutler/design-core/fonts/inter/Inter-Variable.woff2";
+@import "@gitbutler/design-core/fonts/geist-mono/GeistMono-Variable.woff2";
 @import "@gitbutler/design-core/fonts/but-head/But-Head-Regular.woff2";
 ```
 
-### Core Styles
+### Styles
 
-Import the core CSS styles:
-
-```css
-@import "@gitbutler/design-core/core";
-```
-
-### Style Utilities
-
-Import individual style utilities:
+Import individual style sheets:
 
 ```css
-@import "@gitbutler/design-core/styles"; /* Base styles */
-@import "@gitbutler/design-core/styles/base"; /* Base styles */
 @import "@gitbutler/design-core/styles/reset"; /* CSS reset */
 @import "@gitbutler/design-core/styles/text"; /* Text utilities */
 ```
 
-### Utility Classes
+**Text utilities** include:
 
-Import all utility classes at once:
-
-```css
-@import "@gitbutler/design-core/utility";
-```
-
-Or in JavaScript/TypeScript:
-
-```javascript
-import "@gitbutler/design-core/utility";
-```
-
-Or import individual utility class files:
-
-```css
-@import "@gitbutler/design-core/utility/general"; /* Border radius, colors, borders */
-@import "@gitbutler/design-core/utility/helpers"; /* Scrollbar helpers, stack utilities */
-@import "@gitbutler/design-core/utility/layout"; /* Spacing, positioning, flexbox, overflow, text alignment */
-```
-
-**General utilities** include:
-
-- Border radius (`.radius-s`, `.radius-m`, `.radius-ml`, `.radius-l`)
-- Background colors (`.clr-bg-1`, `.clr-bg-2`, `.clr-bg-3` and their muted variants)
-- Borders (`.clr-border-1`, `.clr-border-2`, `.clr-border-3`)
-- Text colors (`.text-1`, `.text-2`, `.text-3`)
-
-**Helper utilities** include:
-
-- Scrollbar utilities (`.hide-native-scrollbar`, `.scrollbar`)
-- Stack layouts (`.stack-v`, `.stack-h`)
-
-**Layout utilities** include:
-
-- Spacing (margin, padding, gap in 2px increments from 2px to 48px)
-- Positioning (`.relative`, `.absolute`, `.fixed`, `.sticky`, positioning utilities)
-- Size (`.full-width`, `.full-height`)
-- Flexbox (`.flex`, `.flex-col`, alignment and justify utilities, flex grow/shrink)
-- Overflow (`.overflow-hidden`, `.overflow-auto`, `.overflow-scroll`, `.overflow-visible`)
-- Text alignment (`.text-center`, `.text-left`, `.text-right`, `.text-nowrap`)
+- Size classes (`.text-10`, `.text-11`, `.text-12`, `.text-13`, `.text-14`, `.text-15`, `.text-16`, `.text-accent-head`)
+- Weight modifiers (`.text-semibold`, `.text-bold`)
+- Style modifiers (`.text-italic`, `.text-monospace`, `.text-body`, `.text-balance`, `.text-pre`)
 
 ## Available Exports
 
-- `@gitbutler/design-core/tokens` - CSS custom properties
+- `@gitbutler/design-core/core` - Single import: fonts + reset + text utilities + tokens
+- `@gitbutler/design-core/tokens` - CSS custom properties (design tokens)
 - `@gitbutler/design-core/fonts` - All font CSS declarations
 - `@gitbutler/design-core/fonts/*` - Individual font files
-- `@gitbutler/design-core/core` - Core CSS styles
-- `@gitbutler/design-core/styles` - Base style utilities
-- `@gitbutler/design-core/styles/base` - Base styles
 - `@gitbutler/design-core/styles/reset` - CSS reset
-- `@gitbutler/design-core/styles/text` - Text utilities
-- `@gitbutler/design-core/utility` - All utility classes (combined)
-- `@gitbutler/design-core/utility/general` - General utility classes (borders, colors)
-- `@gitbutler/design-core/utility/helpers` - Helper utility classes (scrollbar, stacks)
-- `@gitbutler/design-core/utility/layout` - Layout utility classes (spacing, flexbox, positioning)
+- `@gitbutler/design-core/styles/text` - Text utility classes
 
 ## Included Fonts
 
-- **Inter** - Primary UI font family
-- **Geist Mono** - Monospace font for code
-- **But Head** - Brand display font
-- **PP Editorial** - Editorial content font
+All fonts are variable fonts unless noted.
+
+- **Inter** — Primary UI font (`Inter-Variable.woff2`, `Inter-Variable-Italic.woff2`)
+- **Geist Mono** — Monospace font for code (`GeistMono-Variable.woff2`)
+- **But Head** — Brand display font (`But-Head-Regular.woff2`, `But-Head-Italic.woff2`)
 
 ## Development
 

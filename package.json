@@ -1,6 +1,6 @@
 {
 	"name": "@gitbutler/design-core",
-	"version": "2.2.2",
+	"version": "3.0.0",
 	"type": "module",
 	"description": "Design tokens for GitButler applications",
 	"keywords": [
@@ -20,25 +20,16 @@
 		"./fonts": "./fonts/fonts.css",
 		"./fonts/*": "./fonts/*",
 		"./core": "./core.css",
-		"./styles": "./styles/base.css",
-		"./styles/base": "./styles/base.css",
 		"./styles/reset": "./styles/reset.css",
-		"./styles/text": "./styles/text.css",
-		"./utility": "./utility/utility.css",
-		"./utility/general": "./utility/general.css",
-		"./utility/helpers": "./utility/helpers.css",
-		"./utility/layout": "./utility/layout.min.css"
+		"./styles/text": "./styles/text.css"
 	},
 	"scripts": {
-		"build": "npx tz build",
-		"build:tokens": "npx tz build",
-		"dev:tokens": "npx tz build --watch",
-		"prepublishOnly": "npm run build:tokens",
+		"build": "node scripts/postprocess-light-dark.mjs",
+		"dev:tokens": "node scripts/postprocess-light-dark.mjs --watch",
+		"prepublishOnly": "npm run build",
 		"format": "prettier --write \"**/*.{css,ts,js}\"",
 		"format:check": "prettier --check \"**/*.{css,ts,js}\"",
-		"dev:hue-dini": "cd tools/hue-dini && pnpm dev",
-		"dev:generator": "cd color-generator && pnpm dev",
-		"build:generator": "cd color-generator && pnpm build"
+		"dev:hue-dini": "cd tools/hue-dini && pnpm dev"
 	},
 	"devDependencies": {
 		"@terrazzo/cli": "0.10.3",
@@ -50,7 +41,6 @@
 		"tokens/",
 		"fonts/",
 		"styles/",
-		"utility/",
 		"core.css",
 		"README.md"
 	],

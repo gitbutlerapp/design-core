@@ -1,137 +1,94 @@
 :root {
-	--font-mono: var(--text-fontfamily-mono), monospace;
-	--font-default: var(--text-fontfamily-default), sans-serif;
-	--font-accent: var(--text-fontfamily-accent), serif;
+	--fontfamily-mono: var(--text-fontfamily-mono), monospace;
+	--fontfamily-base: var(--text-fontfamily-base), sans-serif;
+	--fontfamily-accent: var(--text-fontfamily-accent), serif;
 }
 
-/* text Base Classes */
-.text-9 {
-	font-weight: var(--text-weight-regular);
-	font-size: 0.563rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+@layer text {
+	/* text Base Classes */
+	.text-10 {
+		font-weight: var(--text-weight-regular);
+		font-size: 0.625rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-10 {
-	font-weight: var(--text-weight-regular);
-	font-size: 0.625rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-11 {
+		font-weight: var(--text-weight-regular);
+		font-size: 0.6875rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-11 {
-	font-weight: var(--text-weight-regular);
-	font-size: 0.6875rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-12 {
+		font-weight: var(--text-weight-regular);
+		font-size: 0.75rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-12 {
-	font-weight: var(--text-weight-regular);
-	font-size: 0.75rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-13 {
+		font-weight: var(--text-weight-regular);
+		font-size: 0.8125rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-13 {
-	font-weight: var(--text-weight-regular);
-	font-size: 0.8125rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-14 {
+		font-weight: var(--text-weight-regular);
+		font-size: 0.875rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-14 {
-	font-weight: var(--text-weight-regular);
-	font-size: 0.875rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-15 {
+		font-weight: var(--text-weight-regular);
+		font-size: 0.938rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-15 {
-	font-weight: var(--text-weight-regular);
-	font-size: 0.938rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-16 {
+		font-weight: var(--text-weight-regular);
+		font-size: 1rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-16 {
-	font-weight: var(--text-weight-regular);
-	font-size: 1rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-accent-head {
+		font-weight: var(--text-weight-bold);
+		font-size: 3.875rem;
+		line-height: var(--text-lineheight-default);
+		font-family: var(--fontfamily-base);
+	}
 
-.text-18 {
-	font-weight: var(--text-weight-regular);
-	font-size: 1.125rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	/* MODIFIERS */
+	.text-body {
+		line-height: var(--text-lineheight-body);
+	}
 
-/* text Head Classes */
-.text-head-20 {
-	font-weight: var(--text-weight-bold);
-	font-size: 1.25rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-semibold {
+		font-weight: var(--text-weight-semibold);
+	}
 
-.text-head-22 {
-	font-weight: var(--text-weight-bold);
-	font-size: 1.375rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-bold {
+		font-weight: var(--text-weight-bold);
+	}
 
-.text-head-24 {
-	font-weight: var(--text-weight-bold);
-	font-size: 1.5rem;
-	line-height: var(--text-lineheight-default);
-	font-family: var(--font-default);
-}
+	.text-monospace {
+		font-family: var(--fontfamily-mono);
+	}
 
-/* Serif Classes */
-.text-serif-42 {
-	font-weight: 400;
-	font-size: 2.625rem;
-	line-height: var(--text-lineheight-accent);
-	font-family: var(--font-accent);
-}
+	.text-balance {
+		text-wrap: balance;
+	}
 
-.text-serif-32 {
-	font-weight: 400;
-	font-size: 2rem;
-	line-height: var(--text-lineheight-accent);
-	font-family: var(--font-accent);
-}
+	.text-pre {
+		white-space: pre-wrap;
+		word-break: break-word;
+	}
 
-/* MODIFIERS */
-
-.text-body {
-	line-height: var(--text-lineheight-body);
-}
-
-.text-semibold {
-	font-weight: var(--text-weight-semibold);
-}
-
-.text-bold {
-	font-weight: var(--text-weight-bold);
-}
-
-.text-monospace {
-	font-family: var(--fontfamily-mono);
-}
-
-.text-balance {
-	text-wrap: balance;
-}
-
-.text-pre {
-	white-space: pre-wrap;
-	word-break: break-word;
-}
-
-.text-italic {
-	font-style: italic;
+	.text-italic {
+		font-style: italic;
+	}
 }
