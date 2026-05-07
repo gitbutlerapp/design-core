@@ -65,11 +65,60 @@ Import individual style sheets:
 @import "@gitbutler/design-core/styles/text"; /* Text utilities */
 ```
 
-**Text utilities** include:
+#### CSS Reset
 
-- Size classes (`.text-10`, `.text-11`, `.text-12`, `.text-13`, `.text-14`, `.text-15`, `.text-16`, `.text-accent-head`)
-- Weight modifiers (`.text-semibold`, `.text-bold`)
-- Style modifiers (`.text-italic`, `.text-monospace`, `.text-body`, `.text-balance`, `.text-pre`)
+The reset is scoped to `@layer reset` to avoid specificity conflicts with application styles. It applies the following normalizations:
+
+- **Box sizing** — `box-sizing: border-box` on all elements and pseudo-elements.
+- **Font rendering** — `-webkit-font-smoothing: antialiased`, `-moz-osx-font-smoothing: grayscale`, `text-rendering: optimizeLegibility`, and font size inflation prevention on `html`.
+- **Body defaults** — zero padding and margin, `overflow-x: hidden`, and base values for `color`, `font-family`, `font-weight`, and `line-height` pulled from design tokens.
+- **Form elements** — `input`, `textarea`, `select`, and `button` have their padding, border, and background stripped, and inherit `color` and `font` from the parent.
+- **Headings** — `h1`–`h6` have `margin-block` removed.
+- **Code & pre** — `code` and `pre` use `var(--fontfamily-mono)`.
+- **Lists & paragraphs** — `ul` and `ol` have `padding-left` and `list-style` removed; `ul`, `pre`, and `p` have `margin-block` removed.
+
+#### Text Utilities
+
+Text classes are scoped to `@layer text`. The layer also sets three font-family custom properties on `:root`:
+
+| Property              | Value                                     |
+| --------------------- | ----------------------------------------- |
+| `--fontfamily-base`   | `var(--text-fontfamily-base), sans-serif` |
+| `--fontfamily-mono`   | `var(--text-fontfamily-mono), monospace`  |
+| `--fontfamily-accent` | `var(--text-fontfamily-accent), serif`    |
+
+**Size classes** set `font-size`, `font-weight: regular`, `line-height`, and `font-family: base` as a self-contained unit:
+
+| Class               | Font size                                 |
+| ------------------- | ----------------------------------------- |
+| `.text-10`          | 10px (0.625rem)                           |
+| `.text-11`          | 11px (0.6875rem)                          |
+| `.text-12`          | 12px (0.75rem)                            |
+| `.text-13`          | 13px (0.8125rem)                          |
+| `.text-14`          | 14px (0.875rem)                           |
+| `.text-15`          | 15px (0.938rem)                           |
+| `.text-16`          | 16px (1rem)                               |
+| `.text-accent-head` | 62px (3.875rem) — display / brand heading |
+
+**Modifier classes** are designed to be composed on top of a size class:
+
+| Class             | Effect                                                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------ |
+| `.text-semibold`  | `font-weight: var(--text-weight-semibold)`                                                 |
+| `.text-bold`      | `font-weight: var(--text-weight-bold)`                                                     |
+| `.text-italic`    | `font-style: italic`                                                                       |
+| `.text-monospace` | Switches to `var(--fontfamily-mono)`                                                       |
+| `.text-body`      | Switches to the looser `var(--text-lineheight-body)` line height                           |
+| `.text-balance`   | `text-wrap: balance` — ideal for short headings                                            |
+| `.text-pre`       | `white-space: pre-wrap` + `word-break: break-word` — preserves whitespace without overflow |
+
+Example usage:
+
+```html
+<p class="text-13 text-semibold">Label</p>
+<code class="text-12 text-monospace">git commit</code>
+<h1 class="text-accent-head text-italic">GitButler</h1>
+```
 
 ## Available Exports
 
