@@ -56,7 +56,7 @@
 	}
 
 	.text-accent-head {
-		font-weight: var(--text-weight-bold);
+		font-weight: 400;
 		font-size: 3.875rem;
 		line-height: var(--text-lineheight-default);
 		font-family: var(--fontfamily-base);

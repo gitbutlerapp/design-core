@@ -24,6 +24,8 @@
 		overflow-x: hidden;
 		color: var(--text-1);
 		font-family: var(--fontfamily-base);
+		font-weight: var(--text-weight-regular);
+		line-height: var(--text-lineheight-default);
 	}
 
 	input,
