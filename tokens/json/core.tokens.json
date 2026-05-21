@@ -35,14 +35,6 @@
       }
     },
     "size": {
-      "cta": {
-        "$type": "dimension",
-        "$value": "32px",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
       "button": {
         "$type": "dimension",
         "$value": "28px",
@@ -61,7 +53,7 @@
       },
       "tag": {
         "$type": "dimension",
-        "$value": "22px",
+        "$value": "20px",
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -98,7 +90,7 @@
       "weight": {
         "bold": {
           "$type": "string",
-          "$value": "650",
+          "$value": "700",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -106,7 +98,7 @@
         },
         "regular": {
           "$type": "string",
-          "$value": "450",
+          "$value": "460",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -114,7 +106,7 @@
         },
         "semibold": {
           "$type": "string",
-          "$value": "550",
+          "$value": "600",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -706,96 +698,6 @@
         }
       }
     },
-    "opacity": {
-      "5": {
-        "$type": "string",
-        "$value": "5%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "10": {
-        "$type": "string",
-        "$value": "10%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "20": {
-        "$type": "string",
-        "$value": "20%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "30": {
-        "$type": "string",
-        "$value": "30%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "40": {
-        "$type": "string",
-        "$value": "40%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "50": {
-        "$type": "string",
-        "$value": "50%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "60": {
-        "$type": "string",
-        "$value": "60%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "70": {
-        "$type": "string",
-        "$value": "70%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "80": {
-        "$type": "string",
-        "$value": "80%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "90": {
-        "$type": "string",
-        "$value": "90%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "95": {
-        "$type": "string",
-        "$value": "95%",
-        "$description": "",
-        "$extensions": {
-          "mode": {}
-        }
-      }
-    },
     "$extensions": {
       "tokens-bruecke-meta": {
         "useDTCGKeys": true,
@@ -804,7 +706,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-05-05T21:29:24.973Z"
+        "createdAt": "2026-05-21T21:36:55.161Z"
       }
     }
   }

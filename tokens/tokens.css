@@ -4,11 +4,6 @@
 
 :root {
   color-scheme: light dark;
-  --art-scene-bg: light-dark(hsl(175 46.4% 89.0%), hsl(177 44.1% 28.0%));
-  --art-scene-fill: light-dark(hsl(60 64.7% 96.7%), hsl(79 37.8% 82.4%));
-  --art-scene-outline: light-dark(hsl(180 6.0% 29.6%), hsl(180 25.9% 10.6%));
-  --art-spot-fill: light-dark(var(--clr-gray-70), var(--clr-gray-40));
-  --art-spot-fill-pop: light-dark(var(--clr-pop-70), var(--clr-pop-30));
   --bg-1: light-dark(var(--clr-gray-100), var(--clr-gray-10));
   --bg-2: light-dark(var(--clr-gray-90), var(--clr-gray-5));
   --bg-3: light-dark(var(--clr-gray-80), var(--clr-gray-0));
@@ -97,7 +92,6 @@
   --commit-integrated: light-dark(var(--clr-purple-50), var(--clr-purple-40));
   --commit-local: var(--clr-gray-50);
   --commit-remote: var(--clr-pop-50);
-  --commit-shadow: light-dark(var(--clr-pop-60), var(--clr-pop-30));
   --commit-upstream: var(--clr-warn-50);
   --fill-danger-bg: light-dark(var(--clr-danger-50), var(--clr-danger-40));
   --fill-danger-fg: var(--clr-danger-95);
@@ -111,19 +105,6 @@
   --fill-safe-fg: light-dark(var(--clr-safe-95), var(--clr-safe-90));
   --fill-warn-bg: light-dark(var(--clr-warn-50), var(--clr-warn-40));
   --fill-warn-fg: light-dark(var(--clr-warn-95), var(--clr-warn-90));
-  --focus-ring: light-dark(var(--clr-pop-50), var(--clr-pop-40));
-  --focus-ring-mute: light-dark(var(--clr-gray-60), var(--clr-gray-40));
-  --opacity-5: 5%;
-  --opacity-10: 10%;
-  --opacity-20: 20%;
-  --opacity-30: 30%;
-  --opacity-40: 40%;
-  --opacity-50: 50%;
-  --opacity-60: 60%;
-  --opacity-70: 70%;
-  --opacity-80: 80%;
-  --opacity-90: 90%;
-  --opacity-95: 95%;
   --radius-l: 0.75rem;
   --radius-m: 0.5rem;
   --radius-ml: 0.625rem;
@@ -198,9 +179,8 @@
   --scale-warn-95: light-dark(var(--clr-warn-95), var(--clr-warn-5));
   --shadow-clr: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 0.0% / 0.5));
   --size-button: 1.75rem;
-  --size-cta: 2rem;
   --size-icon: 1rem;
-  --size-tag: 1.375rem;
+  --size-tag: 1.25rem;
   --text-1: light-dark(var(--clr-gray-5), var(--clr-gray-95));
   --text-2: light-dark(var(--clr-gray-50), var(--clr-gray-60));
   --text-3: light-dark(var(--clr-gray-60), var(--clr-gray-40));
@@ -215,9 +195,9 @@
   --text-purple: light-dark(var(--clr-purple-40), var(--clr-purple-50));
   --text-safe: light-dark(var(--clr-safe-40), var(--clr-safe-50));
   --text-warn: light-dark(var(--clr-warn-40), var(--clr-warn-50));
-  --text-weight-bold: 650;
-  --text-weight-regular: 450;
-  --text-weight-semibold: 550;
+  --text-weight-bold: 700;
+  --text-weight-regular: 460;
+  --text-weight-semibold: 600;
   --tooltip-bg: light-dark(var(--clr-gray-95), var(--clr-gray-10));
   --tooltip-border: light-dark(var(--clr-gray-80), var(--clr-gray-30));
   /* shadow vars */

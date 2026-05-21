@@ -47,67 +47,6 @@
           }
         }
       },
-      "art": {
-        "spot": {
-          "fill-pop": {
-            "$type": "color",
-            "$value": "{core.clr.pop.70}",
-            "$description": "",
-            "$extensions": {
-              "mode": {
-                "light": "{core.clr.pop.70}",
-                "dark": "{core.clr.pop.30}"
-              }
-            }
-          },
-          "fill": {
-            "$type": "color",
-            "$value": "{core.clr.gray.70}",
-            "$description": "",
-            "$extensions": {
-              "mode": {
-                "light": "{core.clr.gray.70}",
-                "dark": "{core.clr.gray.40}"
-              }
-            }
-          }
-        },
-        "scene": {
-          "bg": {
-            "$type": "color",
-            "$value": "#d6f0ee",
-            "$description": "",
-            "$extensions": {
-              "mode": {
-                "light": "#d6f0ee",
-                "dark": "#286764"
-              }
-            }
-          },
-          "outline": {
-            "$type": "color",
-            "$value": "#475050",
-            "$description": "",
-            "$extensions": {
-              "mode": {
-                "light": "#475050",
-                "dark": "#142222"
-              }
-            }
-          },
-          "fill": {
-            "$type": "color",
-            "$value": "#fcfcf1",
-            "$description": "",
-            "$extensions": {
-              "mode": {
-                "light": "#fcfcf1",
-                "dark": "#d8e3c1"
-              }
-            }
-          }
-        }
-      },
       "tooltip": {
         "bg": {
           "$type": "color",
@@ -141,17 +80,6 @@
             "mode": {
               "light": "{core.clr.warn.50}",
               "dark": "{core.clr.warn.50}"
-            }
-          }
-        },
-        "shadow": {
-          "$type": "color",
-          "$value": "{core.clr.pop.60}",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.pop.60}",
-              "dark": "{core.clr.pop.30}"
             }
           }
         },
@@ -534,30 +462,6 @@
           "mode": {
             "light": "{core.clr.warn.95}",
             "dark": "{core.clr.warn.5}"
-          }
-        }
-      }
-    },
-    "focus": {
-      "ring": {
-        "$type": "color",
-        "$value": "{core.clr.pop.50}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.pop.50}",
-            "dark": "{core.clr.pop.40}"
-          }
-        }
-      },
-      "ring-mute": {
-        "$type": "color",
-        "$value": "{core.clr.gray.60}",
-        "$description": "",
-        "$extensions": {
-          "mode": {
-            "light": "{core.clr.gray.60}",
-            "dark": "{core.clr.gray.40}"
           }
         }
       }
@@ -1378,7 +1282,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-05-06T00:07:50.195Z"
+        "createdAt": "2026-05-21T21:36:55.161Z"
       }
     }
   }
