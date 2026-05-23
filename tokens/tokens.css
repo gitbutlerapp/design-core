@@ -182,8 +182,11 @@
   --size-icon: 1rem;
   --size-tag: 1.25rem;
   --text-1: light-dark(var(--clr-gray-5), var(--clr-gray-95));
+  --text-1-invert: light-dark(var(--clr-gray-95), var(--clr-gray-5));
   --text-2: light-dark(var(--clr-gray-50), var(--clr-gray-60));
+  --text-2-invert: light-dark(var(--clr-gray-60), var(--clr-gray-50));
   --text-3: light-dark(var(--clr-gray-60), var(--clr-gray-40));
+  --text-3-invert: light-dark(var(--clr-gray-40), var(--clr-gray-60));
   --text-danger: var(--clr-danger-50);
   --text-fontfamily-accent: But Head;
   --text-fontfamily-base: Inter;
