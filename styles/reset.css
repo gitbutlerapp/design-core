@@ -47,6 +47,11 @@
 		font: inherit;
 		line-height: inherit;
 		text-align: left;
+		cursor: pointer;
+	}
+
+	a {
+		cursor: pointer;
 	}
 
 	* {
