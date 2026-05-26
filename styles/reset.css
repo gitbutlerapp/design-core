@@ -47,9 +47,10 @@
 		font: inherit;
 		line-height: inherit;
 		text-align: left;
-		cursor: pointer;
 	}
 
+	[role="button"],
+	button,
 	a {
 		cursor: pointer;
 	}
