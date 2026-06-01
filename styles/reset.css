@@ -49,8 +49,6 @@
 		text-align: left;
 	}
 
-	[role="button"],
-	button,
 	a {
 		cursor: pointer;
 	}
