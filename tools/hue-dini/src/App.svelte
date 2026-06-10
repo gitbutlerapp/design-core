@@ -42,6 +42,7 @@
 
 	let popColorInputEl = $state(null);
 	let copied = $state(false);
+	let copiedScale = $state(null);
 
 	function clamp(v, lo = 0, hi = 100) {
 		return Math.min(Math.max(Number.isFinite(v) ? v : lo, lo), hi);
@@ -230,6 +231,30 @@
 		url.searchParams.delete("lums");
 		history.replaceState({}, "", url);
 	}
+
+	async function copyScaleToClipboard(e, baseHex, label, darkenCoeff = 1) {
+		if (e.target.closest("button, input, select")) return;
+		const colorObj = {};
+		for (let si = 0; si < sortedStops.length; si++) {
+			const coeff =
+				si === sortedStops.length - 1 && darkenCoeff !== 1
+					? darkenCoeff
+					: 1;
+			colorObj[scaleLabels[si]] = {
+				$type: "color",
+				$value: hslCssToHex(
+					toRampCss(baseHex, sortedStops[si].v, coeff),
+				),
+				$description: "",
+				$extensions: { mode: {} },
+			};
+		}
+		await navigator.clipboard.writeText(
+			JSON.stringify({ [label.toLowerCase()]: colorObj }, null, 2),
+		);
+		copiedScale = label;
+		setTimeout(() => (copiedScale = null), 2000);
+	}
 </script>
 
 <main class="page">
@@ -278,7 +303,14 @@
 	</div>
 
 	<!-- Gray ramp (large) -->
-	<div class="ramp ramp-large">
+	<div
+		class="ramp ramp-large ramp-clickable"
+		title="Click to copy {colors[0].label} scale"
+		onclick={(e) => copyScaleToClipboard(e, colors[0].hex, colors[0].label)}
+	>
+		{#if copiedScale === colors[0].label}<span class="scale-copied"
+				>Copied!</span
+			>{/if}
 		{#each sortedStops as { v }, si}
 			<div
 				class="swatch"
@@ -311,7 +343,13 @@
 	</div>
 
 	<!-- Pop color ramp (smaller) -->
-	<div class="ramp ramp-pop">
+	<div
+		class="ramp ramp-pop ramp-clickable"
+		title="Click to copy pop scale"
+		onclick={(e) => copyScaleToClipboard(e, colorPresets.pop, "pop")}
+	>
+		{#if copiedScale === "pop"}<span class="scale-copied">Copied!</span
+			>{/if}
 		{#each sortedStops as { v }, si}
 			<div
 				class="swatch"
@@ -340,7 +378,22 @@
 	<!-- Extra color ramps: danger, warning, safe, purple -->
 	<div class="extra-ramps">
 		{#each ["danger", "warn", "safe", "purple", "blue"] as name}
-			<div class="ramp ramp-small">
+			{@const darkenCoeff =
+				name === "danger" || name === "warn" ? darken5Coeff : 1}
+			<div
+				class="ramp ramp-small ramp-clickable"
+				title="Click to copy {name} scale"
+				onclick={(e) =>
+					copyScaleToClipboard(
+						e,
+						colorPresets[name],
+						name,
+						darkenCoeff,
+					)}
+			>
+				{#if copiedScale === name}<span class="scale-copied"
+						>Copied!</span
+					>{/if}
 				{#each sortedStops as { v }, si}
 					{@const isDarkenTarget =
 						(name === "danger" || name === "warn") &&
@@ -474,6 +527,26 @@
 		display: flex;
 		border-radius: 20px;
 		overflow: hidden;
+		position: relative;
+	}
+
+	.ramp-clickable {
+		cursor: pointer;
+	}
+
+	.scale-copied {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		z-index: 10;
+		background: rgba(0, 0, 0, 0.65);
+		color: #fff;
+		font-size: 0.7rem;
+		font-weight: 500;
+		padding: 2px 6px;
+		border-radius: 6px;
+		pointer-events: none;
+		white-space: nowrap;
 	}
 
 	/* Large gray ramp — overflow visible so dropdown isn't clipped */
