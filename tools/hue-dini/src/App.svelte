@@ -25,6 +25,7 @@
 		warn: "#f99406",
 		safe: "#2eb87e",
 		purple: "#8a43d0",
+		blue: "#3b82f6",
 	});
 
 	const darken5Coeff = 0.8;
@@ -222,15 +223,25 @@
 		updateColorHex(colors[0].id, hex);
 		updateColorLabel(colors[0].id, name);
 	}
+
+	function resetScale() {
+		stops = [...defaultLums].slice(0, 11).sort((a, b) => b - a);
+		const url = new URL(window.location.href);
+		url.searchParams.delete("lums");
+		history.replaceState({}, "", url);
+	}
 </script>
 
 <main class="page">
 	<!-- Header -->
 	<header class="header">
 		<h1>hue-dini</h1>
-		<button class="copy-btn" onclick={copyColorsJson}
-			>{copied ? "Copied!" : "Copy output"}</button
-		>
+		<div class="header-buttons">
+			<button class="copy-btn" onclick={resetScale}>Reset</button>
+			<button class="copy-btn" onclick={copyColorsJson}
+				>{copied ? "Copied!" : "Copy output"}</button
+			>
+		</div>
 	</header>
 
 	<!-- Adjustment scale -->
@@ -328,7 +339,7 @@
 
 	<!-- Extra color ramps: danger, warning, safe, purple -->
 	<div class="extra-ramps">
-		{#each ["danger", "warn", "safe", "purple"] as name}
+		{#each ["danger", "warn", "safe", "purple", "blue"] as name}
 			<div class="ramp ramp-small">
 				{#each sortedStops as { v }, si}
 					{@const isDarkenTarget =
@@ -386,6 +397,11 @@
 
 	.copy-btn:hover {
 		opacity: 0.6;
+	}
+
+	.header-buttons {
+		display: flex;
+		gap: 16px;
 	}
 
 	/* ── Adjustment scale ── */
