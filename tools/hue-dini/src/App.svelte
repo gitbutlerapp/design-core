@@ -306,7 +306,12 @@
 	<div
 		class="ramp ramp-large ramp-clickable"
 		title="Click to copy {colors[0].label} scale"
+		role="button"
+		tabindex="0"
 		onclick={(e) => copyScaleToClipboard(e, colors[0].hex, colors[0].label)}
+		onkeydown={(e) =>
+			e.key === "Enter" &&
+			copyScaleToClipboard(e, colors[0].hex, colors[0].label)}
 	>
 		{#if copiedScale === colors[0].label}<span class="scale-copied"
 				>Copied!</span
@@ -346,7 +351,12 @@
 	<div
 		class="ramp ramp-pop ramp-clickable"
 		title="Click to copy pop scale"
+		role="button"
+		tabindex="0"
 		onclick={(e) => copyScaleToClipboard(e, colorPresets.pop, "pop")}
+		onkeydown={(e) =>
+			e.key === "Enter" &&
+			copyScaleToClipboard(e, colorPresets.pop, "pop")}
 	>
 		{#if copiedScale === "pop"}<span class="scale-copied">Copied!</span
 			>{/if}
@@ -383,7 +393,17 @@
 			<div
 				class="ramp ramp-small ramp-clickable"
 				title="Click to copy {name} scale"
+				role="button"
+				tabindex="0"
 				onclick={(e) =>
+					copyScaleToClipboard(
+						e,
+						colorPresets[name],
+						name,
+						darkenCoeff,
+					)}
+				onkeydown={(e) =>
+					e.key === "Enter" &&
 					copyScaleToClipboard(
 						e,
 						colorPresets[name],
