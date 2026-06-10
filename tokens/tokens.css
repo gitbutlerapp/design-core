@@ -19,7 +19,7 @@
   --border-3: light-dark(var(--clr-gray-80), var(--clr-gray-20));
   --change-status-addition: light-dark(var(--clr-safe-60), var(--clr-safe-30));
   --change-status-deletion: light-dark(var(--clr-danger-60), var(--clr-danger-30));
-  --change-status-modification: light-dark(var(--clr-warn-60), var(--clr-warn-30));
+  --change-status-modification: light-dark(var(--clr-blue-60), var(--clr-blue-30));
   --change-status-rename: light-dark(var(--clr-purple-60), var(--clr-purple-40));
   --clr-blue-5: hsl(217 90.9% 12.9%);
   --clr-blue-10: hsl(217 91.4% 18.2%);

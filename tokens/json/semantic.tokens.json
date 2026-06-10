@@ -26,12 +26,12 @@
         },
         "modification": {
           "$type": "color",
-          "$value": "{core.clr.warn.60}",
+          "$value": "{core.clr.blue.60}",
           "$description": "",
           "$extensions": {
             "mode": {
-              "light": "{core.clr.warn.60}",
-              "dark": "{core.clr.warn.30}"
+              "light": "{core.clr.blue.60}",
+              "dark": "{core.clr.blue.30}"
             }
           }
         },
@@ -1438,7 +1438,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-06-10T16:18:00.397Z"
+        "createdAt": "2026-06-10T16:52:39.186Z"
       }
     }
   }
