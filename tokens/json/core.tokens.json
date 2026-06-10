@@ -696,6 +696,96 @@
             "mode": {}
           }
         }
+      },
+      "blue": {
+        "5": {
+          "$type": "color",
+          "$value": "#031a3f",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "#042459",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "20": {
+          "$type": "color",
+          "$value": "#063685",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "30": {
+          "$type": "color",
+          "$value": "#084bb8",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "40": {
+          "$type": "color",
+          "$value": "#0b60eb",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "#3b82f6",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "60": {
+          "$type": "color",
+          "$value": "#84aff5",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "70": {
+          "$type": "color",
+          "$value": "#b3cdf7",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "80": {
+          "$type": "color",
+          "$value": "#dae6fa",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "90": {
+          "$type": "color",
+          "$value": "#ebf2fc",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "95": {
+          "$type": "color",
+          "$value": "#f5f8fe",
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        }
       }
     },
     "$extensions": {
@@ -706,7 +796,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-05-23T16:06:37.702Z"
+        "createdAt": "2026-06-10T16:18:00.397Z"
       }
     }
   }

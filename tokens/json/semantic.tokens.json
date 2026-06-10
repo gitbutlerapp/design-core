@@ -74,12 +74,12 @@
       "commit": {
         "upstream": {
           "$type": "color",
-          "$value": "{core.clr.warn.50}",
+          "$value": "#e1a652",
           "$description": "",
           "$extensions": {
             "mode": {
-              "light": "{core.clr.warn.50}",
-              "dark": "{core.clr.warn.50}"
+              "light": "#e1a652",
+              "dark": "#e9a03a"
             }
           }
         },
@@ -1305,6 +1305,129 @@
             }
           }
         }
+      },
+      "blue": {
+        "5": {
+          "$type": "color",
+          "$value": "{core.clr.blue.5}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.5}",
+              "dark": "{core.clr.blue.95}"
+            }
+          }
+        },
+        "10": {
+          "$type": "color",
+          "$value": "{core.clr.blue.10}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.10}",
+              "dark": "{core.clr.blue.90}"
+            }
+          }
+        },
+        "20": {
+          "$type": "color",
+          "$value": "{core.clr.blue.20}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.20}",
+              "dark": "{core.clr.blue.80}"
+            }
+          }
+        },
+        "30": {
+          "$type": "color",
+          "$value": "{core.clr.blue.30}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.30}",
+              "dark": "{core.clr.blue.70}"
+            }
+          }
+        },
+        "40": {
+          "$type": "color",
+          "$value": "{core.clr.blue.40}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.40}",
+              "dark": "{core.clr.blue.60}"
+            }
+          }
+        },
+        "50": {
+          "$type": "color",
+          "$value": "{core.clr.blue.50}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.50}",
+              "dark": "{core.clr.blue.50}"
+            }
+          }
+        },
+        "60": {
+          "$type": "color",
+          "$value": "{core.clr.blue.60}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.60}",
+              "dark": "{core.clr.blue.40}"
+            }
+          }
+        },
+        "70": {
+          "$type": "color",
+          "$value": "{core.clr.blue.70}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.70}",
+              "dark": "{core.clr.blue.30}"
+            }
+          }
+        },
+        "80": {
+          "$type": "color",
+          "$value": "{core.clr.blue.80}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.80}",
+              "dark": "{core.clr.blue.20}"
+            }
+          }
+        },
+        "90": {
+          "$type": "color",
+          "$value": "{core.clr.blue.90}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.90}",
+              "dark": "{core.clr.blue.10}"
+            }
+          }
+        },
+        "95": {
+          "$type": "color",
+          "$value": "{core.clr.blue.95}",
+          "$description": "",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.95}",
+              "dark": "{core.clr.blue.5}"
+            }
+          }
+        }
       }
     },
     "$extensions": {
@@ -1315,7 +1438,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-05-23T16:06:37.702Z"
+        "createdAt": "2026-06-10T16:18:00.397Z"
       }
     }
   }
