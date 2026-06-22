@@ -807,7 +807,7 @@
       },
       "bg-hover": {
         "$type": "string",
-        "$value": "5%",
+        "$value": "6%",
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -822,7 +822,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-06-22T20:42:22.512Z"
+        "createdAt": "2026-06-22T21:35:12.864Z"
       }
     }
   }

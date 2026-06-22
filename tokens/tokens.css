@@ -116,7 +116,7 @@
   --fill-safe-fg: light-dark(var(--clr-safe-95), var(--clr-safe-90));
   --fill-warn-bg: light-dark(var(--clr-warn-50), var(--clr-warn-40));
   --fill-warn-fg: light-dark(var(--clr-warn-95), var(--clr-warn-90));
-  --opacity-bg-hover: 5%;
+  --opacity-bg-hover: 6%;
   --opacity-bg-selected-blur: 13%;
   --opacity-disabled: 50%;
   --radius-l: 0.75rem;
