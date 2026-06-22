@@ -788,6 +788,32 @@
         }
       }
     },
+    "opacity": {
+      "disabled": {
+        "$type": "string",
+        "$value": "50%",
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "bg-selected-blur": {
+        "$type": "string",
+        "$value": "13%",
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "bg-hover": {
+        "$type": "string",
+        "$value": "5%",
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
+      }
+    },
     "$extensions": {
       "tokens-bruecke-meta": {
         "useDTCGKeys": true,
@@ -796,7 +822,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-06-10T16:52:39.186Z"
+        "createdAt": "2026-06-22T20:42:22.512Z"
       }
     }
   }
