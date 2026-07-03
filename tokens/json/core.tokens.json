@@ -32,6 +32,14 @@
         "$extensions": {
           "mode": {}
         }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": "6px",
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
       }
     },
     "size": {
@@ -89,24 +97,24 @@
       },
       "weight": {
         "bold": {
-          "$type": "string",
-          "$value": "700",
+          "$type": "fontWeight",
+          "$value": 700,
           "$description": "",
           "$extensions": {
             "mode": {}
           }
         },
         "regular": {
-          "$type": "string",
-          "$value": "460",
+          "$type": "fontWeight",
+          "$value": 460,
           "$description": "",
           "$extensions": {
             "mode": {}
           }
         },
         "semibold": {
-          "$type": "string",
-          "$value": "600",
+          "$type": "fontWeight",
+          "$value": 600,
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -799,7 +807,7 @@
       },
       "bg-selected-blur": {
         "$type": "string",
-        "$value": "13%",
+        "$value": "10%",
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -807,7 +815,7 @@
       },
       "bg-hover": {
         "$type": "string",
-        "$value": "6%",
+        "$value": "5%",
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -822,7 +830,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-06-22T21:35:12.864Z"
+        "createdAt": "2026-07-03T12:25:28.538Z"
       }
     }
   }

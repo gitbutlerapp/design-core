@@ -116,13 +116,14 @@
   --fill-safe-fg: light-dark(var(--clr-safe-95), var(--clr-safe-90));
   --fill-warn-bg: light-dark(var(--clr-warn-50), var(--clr-warn-40));
   --fill-warn-fg: light-dark(var(--clr-warn-95), var(--clr-warn-90));
-  --opacity-bg-hover: 6%;
-  --opacity-bg-selected-blur: 13%;
+  --opacity-bg-hover: 5%;
+  --opacity-bg-selected-blur: 10%;
   --opacity-disabled: 50%;
   --radius-l: 0.75rem;
   --radius-m: 0.5rem;
   --radius-ml: 0.625rem;
   --radius-s: 0.25rem;
+  --radius-sm: 0.375rem;
   --scale-blue-5: light-dark(var(--clr-blue-5), var(--clr-blue-95));
   --scale-blue-10: light-dark(var(--clr-blue-10), var(--clr-blue-90));
   --scale-blue-20: light-dark(var(--clr-blue-20), var(--clr-blue-80));
