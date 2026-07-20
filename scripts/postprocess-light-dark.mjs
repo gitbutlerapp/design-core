@@ -20,7 +20,9 @@ function parseDeclarations(block) {
 	const index = new Map();
 
 	for (const line of block.split("\n")) {
-		const match = line.match(/^\s*(--[^:]+):\s*(.+);\s*$/);
+		const match = line.match(
+			/^\s*(--[^:]+):\s*(.+?);\s*(?:\/\*.*\*\/)?\s*$/,
+		);
 		if (!match) continue;
 
 		const [, name, value] = match;

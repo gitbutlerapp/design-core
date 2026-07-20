@@ -15,13 +15,21 @@ function resolveTokenRef(ref) {
 	return `var(--${inner.replaceAll(".", "-")})`;
 }
 
+function formatDimension(dim) {
+	if (typeof dim === "string") return dim;
+	if (typeof dim === "number") return dim === 0 ? "0" : `${dim}px`;
+	const { value, unit } = dim;
+	return value === 0 ? "0" : `${value}${unit}`;
+}
+
 function buildShadowValue(layers) {
 	return layers
 		.map(({ inset, color, offsetX, offsetY, blur, spread }) => {
 			const colorValue = color.startsWith("{")
 				? resolveTokenRef(color)
 				: color;
-			const parts = [offsetX, offsetY, blur, spread, colorValue];
+			const parts = [offsetX, offsetY, blur, spread].map(formatDimension);
+			parts.push(colorValue);
 			if (inset) parts.unshift("inset");
 			return parts.join(" ");
 		})
