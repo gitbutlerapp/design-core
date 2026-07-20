@@ -1,7 +1,7 @@
 {
   "fx": {
     "shadow": {
-      "s": {
+      "sm": {
         "$type": "shadow",
         "$value": [
           {
@@ -26,7 +26,7 @@
           }
         ]
       },
-      "m": {
+      "md": {
         "$type": "shadow",
         "$value": [
           {
@@ -51,7 +51,7 @@
           }
         ]
       },
-      "l": {
+      "lg": {
         "$type": "shadow",
         "$value": [
           {
@@ -176,7 +176,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-07-20T10:30:44.022Z"
+        "createdAt": "2026-07-20T11:29:46.418Z"
       }
     }
   }

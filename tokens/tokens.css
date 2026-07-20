@@ -234,9 +234,9 @@
   --tooltip-bg: light-dark(var(--clr-gray-95), var(--clr-gray-10));
   --tooltip-border: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 100.0% / 0.12));
   /* shadow vars */
-  --shadow-s: 0 4px 14px 0 var(--shadow-clr);
-  --shadow-m: 0 6px 30px 0 var(--shadow-clr);
-  --shadow-l: 0 10px 40px 0 var(--shadow-clr);
+  --shadow-sm: 0 4px 14px 0 var(--shadow-clr);
+  --shadow-md: 0 6px 30px 0 var(--shadow-clr);
+  --shadow-lg: 0 10px 40px 0 var(--shadow-clr);
   --shadow-card: 0 2px 4px 0 #00000014, 0 0 0 1px var(--card-border);
   --shadow-tooltip: 0 4px 14px 0 var(--shadow-clr), 0 0 0 1px var(--tooltip-border);
 }
