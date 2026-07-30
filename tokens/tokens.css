@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: light dark;
+  --badge-bg-opacity: light-dark(20%, 30%);
   --bg-1: light-dark(var(--clr-gray-100), var(--clr-gray-10));
   --bg-2: light-dark(var(--clr-gray-90), var(--clr-gray-5));
   --bg-3: light-dark(var(--clr-gray-80), var(--clr-gray-0));
@@ -220,7 +221,7 @@
   --text-3: light-dark(var(--clr-gray-60), var(--clr-gray-40));
   --text-3-invert: light-dark(var(--clr-gray-40), var(--clr-gray-60));
   --text-blue: light-dark(var(--clr-blue-40), var(--clr-blue-60));
-  --text-danger: var(--clr-danger-50);
+  --text-danger: light-dark(var(--clr-danger-50), var(--clr-danger-60));
   --text-fontfamily-accent: But Head;
   --text-fontfamily-base: Inter;
   --text-fontfamily-mono: Geist Mono;
