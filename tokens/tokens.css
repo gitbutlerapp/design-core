@@ -4,7 +4,6 @@
 
 :root {
   color-scheme: light dark;
-  --badge-bg-opacity: light-dark(20%, 30%);
   --bg-1: light-dark(var(--clr-gray-100), var(--clr-gray-10));
   --bg-2: light-dark(var(--clr-gray-90), var(--clr-gray-5));
   --bg-3: light-dark(var(--clr-gray-80), var(--clr-gray-0));

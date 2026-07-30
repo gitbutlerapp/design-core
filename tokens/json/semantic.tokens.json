@@ -546,19 +546,6 @@
           }
         }
       },
-      "badge": {
-        "bg-opacity": {
-          "$type": "string",
-          "$value": "20%",
-          "$description": "",
-          "$extensions": {
-            "mode": {
-              "light": "20%",
-              "dark": "30%"
-            }
-          }
-        }
-      },
       "change-status": {
         "modification": {
           "$type": "color",
@@ -1500,7 +1487,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-07-30T14:54:57.577Z"
+        "createdAt": "2026-07-30T15:06:24.910Z"
       }
     }
   }
