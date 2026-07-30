@@ -267,6 +267,30 @@
             }
           }
         }
+      },
+      "blue": {
+        "fg": {
+          "$type": "color",
+          "$value": "{core.clr.blue.95}",
+          "$description": "Purple fill foreground. Use for icons and text on purple fills.",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.95}",
+              "dark": "{core.clr.blue.90}"
+            }
+          }
+        },
+        "bg": {
+          "$type": "color",
+          "$value": "{core.clr.blue.50}",
+          "$description": "Purple fill background. Use for small interactive elements like feature buttons and informational controls. Not for cards or large surfaces.",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.blue.50}",
+              "dark": "{core.clr.blue.50}"
+            }
+          }
+        }
       }
     },
     "text": {
@@ -388,6 +412,17 @@
           "mode": {
             "light": "{core.clr.purple.40}",
             "dark": "{core.clr.purple.50}"
+          }
+        }
+      },
+      "blue": {
+        "$type": "color",
+        "$value": "{core.clr.blue.40}",
+        "$description": "Purple accent text. Use for informational labels and feature highlights.",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.blue.40}",
+            "dark": "{core.clr.blue.50}"
           }
         }
       }
@@ -1452,7 +1487,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-07-20T12:06:14.474Z"
+        "createdAt": "2026-07-30T12:01:51.866Z"
       }
     }
   }
