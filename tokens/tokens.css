@@ -219,7 +219,7 @@
   --text-2-invert: light-dark(var(--clr-gray-60), var(--clr-gray-50));
   --text-3: light-dark(var(--clr-gray-60), var(--clr-gray-40));
   --text-3-invert: light-dark(var(--clr-gray-40), var(--clr-gray-60));
-  --text-blue: light-dark(var(--clr-blue-40), var(--clr-blue-50));
+  --text-blue: light-dark(var(--clr-blue-40), var(--clr-blue-60));
   --text-danger: var(--clr-danger-50);
   --text-fontfamily-accent: But Head;
   --text-fontfamily-base: Inter;
@@ -228,7 +228,7 @@
   --text-lineheight-body: 160%;
   --text-lineheight-default: 120%;
   --text-pop: light-dark(var(--clr-pop-40), var(--clr-pop-50));
-  --text-purple: light-dark(var(--clr-purple-40), var(--clr-purple-50));
+  --text-purple: light-dark(var(--clr-purple-40), var(--clr-purple-60));
   --text-safe: light-dark(var(--clr-safe-40), var(--clr-safe-50));
   --text-warn: light-dark(var(--clr-warn-40), var(--clr-warn-50));
   --text-weight-bold: 700;

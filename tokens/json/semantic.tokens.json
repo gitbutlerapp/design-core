@@ -411,7 +411,7 @@
         "$extensions": {
           "mode": {
             "light": "{core.clr.purple.40}",
-            "dark": "{core.clr.purple.50}"
+            "dark": "{core.clr.purple.60}"
           }
         }
       },
@@ -422,7 +422,7 @@
         "$extensions": {
           "mode": {
             "light": "{core.clr.blue.40}",
-            "dark": "{core.clr.blue.50}"
+            "dark": "{core.clr.blue.60}"
           }
         }
       }
@@ -1487,7 +1487,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-07-30T12:01:51.866Z"
+        "createdAt": "2026-07-30T13:39:43.559Z"
       }
     }
   }
