@@ -554,7 +554,7 @@
           "$extensions": {
             "mode": {
               "light": "{core.clr.blue.60}",
-              "dark": "{core.clr.blue.30}"
+              "dark": "{core.clr.blue.40}"
             }
           }
         },
@@ -576,7 +576,7 @@
           "$extensions": {
             "mode": {
               "light": "{core.clr.danger.60}",
-              "dark": "{core.clr.danger.30}"
+              "dark": "{core.clr.danger.40}"
             }
           }
         },
@@ -587,7 +587,7 @@
           "$extensions": {
             "mode": {
               "light": "{core.clr.purple.60}",
-              "dark": "{core.clr.purple.40}"
+              "dark": "{core.clr.purple.50}"
             }
           }
         }
@@ -1487,7 +1487,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-07-30T15:06:24.910Z"
+        "createdAt": "2026-08-06T14:34:32.918Z"
       }
     }
   }
