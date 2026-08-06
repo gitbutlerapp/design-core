@@ -866,7 +866,7 @@
       },
       "bg-selected-blur": {
         "$type": "string",
-        "$value": "14%",
+        "$value": "12%",
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -882,7 +882,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-06T19:59:33.620Z"
+        "createdAt": "2026-08-06T20:04:36.799Z"
       }
     }
   }
