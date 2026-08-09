@@ -6,6 +6,8 @@ GitButler's color system uses a single shared luminance scale across all hues �
 
 hue-dini is the tool for previewing and exporting this palette. The draggable stops represent the luminance scale — mainly for inspection, with adjustments only needed for occasional corrections. **Copy output** exports the palette as a JSON token file for the design token pipeline.
 
+The tool's own UI is styled with the tokens it exports — `src/app.css` imports `tokens/tokens.css` and `fonts/fonts.css` straight from the working tree, so it always reflects the current tokens rather than a published package version. It follows the system light/dark preference; pin it by putting `class="light"` on `<html>` in `index.html`.
+
 ## Run locally
 
 ```bash

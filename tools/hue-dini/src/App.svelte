@@ -210,16 +210,6 @@
 
 	const centerIdx = $derived(Math.floor(sortedStops.length / 2));
 
-	$effect(() => {
-		const root = document.documentElement;
-		sortedStops.forEach(({ v }, si) => {
-			root.style.setProperty(
-				`--gray-${scaleLabels[si]}`,
-				toRampCss(colors[0].hex, v),
-			);
-		});
-	});
-
 	function selectGrayPreset(name, hex) {
 		updateColorHex(colors[0].id, hex);
 		updateColorLabel(colors[0].id, name);
@@ -453,7 +443,7 @@
 	h1 {
 		margin: 0;
 		font-size: 1.4rem;
-		font-weight: 600;
+		font-weight: var(--text-weight-semibold);
 		letter-spacing: -0.02em;
 	}
 
@@ -477,12 +467,18 @@
 		gap: 16px;
 	}
 
-	/* ── Adjustment scale ── */
+	/* ── Adjustment scale ──
+	 * The track and its dots sit on an absolute luminance axis (100 → 0),
+	 * so they use the unmapped --clr-* tokens rather than theme-flipping ones. */
 	.scale-track {
 		position: relative;
 		height: 80px;
 		border-radius: 20px;
-		background: linear-gradient(to right, #ffffff, #000000);
+		background: linear-gradient(
+			to right,
+			var(--clr-gray-100),
+			var(--clr-gray-0)
+		);
 	}
 
 	.dot {
@@ -492,8 +488,8 @@
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
-		background: white;
-		border: 1px solid rgba(0, 0, 0, 1);
+		background: var(--clr-gray-100);
+		border: 1px solid var(--clr-gray-0);
 		cursor: grab;
 		padding: 0;
 		z-index: 1;
@@ -504,15 +500,13 @@
 	}
 
 	.dot:hover {
-		box-shadow:
-			0 2px 6px rgba(0, 0, 0, 0.22),
-			0 4px 14px rgba(0, 0, 0, 0.15);
+		box-shadow: var(--shadow-sm);
 	}
 
 	.dot.dragging {
 		cursor: grabbing;
 		transform: translate(-50%, -50%) scale(1.15);
-		box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+		box-shadow: var(--shadow-md);
 		z-index: 2;
 	}
 
@@ -559,12 +553,14 @@
 		bottom: 10px;
 		right: 10px;
 		z-index: 10;
-		background: rgba(0, 0, 0, 0.65);
-		color: #fff;
+		/* Lands on top of an arbitrary swatch, so it stays absolute
+		 * rather than following the theme. */
+		background: color-mix(in srgb, var(--clr-gray-0) 65%, transparent);
+		color: var(--clr-gray-100);
 		font-size: 0.7rem;
-		font-weight: 500;
+		font-weight: var(--text-weight-semibold);
 		padding: 2px 6px;
-		border-radius: 6px;
+		border-radius: var(--radius-md);
 		pointer-events: none;
 		white-space: nowrap;
 	}
@@ -607,7 +603,8 @@
 		width: 28px;
 		height: 28px;
 		background: transparent;
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
+		border: 1.5px solid
+			color-mix(in srgb, var(--clr-gray-100) 60%, transparent);
 		cursor: pointer;
 		padding: 0;
 		transition:
@@ -617,7 +614,7 @@
 
 	.swatch-sq:hover,
 	.swatch-sq-wrap:hover .swatch-sq {
-		border-color: rgba(255, 255, 255, 0.95);
+		border-color: color-mix(in srgb, var(--clr-gray-100) 95%, transparent);
 	}
 
 	.swatch-native-select {

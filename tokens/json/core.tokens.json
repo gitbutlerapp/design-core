@@ -28,7 +28,7 @@
         },
         "20": {
           "$type": "color",
-          "$value": "#3e3e3e",
+          "$value": "#434343",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -68,7 +68,7 @@
         },
         "70": {
           "$type": "color",
-          "$value": "#cfcfcf",
+          "$value": "#cccccc",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -76,7 +76,7 @@
         },
         "80": {
           "$type": "color",
-          "$value": "#e1e1e0",
+          "$value": "#dddddc",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -882,7 +882,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-09T20:10:47.375Z"
+        "createdAt": "2026-08-09T21:39:49.994Z"
       }
     }
   }

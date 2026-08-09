@@ -5,6 +5,10 @@ on:
         branches: [main]
         paths:
             - "tools/hue-dini/**"
+            # hue-dini is styled with the tokens it exports, so a token
+            # or font change also needs to redeploy it.
+            - "tokens/tokens.css"
+            - "fonts/**"
 
 permissions:
     contents: read

@@ -1,10 +1,15 @@
+/* Design tokens — the same source hue-dini exports into.
+ * Relative import so the tool always reflects the working tree,
+ * not a published @gitbutler/design-core version. */
+@import "../../../fonts/fonts.css";
+@import "../../../tokens/tokens.css";
+
 :root {
-	font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, monospace;
-	line-height: 1.5;
-	font-weight: 400;
-	color-scheme: light;
-	color: var(--gray-10, #1a1714);
-	background: var(--gray-80, #e9e5df);
+	font-family: var(--text-fontfamily-mono), ui-monospace, Menlo, monospace;
+	line-height: var(--text-lineheight-default);
+	font-weight: var(--text-weight-regular);
+	color: var(--text-1);
+	background: var(--bg-2);
 }
 
 * {

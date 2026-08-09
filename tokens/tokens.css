@@ -18,7 +18,7 @@
   --border-2: light-dark(var(--clr-gray-70), var(--clr-gray-30));
   --border-3: light-dark(var(--clr-gray-80), var(--clr-gray-20));
   --border-section: light-dark(var(--clr-gray-80), var(--clr-gray-20));
-  --card-border: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 100.0% / 0.2));
+  --card-border: light-dark(hsl(0 0.0% 0.0% / 0.07), hsl(0 0.0% 100.0% / 0.2));
   --change-status-addition: light-dark(var(--clr-safe-60), var(--clr-safe-30));
   --change-status-deletion: light-dark(var(--clr-danger-60), var(--clr-danger-40));
   --change-status-modification: light-dark(var(--clr-blue-60), var(--clr-blue-40));
@@ -48,13 +48,13 @@
   --clr-gray-0: hsl(0 0.0% 0.0%);
   --clr-gray-5: hsl(0 0.0% 11.8%);
   --clr-gray-10: hsl(0 0.0% 16.1%);
-  --clr-gray-20: hsl(0 0.0% 24.3%);
+  --clr-gray-20: hsl(0 0.0% 26.3%);
   --clr-gray-30: hsl(0 0.0% 33.7%);
   --clr-gray-40: hsl(0 0.0% 42.7%);
   --clr-gray-50: hsl(0 0.0% 53.3%);
   --clr-gray-60: hsl(0 0.0% 69.8%);
-  --clr-gray-70: hsl(0 0.0% 81.2%);
-  --clr-gray-80: hsl(60 1.6% 88.0%);
+  --clr-gray-70: hsl(0 0.0% 80.0%);
+  --clr-gray-80: hsl(60 1.4% 86.5%);
   --clr-gray-90: hsl(0 0.0% 94.9%);
   --clr-gray-95: hsl(0 0.0% 97.3%);
   --clr-gray-100: hsl(0 0.0% 100.0%);
@@ -241,7 +241,7 @@
   --shadow-sm: 0 4px 14px 0 var(--shadow-clr);
   --shadow-md: 0 6px 30px 0 var(--shadow-clr);
   --shadow-lg: 0 10px 40px 0 var(--shadow-clr);
-  --shadow-card: 0 2px 4px 0 #00000014, 0 0 0 1px var(--card-border);
+  --shadow-card: 0 2px 4px 0 #0000001a, 0 0 0 1px var(--card-border);
   --shadow-tooltip: 0 4px 14px 0 var(--shadow-clr), 0 0 0 1px var(--tooltip-border);
 }
 

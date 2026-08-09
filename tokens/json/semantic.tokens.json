@@ -477,11 +477,11 @@
       "card": {
         "border": {
           "$type": "color",
-          "$value": "#0000001a",
+          "$value": "#00000012",
           "$description": "",
           "$extensions": {
             "mode": {
-              "light": "#0000001a",
+              "light": "#00000012",
               "dark": "#ffffff33"
             }
           }
@@ -1498,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-09T20:10:47.375Z"
+        "createdAt": "2026-08-09T21:39:49.994Z"
       }
     }
   }

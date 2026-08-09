@@ -81,7 +81,7 @@
         "$value": [
           {
             "inset": false,
-            "color": "#00000014",
+            "color": "#0000001a",
             "offsetX": {
               "value": 0,
               "unit": "px"
@@ -176,7 +176,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-09T20:10:47.375Z"
+        "createdAt": "2026-08-09T21:39:49.994Z"
       }
     }
   }
