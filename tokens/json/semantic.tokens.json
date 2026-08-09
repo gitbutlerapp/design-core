@@ -460,18 +460,29 @@
             "dark": "{core.clr.gray.20}"
           }
         }
+      },
+      "section": {
+        "$type": "color",
+        "$value": "{core.clr.gray.80}",
+        "$description": "",
+        "$extensions": {
+          "mode": {
+            "light": "{core.clr.gray.80}",
+            "dark": "{core.clr.gray.20}"
+          }
+        }
       }
     },
     "component": {
       "card": {
         "border": {
           "$type": "color",
-          "$value": "#0000000d",
+          "$value": "#0000001a",
           "$description": "",
           "$extensions": {
             "mode": {
-              "light": "#0000000d",
-              "dark": "#ffffff24"
+              "light": "#0000001a",
+              "dark": "#ffffff33"
             }
           }
         }
@@ -1487,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-06T19:59:33.620Z"
+        "createdAt": "2026-08-09T20:10:47.375Z"
       }
     }
   }

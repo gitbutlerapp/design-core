@@ -76,7 +76,7 @@
         },
         "80": {
           "$type": "color",
-          "$value": "#e7e7e7",
+          "$value": "#e1e1e0",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -882,7 +882,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-06T20:04:36.799Z"
+        "createdAt": "2026-08-09T20:10:47.375Z"
       }
     }
   }

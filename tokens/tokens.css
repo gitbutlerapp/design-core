@@ -17,7 +17,8 @@
   --border-1: light-dark(var(--clr-gray-60), var(--clr-gray-40));
   --border-2: light-dark(var(--clr-gray-70), var(--clr-gray-30));
   --border-3: light-dark(var(--clr-gray-80), var(--clr-gray-20));
-  --card-border: light-dark(hsl(0 0.0% 0.0% / 0.05), hsl(0 0.0% 100.0% / 0.14));
+  --border-section: light-dark(var(--clr-gray-80), var(--clr-gray-20));
+  --card-border: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 100.0% / 0.2));
   --change-status-addition: light-dark(var(--clr-safe-60), var(--clr-safe-30));
   --change-status-deletion: light-dark(var(--clr-danger-60), var(--clr-danger-40));
   --change-status-modification: light-dark(var(--clr-blue-60), var(--clr-blue-40));
@@ -53,7 +54,7 @@
   --clr-gray-50: hsl(0 0.0% 53.3%);
   --clr-gray-60: hsl(0 0.0% 69.8%);
   --clr-gray-70: hsl(0 0.0% 81.2%);
-  --clr-gray-80: hsl(0 0.0% 90.6%);
+  --clr-gray-80: hsl(60 1.6% 88.0%);
   --clr-gray-90: hsl(0 0.0% 94.9%);
   --clr-gray-95: hsl(0 0.0% 97.3%);
   --clr-gray-100: hsl(0 0.0% 100.0%);
