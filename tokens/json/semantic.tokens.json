@@ -543,6 +543,17 @@
             }
           }
         },
+        "upstream-line": {
+          "$type": "color",
+          "$value": "#f1cf9f",
+          "$description": "Upstream commit indicator color.",
+          "$extensions": {
+            "mode": {
+              "light": "#f1cf9f",
+              "dark": "#966116"
+            }
+          }
+        },
         "integrated": {
           "$type": "color",
           "$value": "{core.clr.purple.50}",
@@ -1531,7 +1542,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-17T22:27:34.621Z"
+        "createdAt": "2026-08-17T22:45:11.155Z"
       }
     }
   }
