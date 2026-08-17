@@ -127,12 +127,12 @@
       "gray": {
         "bg": {
           "$type": "color",
-          "$value": "{core.clr.gray.20}",
+          "$value": "{core.clr.gray.10}",
           "$description": "Neutral fill background. Use for small interactive elements like buttons, badges, and tags. Not for cards or large surfaces.",
           "$extensions": {
             "mode": {
-              "light": "{core.clr.gray.20}",
-              "dark": "{core.clr.gray.80}"
+              "light": "{core.clr.gray.10}",
+              "dark": "{core.clr.gray.90}"
             }
           }
         },
@@ -464,7 +464,7 @@
       "section": {
         "$type": "color",
         "$value": "{core.clr.gray.80}",
-        "$description": "",
+        "$description": "Border color for section dividers and content area boundaries. Use to visually separate major sections or groups of related content.",
         "$extensions": {
           "mode": {
             "light": "{core.clr.gray.80}",
@@ -499,6 +499,17 @@
             }
           }
         },
+        "local-line": {
+          "$type": "color",
+          "$value": "{core.clr.gray.70}",
+          "$description": "Local commit indicator color.",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.gray.70}",
+              "dark": "{core.clr.gray.30}"
+            }
+          }
+        },
         "remote": {
           "$type": "color",
           "$value": "{core.clr.pop.50}",
@@ -507,6 +518,17 @@
             "mode": {
               "light": "{core.clr.pop.50}",
               "dark": "{core.clr.pop.50}"
+            }
+          }
+        },
+        "remote-line": {
+          "$type": "color",
+          "$value": "{core.clr.pop.70}",
+          "$description": "Remote commit indicator color.",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.pop.70}",
+              "dark": "{core.clr.pop.30}"
             }
           }
         },
@@ -529,6 +551,17 @@
             "mode": {
               "light": "{core.clr.purple.50}",
               "dark": "{core.clr.purple.50}"
+            }
+          }
+        },
+        "integrated-line": {
+          "$type": "color",
+          "$value": "{core.clr.purple.70}",
+          "$description": "Integrated commit indicator color.",
+          "$extensions": {
+            "mode": {
+              "light": "{core.clr.purple.70}",
+              "dark": "{core.clr.purple.40}"
             }
           }
         }
@@ -1498,7 +1531,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-11T09:40:14.633Z"
+        "createdAt": "2026-08-17T22:27:34.621Z"
       }
     }
   }
