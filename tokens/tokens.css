@@ -109,6 +109,7 @@
   --commit-remote: var(--clr-pop-50);
   --commit-remote-line: light-dark(var(--clr-pop-70), var(--clr-pop-30));
   --commit-upstream: light-dark(hsl(35 70.4% 60.2%), hsl(35 79.9% 57.1%));
+  --commit-upstream-line: light-dark(hsl(35 74.5% 78.4%), hsl(35 74.4% 33.7%));
   --fill-blue-bg: var(--clr-blue-50);
   --fill-blue-fg: light-dark(var(--clr-blue-95), var(--clr-blue-90));
   --fill-danger-bg: light-dark(var(--clr-danger-50), var(--clr-danger-40));
