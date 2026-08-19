@@ -499,17 +499,6 @@
             }
           }
         },
-        "local-line": {
-          "$type": "color",
-          "$value": "{core.clr.gray.70}",
-          "$description": "Local commit indicator color.",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.gray.70}",
-              "dark": "{core.clr.gray.30}"
-            }
-          }
-        },
         "remote": {
           "$type": "color",
           "$value": "{core.clr.pop.50}",
@@ -518,17 +507,6 @@
             "mode": {
               "light": "{core.clr.pop.50}",
               "dark": "{core.clr.pop.50}"
-            }
-          }
-        },
-        "remote-line": {
-          "$type": "color",
-          "$value": "{core.clr.pop.70}",
-          "$description": "Remote commit indicator color.",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.pop.70}",
-              "dark": "{core.clr.pop.30}"
             }
           }
         },
@@ -543,17 +521,6 @@
             }
           }
         },
-        "upstream-line": {
-          "$type": "color",
-          "$value": "#f1cf9f",
-          "$description": "Upstream commit indicator color.",
-          "$extensions": {
-            "mode": {
-              "light": "#f1cf9f",
-              "dark": "#966116"
-            }
-          }
-        },
         "integrated": {
           "$type": "color",
           "$value": "{core.clr.purple.50}",
@@ -562,17 +529,6 @@
             "mode": {
               "light": "{core.clr.purple.50}",
               "dark": "{core.clr.purple.50}"
-            }
-          }
-        },
-        "integrated-line": {
-          "$type": "color",
-          "$value": "{core.clr.purple.70}",
-          "$description": "Integrated commit indicator color.",
-          "$extensions": {
-            "mode": {
-              "light": "{core.clr.purple.70}",
-              "dark": "{core.clr.purple.40}"
             }
           }
         }
@@ -1542,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-17T22:45:11.155Z"
+        "createdAt": "2026-08-19T20:01:58.957Z"
       }
     }
   }
