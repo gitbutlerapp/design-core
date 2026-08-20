@@ -26,6 +26,7 @@
 	"scripts": {
 		"build": "node scripts/postprocess-light-dark.mjs",
 		"prepublishOnly": "npm run build",
+		"dev:tokens": "node scripts/postprocess-light-dark.mjs --watch",
 		"format": "prettier --write \"**/*.{css,ts,js}\"",
 		"format:check": "prettier --check \"**/*.{css,ts,js}\"",
 		"dev:hue-dini": "cd tools/hue-dini && pnpm dev"
