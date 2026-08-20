@@ -127,11 +127,11 @@
       "gray": {
         "bg": {
           "$type": "color",
-          "$value": "{core.clr.gray.10}",
+          "$value": "{core.clr.gray.20}",
           "$description": "Neutral fill background. Use for small interactive elements like buttons, badges, and tags. Not for cards or large surfaces.",
           "$extensions": {
             "mode": {
-              "light": "{core.clr.gray.10}",
+              "light": "{core.clr.gray.20}",
               "dark": "{core.clr.gray.90}"
             }
           }
@@ -1498,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-19T20:01:58.957Z"
+        "createdAt": "2026-08-20T21:54:25.238Z"
       }
     }
   }

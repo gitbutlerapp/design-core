@@ -110,7 +110,7 @@
   --fill-blue-fg: light-dark(var(--clr-blue-95), var(--clr-blue-90));
   --fill-danger-bg: light-dark(var(--clr-danger-50), var(--clr-danger-40));
   --fill-danger-fg: var(--clr-danger-95);
-  --fill-gray-bg: light-dark(var(--clr-gray-10), var(--clr-gray-90));
+  --fill-gray-bg: light-dark(var(--clr-gray-20), var(--clr-gray-90));
   --fill-gray-fg: light-dark(var(--clr-gray-100), var(--clr-gray-0));
   --fill-pop-bg: light-dark(var(--clr-pop-50), var(--clr-pop-40));
   --fill-pop-fg: var(--clr-gray-100);
