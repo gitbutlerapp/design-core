@@ -1,0 +1,91 @@
+name: Release
+
+# Publishes @gitbutler/design-core to npm whenever the version in package.json
+# changes on main. Auth is npm trusted publishing (OIDC) — no token, no 2FA code.
+# Registered on npmjs.com as: gitbutlerapp/design-core -> release.yml
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - package.json
+  workflow_dispatch:
+
+permissions:
+  contents: write # push the version tag + create the release
+  id-token: write # required for npm trusted publishing
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      # Trusted publishing needs npm >= 11.5.1; Node 22 still ships npm 10.
+      - name: Update npm
+        run: npm install -g npm@latest
+
+      - name: Read version
+        id: version
+        run: echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Skip if already published
+        id: check
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          if npm view "@gitbutler/design-core@$VERSION" version >/dev/null 2>&1; then
+            echo "$VERSION is already on npm — nothing to do."
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install dependencies
+        if: steps.check.outputs.publish == 'true'
+        run: pnpm install --frozen-lockfile
+
+      # prepublishOnly also runs this, but building here fails the job early
+      # and lets us verify the committed CSS matches the committed JSON.
+      - name: Build tokens
+        if: steps.check.outputs.publish == 'true'
+        run: pnpm run build
+
+      - name: Verify generated CSS is committed
+        if: steps.check.outputs.publish == 'true'
+        run: |
+          if ! git diff --quiet -- tokens/tokens.css; then
+            echo "::error::tokens/tokens.css is out of date — run 'pnpm run build' and commit the result."
+            git diff -- tokens/tokens.css
+            exit 1
+          fi
+
+      # Publishing stays on the npm CLI even though deps come from pnpm:
+      # trusted publishing (OIDC) is an npm CLI feature. --ignore-scripts skips
+      # prepublishOnly, since the build already ran and was verified above.
+      - name: Publish to npm
+        if: steps.check.outputs.publish == 'true'
+        run: npm publish --ignore-scripts
+
+      - name: Tag and release
+        if: steps.check.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$VERSION" -m "$VERSION"
+          git push origin "$VERSION"
+          gh release create "$VERSION" --title "$VERSION" --generate-notes
