@@ -29,6 +29,13 @@ version is already bumped and tagged.
 
 ## 1. Export tokens from Figma
 
+Two routes into the same pipeline — pick whichever fits the current setup.
+Both produce the same three files in `tokens/json/`: `core.tokens.json`,
+`semantic.tokens.json`, `fx.tokens.json`. Continue from step 2 regardless of
+which option was used.
+
+### Option A: tokens-bruecke CLI (needs Enterprise plan + PAT)
+
 Credentials live in `.env` (gitignored): `FIGMA_API_KEY`, `FIGMA_FILE_KEY`.
 The exporter is the tokens-bruecke CLI at `/Users/pavellaptev/Documents/GitHub/figma-plugin/bin/cli.js`
 (same tool as the Figma plugin; `npx tokens-bruecke` also works).
@@ -57,8 +64,6 @@ tokens were generated with — DTCG 2025.10, hex colors, no scopes, no Figma met
 effect styles exported as the `fx` collection. Do not change it casually: a config change
 rewrites every token file and produces a huge, unreviewable diff.
 
-Expected output: `tokens/json/core.tokens.json`, `semantic.tokens.json`, `fx.tokens.json`.
-
 **Failure modes** (both surface as HTTP 403):
 
 | Message | Meaning | Fix |
@@ -67,6 +72,29 @@ Expected output: `tokens/json/core.tokens.json`, `semantic.tokens.json`, `fx.tok
 | `Invalid scope(s): … requires the file_variables:read scope` | PAT missing the variables scope | Regenerate **with `file_variables:read` checked** — only offered on Enterprise plans |
 
 Both need the user. Stop and ask; never work around by hand-editing token JSON.
+
+### Option B: Figma agent's /export-tokens (any plan, no PAT)
+
+If there is no Enterprise plan, the PAT has expired, or you are running inside
+the Figma agent, variables can be extracted through the Plugin API instead —
+no personal access token and no REST API required.
+
+1. Open the design tokens file in Figma.
+2. Run `/export-tokens` in the Figma agent chat.
+3. On first run the skill asks about color format, style inclusion, and output
+   layout. To match the committed tokens, choose: **hex**, **everything**
+   (text, colors, effects, grids), **one file per collection**. These map to
+   the same settings as `figma-export.config.json`.
+4. The skill extracts a Plugin API snapshot and pipes it through
+   `tokens-bruecke --input` in snapshot mode (requires tokens-bruecke ≥ 3.6.0).
+5. Copy the exported `core.tokens.json`, `semantic.tokens.json`, and
+   `fx.tokens.json` into `tokens/json/` in this repo.
+
+The snapshot path bypasses the Variables REST API entirely, so it works on
+any Figma plan. The output is byte-for-byte compatible with Option A — same
+DTCG shape, same collection split.
+
+Continue from step 2.
 
 ## 2. Detect whether anything actually changed
 
