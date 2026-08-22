@@ -761,6 +761,19 @@
         "$extensions": {
           "mode": {}
         }
+      },
+      "layout": {
+        "button-row": {
+          "$type": "dimension",
+          "$value": {
+            "value": 6,
+            "unit": "px"
+          },
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        }
       }
     },
     "radius": {
@@ -882,7 +895,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-20T21:54:25.238Z"
+        "createdAt": "2026-08-22T22:19:29.137Z"
       }
     }
   }
