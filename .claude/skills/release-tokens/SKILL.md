@@ -1,13 +1,14 @@
 ---
 name: release-tokens
-description: Rebuild @gitbutler/design-core design tokens from Figma, version them, and prepare the npm release for the user to publish. Use when asked to rebuild/sync/pull tokens from Figma, regenerate tokens.css, bump the design-core version, cut a release, or publish the package. Covers the pipeline — tokens-bruecke export → terrazzo build → semver bump → commit → tag — then stops and hands the user a copy-paste publish command (npm 2FA blocks unattended publishing).
+description: Rebuild @gitbutler/design-core design tokens from Figma, version them, and release them. Use when asked to rebuild/sync/pull tokens from Figma, regenerate tokens.css, bump the design-core version, cut a release, or publish the package. The normal path is a PR: CI builds tokens.css, picks the semver bump from the CSS variable diff, and publishes to npm on merge via trusted publishing. Also covers the manual fallback — tokens-bruecke export → terrazzo build → semver bump → commit → tag → npm publish.
 ---
 
 # Release design tokens
 
 Pipeline: **export from Figma → build CSS → review → version → commit → tag → hand off**.
 
-The agent prepares the entire release. The user runs exactly one command: `npm publish`.
+Normally CI does all of this — see **5b. The automated path** below, and prefer it. The manual steps
+remain for when CI is unavailable.
 
 Run every command from the repo root (`design-core/`). Do not skip the review step — once
 the user publishes it cannot be undone (unpublish is only allowed within 72h and burns the

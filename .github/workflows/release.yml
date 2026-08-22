@@ -27,10 +27,12 @@ jobs:
         with:
           version: latest
 
+      # No `cache: pnpm` here on purpose: when the version is already published
+      # the install step is skipped, and the post-job cache save then fails on a
+      # missing path — reporting a red X for a run that did the right thing.
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: pnpm
           registry-url: https://registry.npmjs.org
 
       # Trusted publishing needs npm >= 11.5.1; Node 22 still ships npm 10.
@@ -41,15 +43,25 @@ jobs:
         id: version
         run: echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
 
-      - name: Skip if already published
+      # Publishing and tagging are checked separately: if a run publishes but
+      # then fails to tag, re-running it must still create the missing tag.
+      - name: What is left to do
         id: check
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
         run: |
-          VERSION="${{ steps.version.outputs.version }}"
           if npm view "@gitbutler/design-core@$VERSION" version >/dev/null 2>&1; then
-            echo "$VERSION is already on npm — nothing to do."
+            echo "$VERSION is already on npm."
             echo "publish=false" >> "$GITHUB_OUTPUT"
           else
             echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+          if git rev-parse -q --verify "refs/tags/$VERSION" >/dev/null; then
+            echo "$VERSION is already tagged."
+            echo "tag=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Install dependencies
@@ -75,11 +87,14 @@ jobs:
       # trusted publishing (OIDC) is an npm CLI feature. --ignore-scripts skips
       # prepublishOnly, since the build already ran and was verified above.
       - name: Publish to npm
+        id: publish
         if: steps.check.outputs.publish == 'true'
         run: npm publish --ignore-scripts
 
+      # Runs whenever the tag is missing and the version is on npm — either just
+      # published above, or published by an earlier run that failed to tag.
       - name: Tag and release
-        if: steps.check.outputs.publish == 'true'
+        if: steps.check.outputs.tag == 'true' && (steps.publish.outcome == 'success' || steps.check.outputs.publish == 'false')
         env:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.version.outputs.version }}
