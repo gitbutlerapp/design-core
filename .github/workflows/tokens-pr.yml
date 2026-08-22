@@ -30,16 +30,21 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
       - name: Rebuild tokens.css
         run: |
           cp tokens/tokens.css /tmp/tokens-before.css
-          npm run build
+          pnpm run build
 
       - name: Diff CSS custom properties
         id: diff

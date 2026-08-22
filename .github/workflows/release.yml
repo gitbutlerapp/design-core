@@ -23,9 +23,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: latest
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
           registry-url: https://registry.npmjs.org
 
       # Trusted publishing needs npm >= 11.5.1; Node 22 still ships npm 10.
@@ -49,26 +54,29 @@ jobs:
 
       - name: Install dependencies
         if: steps.check.outputs.publish == 'true'
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       # prepublishOnly also runs this, but building here fails the job early
       # and lets us verify the committed CSS matches the committed JSON.
       - name: Build tokens
         if: steps.check.outputs.publish == 'true'
-        run: npm run build
+        run: pnpm run build
 
       - name: Verify generated CSS is committed
         if: steps.check.outputs.publish == 'true'
         run: |
           if ! git diff --quiet -- tokens/tokens.css; then
-            echo "::error::tokens/tokens.css is out of date — run 'npm run build' and commit the result."
+            echo "::error::tokens/tokens.css is out of date — run 'pnpm run build' and commit the result."
             git diff -- tokens/tokens.css
             exit 1
           fi
 
+      # Publishing stays on the npm CLI even though deps come from pnpm:
+      # trusted publishing (OIDC) is an npm CLI feature. --ignore-scripts skips
+      # prepublishOnly, since the build already ran and was verified above.
       - name: Publish to npm
         if: steps.check.outputs.publish == 'true'
-        run: npm publish
+        run: npm publish --ignore-scripts
 
       - name: Tag and release
         if: steps.check.outputs.publish == 'true'
