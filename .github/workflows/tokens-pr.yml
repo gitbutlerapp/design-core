@@ -1,0 +1,123 @@
+name: Tokens PR
+
+# Runs on PRs that touch the exported Figma JSON. Rebuilds tokens/tokens.css,
+# commits it back onto the PR branch, bumps the version, and comments the CSS
+# custom-property diff. Merging the PR is what triggers release.yml.
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled]
+    paths:
+      - tokens/json/**
+      - scripts/**
+      - terrazzo.config.js
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: tokens-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - name: Rebuild tokens.css
+        run: |
+          cp tokens/tokens.css /tmp/tokens-before.css
+          npm run build
+
+      - name: Diff CSS custom properties
+        id: diff
+        run: |
+          # Compare against the base branch, not the PR head — the head may
+          # already contain a tokens.css this workflow committed earlier.
+          git show "origin/${{ github.event.pull_request.base.ref }}:tokens/tokens.css" > /tmp/tokens-base.css 2>/dev/null || : > /tmp/tokens-base.css
+          node scripts/diff-css-vars.mjs /tmp/tokens-base.css tokens/tokens.css > /tmp/report.md
+          echo "bump=$(node scripts/diff-css-vars.mjs /tmp/tokens-base.css tokens/tokens.css --json | node -p 'JSON.parse(require("fs").readFileSync(0,"utf8")).bump')" >> "$GITHUB_OUTPUT"
+
+      - name: Nothing changed
+        if: steps.diff.outputs.bump == 'none'
+        run: |
+          echo "::warning::No CSS custom properties changed — only the tokens-bruecke createdAt stamps moved. Nothing to release."
+
+      - name: Resolve bump level
+        id: level
+        if: steps.diff.outputs.bump != 'none'
+        env:
+          DETECTED: ${{ steps.diff.outputs.bump }}
+          LABELS: ${{ toJSON(github.event.pull_request.labels.*.name) }}
+        run: |
+          LABEL=$(node -p 'const l=JSON.parse(process.env.LABELS).find(n=>n.startsWith("release:"));l?l.slice(8):""')
+          LEVEL="${LABEL:-$DETECTED}"
+          # A major is never inferred: removing or renaming a var breaks every
+          # consumer of var(--...), and npm versions can never be reused.
+          if [ "$LEVEL" = "major" ] && [ "$LABEL" != "major" ]; then
+            echo "::error::This PR removes or renames CSS custom properties, which is breaking. Add the 'release:major' label to confirm the major bump."
+            exit 1
+          fi
+          echo "level=$LEVEL" >> "$GITHUB_OUTPUT"
+
+      - name: Bump version
+        id: bump
+        if: steps.diff.outputs.bump != 'none'
+        run: |
+          BASE=$(git show "origin/${{ github.event.pull_request.base.ref }}:package.json" | node -p 'JSON.parse(require("fs").readFileSync(0,"utf8")).version')
+          CURRENT=$(node -p "require('./package.json').version")
+          # Only bump once per PR — later pushes keep the version already chosen,
+          # unless the label changed the level, in which case re-bump from base.
+          if [ "$CURRENT" != "$BASE" ]; then
+            npm version "$BASE" --no-git-tag-version --allow-same-version
+          fi
+          npm version "${{ steps.level.outputs.level }}" --no-git-tag-version
+          echo "version=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+
+      - name: Commit generated files
+        if: steps.diff.outputs.bump != 'none'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tokens/tokens.css package.json
+          if git diff --cached --quiet; then
+            echo "Generated files already up to date."
+          else
+            git commit -m "Build tokens and bump to ${{ steps.bump.outputs.version }}"
+            git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
+          fi
+
+      - name: Comment on the PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          VERSION: ${{ steps.bump.outputs.version }}
+          LEVEL: ${{ steps.level.outputs.level }}
+        run: |
+          {
+            if [ -n "$VERSION" ]; then
+              echo "## Token changes → \`$VERSION\` (\`$LEVEL\`)"
+              echo
+              echo "Merging this PR publishes \`@gitbutler/design-core@$VERSION\` to npm and tags \`$VERSION\`."
+            else
+              echo "## No token changes"
+              echo
+              echo "The export rewrote its \`createdAt\` stamps but no CSS custom property changed. Nothing to release."
+            fi
+            echo
+            cat /tmp/report.md
+          } > /tmp/comment.md
+          gh pr comment "$PR" --body-file /tmp/comment.md --edit-last --create-if-none \
+            --repo "${{ github.repository }}"

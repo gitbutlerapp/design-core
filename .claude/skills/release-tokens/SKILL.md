@@ -141,6 +141,24 @@ VERSION=$(node -p "require('./package.json').version")
 git tag -a "$VERSION" -m "$VERSION"
 ```
 
+## 5b. The automated path (preferred)
+
+CI can do steps 3–7 on its own. Instead of bumping and publishing locally, push the
+token JSON on a branch and open a PR:
+
+- `.github/workflows/tokens-pr.yml` runs on PRs touching `tokens/json/**`. It rebuilds
+  `tokens/tokens.css`, commits it back onto the PR branch, bumps the version from the CSS
+  custom-property diff, and comments the added/changed/removed tokens. A bump that would
+  be **major** fails the check until the PR carries the `release:major` label — removed or
+  renamed vars break every consumer. If only `createdAt` moved, it says so and bumps nothing.
+- Merging the PR triggers `.github/workflows/release.yml`, which publishes to npm via
+  trusted publishing (OIDC — no token, no OTP), pushes the bare `X.Y.Z` tag, and cuts a
+  GitHub release.
+
+So the automated release is: export from Figma (step 1) → PR → review the bot's comment →
+merge. Use the manual steps below only when CI is unavailable or the release must go out
+without a PR.
+
 ## 6. Stop here — hand the publish to the user
 
 **The agent never publishes.** The npm account has 2FA set to `auth-and-writes`, so
