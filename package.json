@@ -9,10 +9,10 @@
 		"terrazzo",
 		"gitbutler"
 	],
-	"homepage": "https://github.com/gitbutlerapp/design-tokens",
+	"homepage": "https://github.com/gitbutlerapp/design-core",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/gitbutlerapp/design-tokens.git"
+		"url": "git+https://github.com/gitbutlerapp/design-core.git"
 	},
 	"main": "./tokens/tokens.css",
 	"exports": {
