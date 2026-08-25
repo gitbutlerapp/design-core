@@ -871,7 +871,7 @@
       },
       "bg-hover": {
         "$type": "string",
-        "$value": "5%",
+        "$value": "4%",
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -879,7 +879,7 @@
       },
       "bg-selected-blur": {
         "$type": "string",
-        "$value": "12%",
+        "$value": "8%",
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -895,7 +895,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-22T22:19:29.137Z"
+        "createdAt": "2026-08-24T18:54:54.199Z"
       }
     }
   }
