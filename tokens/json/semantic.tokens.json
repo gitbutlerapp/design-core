@@ -186,11 +186,11 @@
         },
         "bg": {
           "$type": "color",
-          "$value": "{core.clr.danger.50}",
+          "$value": "{core.clr.danger.80}",
           "$description": "Danger fill background. Use for small interactive elements like destructive buttons and error controls. Not for cards or large surfaces.",
           "$extensions": {
             "mode": {
-              "light": "{core.clr.danger.50}",
+              "light": "{core.clr.danger.80}",
               "dark": "{core.clr.danger.40}"
             }
           }
@@ -1498,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-25T11:05:05.033Z"
+        "createdAt": "2026-08-28T18:53:38.207Z"
       }
     }
   }

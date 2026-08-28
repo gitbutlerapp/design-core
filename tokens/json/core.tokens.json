@@ -862,24 +862,24 @@
     },
     "opacity": {
       "disabled": {
-        "$type": "string",
-        "$value": "50%",
+        "$type": "number",
+        "$value": 0.5,
         "$description": "",
         "$extensions": {
           "mode": {}
         }
       },
       "bg-hover": {
-        "$type": "string",
-        "$value": "5%",
+        "$type": "number",
+        "$value": 0.05,
         "$description": "",
         "$extensions": {
           "mode": {}
         }
       },
       "bg-selected-blur": {
-        "$type": "string",
-        "$value": "10%",
+        "$type": "number",
+        "$value": 0.1,
         "$description": "",
         "$extensions": {
           "mode": {}
@@ -895,7 +895,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-25T11:05:05.033Z"
+        "createdAt": "2026-08-28T18:53:38.207Z"
       }
     }
   }
