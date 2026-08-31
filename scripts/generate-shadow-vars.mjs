@@ -36,23 +36,40 @@ function buildShadowValue(layers) {
 		.join(", ");
 }
 
+// Walks the fx collection and yields every shadow token, wherever it sits in
+// the tree. Figma effect styles are grouped freely ("shadow/sm", "popup"), so
+// anything but a recursive walk silently drops tokens from the build.
+function collectShadowTokens(node, path = [], out = []) {
+	if (!node || typeof node !== "object") return out;
+	if (node.$type === "shadow") {
+		out.push({ path, token: node });
+		return out;
+	}
+	for (const [key, child] of Object.entries(node)) {
+		if (key.startsWith("$")) continue;
+		collectShadowTokens(child, [...path, key], out);
+	}
+	return out;
+}
+
+// "shadow.sm" -> --shadow-sm, "popup" -> --shadow-popup: every effect style
+// lives in the --shadow-* namespace regardless of how it is grouped in Figma.
+function shadowVarName(path) {
+	const name = path.join("-");
+	return name.startsWith("shadow-") || name === "shadow" ? `--${name}` : `--shadow-${name}`;
+}
+
 export function generateShadowVars(css) {
 	const fxTokens = JSON.parse(readFileSync(FX_TOKENS_PATH, "utf8"));
-	const shadows = fxTokens?.fx?.shadow ?? {};
-	const vars = Object.entries(shadows)
-		.filter(([, token]) => token.$type === "shadow")
-		.map(([name, token]) => {
-			const varName = `--shadow-${name}`;
-			const value = buildShadowValue(token.$value);
-			return `  ${varName}: ${value};`;
-		});
+	const shadows = collectShadowTokens(fxTokens?.fx ?? {});
+	const varNames = shadows.map(({ path }) => shadowVarName(path));
+	const vars = shadows.map(({ token }, i) => `  ${varNames[i]}: ${buildShadowValue(token.$value)};`);
 
 	if (vars.length === 0) return css;
 
 	// Strip any previously injected shadow shorthand vars and the marker comment.
-	const shadowVarNames = Object.keys(shadows).map((n) => `--shadow-${n}`);
 	const stripPattern = new RegExp(
-		`^  (?:/\\* shadow vars \\*/|(?:${shadowVarNames.map((v) => v.replace(/-/g, "\\-")).join("|")}):.*)\n`,
+		`^  (?:/\\* shadow vars \\*/|(?:${varNames.map((v) => v.replace(/-/g, "\\-")).join("|")}):.*)\n`,
 		"gm",
 	);
 	const cleaned = css.replace(stripPattern, "");
