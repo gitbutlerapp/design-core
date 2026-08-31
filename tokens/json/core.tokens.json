@@ -858,6 +858,14 @@
         "$extensions": {
           "mode": {}
         }
+      },
+      "popup": {
+        "$type": "dimension",
+        "$value": "{core.radius.lg}",
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
       }
     },
     "opacity": {
@@ -895,7 +903,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-31T10:29:42.621Z"
+        "createdAt": "2026-08-31T11:27:16.423Z"
       }
     }
   }
