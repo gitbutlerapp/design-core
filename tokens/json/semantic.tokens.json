@@ -536,12 +536,12 @@
       "tooltip": {
         "border": {
           "$type": "color",
-          "$value": "#0000001a",
+          "$value": "#0000001f",
           "$description": "Tooltip border color.",
           "$extensions": {
             "mode": {
-              "light": "#0000001a",
-              "dark": "#ffffff1f"
+              "light": "#0000001f",
+              "dark": "#ffffff29"
             }
           }
         },
@@ -1498,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-31T11:27:16.423Z"
+        "createdAt": "2026-08-31T12:29:54.065Z"
       }
     }
   }
