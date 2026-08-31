@@ -1,50 +1,5 @@
 {
   "fx": {
-    "popup": {
-      "$type": "shadow",
-      "$value": [
-        {
-          "inset": false,
-          "color": "{semantic.shadow-clr}",
-          "offsetX": {
-            "value": 0,
-            "unit": "px"
-          },
-          "offsetY": {
-            "value": 9,
-            "unit": "px"
-          },
-          "blur": {
-            "value": 28,
-            "unit": "px"
-          },
-          "spread": {
-            "value": 0,
-            "unit": "px"
-          }
-        },
-        {
-          "inset": false,
-          "color": "{semantic.component.tooltip.border}",
-          "offsetX": {
-            "value": 0,
-            "unit": "px"
-          },
-          "offsetY": {
-            "value": 0,
-            "unit": "px"
-          },
-          "blur": {
-            "value": 0,
-            "unit": "px"
-          },
-          "spread": {
-            "value": 1,
-            "unit": "px"
-          }
-        }
-      ]
-    },
     "shadow": {
       "sm": {
         "$type": "shadow",
@@ -221,7 +176,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-31T11:27:16.423Z"
+        "createdAt": "2026-08-31T12:23:31.528Z"
       }
     }
   }
