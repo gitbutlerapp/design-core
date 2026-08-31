@@ -238,7 +238,7 @@
   --text-weight-regular: 460;
   --text-weight-semibold: 600;
   --tooltip-bg: light-dark(var(--clr-gray-95), var(--clr-gray-10));
-  --tooltip-border: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 100.0% / 0.12));
+  --tooltip-border: light-dark(hsl(0 0.0% 0.0% / 0.12), hsl(0 0.0% 100.0% / 0.16));
   /* shadow vars */
   --shadow-popup: 0 9px 28px 0 var(--shadow-clr), 0 0 0 1px var(--tooltip-border);
   --shadow-sm: 0 4px 14px 0 var(--shadow-clr);
