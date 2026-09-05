@@ -36,7 +36,7 @@
         },
         "30": {
           "$type": "color",
-          "$value": "#565656",
+          "$value": "#ce1d1d",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -100,7 +100,7 @@
         },
         "100": {
           "$type": "color",
-          "$value": "#ffffff",
+          "$value": "#db4747",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -903,7 +903,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-31T12:29:54.065Z"
+        "createdAt": "2026-09-05T14:50:59.141Z"
       }
     }
   }
