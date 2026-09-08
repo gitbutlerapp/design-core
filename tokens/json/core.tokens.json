@@ -894,6 +894,45 @@
         }
       }
     },
+    "transition": {
+      "fast": {
+        "$type": "duration",
+        "$value": {
+          "value": 80,
+          "unit": "ms"
+        },
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "popup": {
+        "$type": "duration",
+        "$value": {
+          "value": 150,
+          "unit": "ms"
+        },
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
+      }
+    },
+    "easing": {
+      "popup": {
+        "$type": "cubicBezier",
+        "$value": [
+          0.45,
+          1,
+          0,
+          1
+        ],
+        "$description": "",
+        "$extensions": {
+          "mode": {}
+        }
+      }
+    },
     "$extensions": {
       "tokens-bruecke-meta": {
         "useDTCG": true,
@@ -903,7 +942,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-08-31T12:29:54.065Z"
+        "createdAt": "2026-09-08T09:12:56.961Z"
       }
     }
   }
