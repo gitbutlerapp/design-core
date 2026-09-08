@@ -743,7 +743,7 @@
       "tag": {
         "$type": "dimension",
         "$value": {
-          "value": 20,
+          "value": 22,
           "unit": "px"
         },
         "$description": "",
@@ -950,7 +950,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-08T09:56:13.216Z"
+        "createdAt": "2026-09-08T19:06:45.504Z"
       }
     }
   }
