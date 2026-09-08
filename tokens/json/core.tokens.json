@@ -901,18 +901,26 @@
           "value": 80,
           "unit": "ms"
         },
-        "$description": "",
+        "$description": "Fast transition (80ms). Use for state changes on controls: hover and press on buttons, outline and border color on focused fields, small opacity fades. Pairs with the default CSS ease. Not for anything that moves, opens, or closes.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "medium": {
+        "$type": "duration",
+        "$value": {
+          "value": 150,
+          "unit": "ms"
+        },
+        "$description": "Medium transition (150ms). Use for small layout changes: a switch thumb sliding, a chevron rotating, a section collapsing. Pairs with the default CSS ease or ease-out. Not for hover or press, which use transition/fast.",
         "$extensions": {
           "mode": {}
         }
       },
       "popup": {
         "$type": "duration",
-        "$value": {
-          "value": 150,
-          "unit": "ms"
-        },
-        "$description": "",
+        "$value": "{core.transition.medium}",
+        "$description": "Popup transition (150ms). Use for anything that opens over the app: modals, dropdowns, the toolbox, and the backdrop behind them. Always pair with easing/popup. Not for hover or press states.",
         "$extensions": {
           "mode": {}
         }
@@ -927,7 +935,7 @@
           0,
           1
         ],
-        "$description": "",
+        "$description": "Popup curve. A hard ease-out that lands quickly and settles without overshoot, so popups arrive rather than drift in. Use only with transition/popup for the scale and opacity of modals, dropdowns, and the toolbox.",
         "$extensions": {
           "mode": {}
         }
@@ -942,7 +950,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-08T09:12:56.961Z"
+        "createdAt": "2026-09-08T09:56:13.216Z"
       }
     }
   }

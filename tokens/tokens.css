@@ -241,7 +241,8 @@
   --tooltip-bg: light-dark(var(--clr-gray-95), var(--clr-gray-10));
   --tooltip-border: light-dark(hsl(0 0.0% 0.0% / 0.12), hsl(0 0.0% 100.0% / 0.16));
   --transition-fast: 80ms;
-  --transition-popup: 150ms;
+  --transition-medium: 150ms;
+  --transition-popup: var(--transition-medium);
   /* shadow vars */
   --shadow-sm: 0 4px 14px 0 var(--shadow-clr);
   --shadow-md: 0 6px 30px 0 var(--shadow-clr);
