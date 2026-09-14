@@ -215,13 +215,14 @@
   --shadow-clr: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 0.0% / 0.5));
   --size-button: 1.75rem;
   --size-icon: 1rem;
-  --size-layout-2xl: 1rem;
-  --size-layout-3xl: 1.25rem;
-  --size-layout-4xl: 1.5rem;
+  --size-layout-2xl: 0.75rem;
+  --size-layout-3xl: 1rem;
+  --size-layout-4xl: 1.25rem;
+  --size-layout-5xl: 1.5rem;
   --size-layout-lg: 0.5rem;
   --size-layout-md: 0.375rem;
   --size-layout-sm: 0.25rem;
-  --size-layout-xl: 0.75rem;
+  --size-layout-xl: 0.625rem;
   --size-layout-xs: 0.125rem;
   --size-tag: 1.25rem;
   --text-1: light-dark(var(--clr-gray-5), var(--clr-gray-95));
