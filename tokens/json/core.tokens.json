@@ -810,7 +810,7 @@
         "xl": {
           "$type": "dimension",
           "$value": {
-            "value": 12,
+            "value": 10,
             "unit": "px"
           },
           "$description": "",
@@ -821,7 +821,7 @@
         "2xl": {
           "$type": "dimension",
           "$value": {
-            "value": 16,
+            "value": 12,
             "unit": "px"
           },
           "$description": "",
@@ -832,7 +832,7 @@
         "3xl": {
           "$type": "dimension",
           "$value": {
-            "value": 20,
+            "value": 16,
             "unit": "px"
           },
           "$description": "",
@@ -841,6 +841,17 @@
           }
         },
         "4xl": {
+          "$type": "dimension",
+          "$value": {
+            "value": 20,
+            "unit": "px"
+          },
+          "$description": "",
+          "$extensions": {
+            "mode": {}
+          }
+        },
+        "5xl": {
           "$type": "dimension",
           "$value": {
             "value": 24,
@@ -1027,7 +1038,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-13T21:16:13.279Z"
+        "createdAt": "2026-09-14T12:01:23.383Z"
       }
     }
   }
