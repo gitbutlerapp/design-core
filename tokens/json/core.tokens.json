@@ -954,6 +954,17 @@
         "$extensions": {
           "mode": {}
         }
+      },
+      "full": {
+        "$type": "dimension",
+        "$value": {
+          "value": 999,
+          "unit": "px"
+        },
+        "$description": "As round as the element can get: a pill on a wide element, a circle on a square one. For badges, switches, tags, avatars.",
+        "$extensions": {
+          "mode": {}
+        }
       }
     },
     "opacity": {
@@ -1038,7 +1049,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-14T12:01:23.383Z"
+        "createdAt": "2026-09-21T21:53:05.298Z"
       }
     }
   }
