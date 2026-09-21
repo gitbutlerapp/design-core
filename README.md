@@ -91,7 +91,6 @@ Text classes are scoped to `@layer text`. The layer also sets three font-family 
 
 | Class               | Font size                                 |
 | ------------------- | ----------------------------------------- |
-| `.text-10`          | 10px (0.625rem)                           |
 | `.text-11`          | 11px (0.6875rem)                          |
 | `.text-12`          | 12px (0.75rem)                            |
 | `.text-13`          | 13px (0.8125rem)                          |

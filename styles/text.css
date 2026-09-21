@@ -6,13 +6,6 @@
 
 @layer text {
 	/* text Base Classes */
-	.text-10 {
-		font-weight: var(--text-weight-regular);
-		font-size: 0.625rem;
-		line-height: var(--text-lineheight-default);
-		font-family: var(--fontfamily-base);
-	}
-
 	.text-11 {
 		font-weight: var(--text-weight-regular);
 		font-size: 0.6875rem;
