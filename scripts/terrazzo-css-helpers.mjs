@@ -39,6 +39,9 @@ export function transformToken(token, mode) {
 	}
 
 	if (token.$type === "dimension") {
+		// Leave aliases to Terrazzo, which writes them as var(--target), so
+		// --gap-buttons reads as a role on the scale rather than a bare 0.5rem.
+		if (modeValue.aliasOf) return;
 		const val = modeValue.$value;
 		if (val && val.unit === "px" && val.value !== 0) {
 			return `${val.value / 16}rem`;

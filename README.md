@@ -165,6 +165,9 @@ npm run dev:tokens
 1. runs Terrazzo (`tz build`) over `core.tokens.json` and `semantic.tokens.json` — see [`terrazzo.config.js`](./terrazzo.config.js) — to write `tokens/tokens.css`;
 2. merges the `:root` and `:root.dark` blocks into single `light-dark(…)` declarations, so light and dark mode need no class switching;
 3. appends box-shadow custom properties generated from `fx.tokens.json` by [`scripts/generate-shadow-vars.mjs`](./scripts/generate-shadow-vars.mjs).
+4. writes each token's Figma description as a comment above its declaration, so `tokens.css` says when to use a token.
+
+Aliases stay aliases: a variable that points at another in Figma comes out as `var(--target)`, for sizes as well as colors.
 
 ### Token files
 
