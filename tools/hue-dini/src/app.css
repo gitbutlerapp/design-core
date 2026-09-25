@@ -5,9 +5,9 @@
 @import "../../../tokens/tokens.css";
 
 :root {
-	font-family: var(--text-fontfamily-mono), ui-monospace, Menlo, monospace;
-	line-height: var(--text-lineheight-default);
-	font-weight: var(--text-weight-regular);
+	font-family: var(--font-family-mono), ui-monospace, Menlo, monospace;
+	line-height: var(--font-line-height-default);
+	font-weight: var(--font-weight-regular);
 	color: var(--text-1);
 	background: var(--bg-2);
 }
