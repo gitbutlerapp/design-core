@@ -418,7 +418,7 @@
       "blue": {
         "$type": "color",
         "$value": "{core.clr.blue.40}",
-        "$description": "Purple accent text. Use for informational labels and feature highlights.",
+        "$description": "Blue accent text. Use for informational labels and highlights that are not the pop accent.",
         "$extensions": {
           "mode": {
             "light": "{core.clr.blue.40}",
@@ -1498,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-21T21:53:05.298Z"
+        "createdAt": "2026-09-25T14:11:29.306Z"
       }
     }
   }
