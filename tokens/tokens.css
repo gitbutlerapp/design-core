@@ -158,9 +158,47 @@
   --fill-warn-bg: light-dark(var(--clr-warn-50), var(--clr-warn-40));
   /* Warning fill foreground. Use for icons and text on warning fills. */
   --fill-warn-fg: light-dark(var(--clr-warn-95), var(--clr-warn-90));
+  /* Brand display type. Not for app UI. */
+  --font-family-accent: But Head;
+  /* The UI font, for all interface text. */
+  --font-family-base: Inter;
+  /* Code, commit hashes, paths and other monospaced content. */
+  --font-family-mono: Geist Mono;
+  /* Brand display type. */
+  --font-line-height-accent: 94%;
+  /* Running text of more than one line: descriptions, markdown. */
+  --font-line-height-body: 160%;
+  /* Single-line and short UI text: labels, buttons, rows. */
+  --font-line-height-default: 120%;
+  /* Strong emphasis; rarely needed in the app UI. */
+  --font-weight-bold: 700;
+  /* Body text weight. */
+  --font-weight-regular: 460;
+  /* Headings, labels and emphasis. */
+  --font-weight-semibold: 600;
+  /* Between buttons in a row: a modal footer, a form's actions, a settings row. The row is right-aligned, primary last. */
+  --gap-buttons: var(--space-lg);
+  /* Between form fields stacked in one form. A field is its label, control and hint together. */
+  --gap-fields: var(--space-2xl);
+  /* Between a leading icon and its text in a row or menu item. Buttons keep their own, tighter gap. */
+  --gap-icon-text: var(--space-lg);
+  /* Between a field's label and its control, and between the control and its hint. */
+  --gap-label-field: var(--space-md);
+  /* Between blocks stacked in a modal or panel: a title, a paragraph, a form, a group of settings. */
+  --gap-stack: var(--space-2xl);
+  /* Between icon-only buttons packed into a toolbar or a header's actions. */
+  --gap-toolbar: var(--space-xs);
   --opacity-bg-hover: 5%;
   --opacity-bg-selected-blur: 10%;
   --opacity-disabled: 50%;
+  /* Inside a bordered card or a settings row. */
+  --padding-card: var(--space-3xl);
+  /* Around a list of rows inside a popup or menu, so the first and last row's hover sits clear of the edge. */
+  --padding-list-inset: var(--space-sm);
+  /* Inside a modal, on every side. */
+  --padding-modal: var(--space-3xl);
+  /* Inside a panel or pane, between its edge and its content. */
+  --padding-panel: var(--space-2xl);
   --radius-2xl: 0.75rem;
   --radius-button: var(--radius-sm);
   --radius-card: var(--radius-md);
@@ -332,18 +370,35 @@
   --scale-warn-95: light-dark(var(--clr-warn-95), var(--clr-warn-5));
   /* Shadow color with transparency. Use for drop shadows and elevation effects. */
   --shadow-clr: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 0.0% / 0.5));
+  /* Height of a bar inside a popup: its search row or footer. Also a snackbar. */
+  --size-bar: 2.25rem;
   --size-button: 1.75rem;
+  /* Height of a small button or control. */
+  --size-button-sm: var(--size-tag);
+  /* Height of a section or panel header. */
+  --size-header: 2.75rem;
   --size-icon: 1rem;
-  --size-layout-2xl: 0.75rem;
-  --size-layout-3xl: 1rem;
-  --size-layout-4xl: 1.25rem;
-  --size-layout-5xl: 1.5rem;
-  --size-layout-lg: 0.5rem;
-  --size-layout-md: 0.375rem;
-  --size-layout-sm: 0.25rem;
-  --size-layout-xl: 0.625rem;
-  --size-layout-xs: 0.125rem;
   --size-tag: 1.25rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-2xl: 0.75rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-3xl: 1rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-4xl: 1.25rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-5xl: 1.5rem;
+  /* The step after 5xl, for the largest gaps and insets. */
+  --space-6xl: 2rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-lg: 0.5rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-md: 0.375rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-sm: 0.25rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-xl: 0.625rem;
+  /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
+  --space-xs: 0.125rem;
   /* Primary text. Use for headings, body copy, and high-emphasis content. */
   --text-1: light-dark(var(--clr-gray-5), var(--clr-gray-95));
   /* Inverted primary text. Use for text on dark/accent backgrounds. */
@@ -356,16 +411,10 @@
   --text-3: light-dark(var(--clr-gray-60), var(--clr-gray-40));
   /* Inverted tertiary text. Use for low-emphasis text on dark/accent backgrounds. */
   --text-3-invert: light-dark(var(--clr-gray-40), var(--clr-gray-60));
-  /* Purple accent text. Use for informational labels and feature highlights. */
+  /* Blue accent text. Use for informational labels and highlights that are not the pop accent. */
   --text-blue: light-dark(var(--clr-blue-40), var(--clr-blue-60));
   /* Danger text. Use for error messages and destructive action labels. */
   --text-danger: light-dark(var(--clr-danger-50), var(--clr-danger-60));
-  --text-fontfamily-accent: But Head;
-  --text-fontfamily-base: Inter;
-  --text-fontfamily-mono: Geist Mono;
-  --text-lineheight-accent: 94%;
-  --text-lineheight-body: 160%;
-  --text-lineheight-default: 120%;
   /* Accent text. Use for links, interactive text, and emphasized inline content. */
   --text-pop: light-dark(var(--clr-pop-40), var(--clr-pop-50));
   /* Purple accent text. Use for informational labels and feature highlights. */
@@ -374,9 +423,6 @@
   --text-safe: light-dark(var(--clr-safe-40), var(--clr-safe-50));
   /* Warning text. Use for caution messages and alert labels. */
   --text-warn: light-dark(var(--clr-warn-40), var(--clr-warn-50));
-  --text-weight-bold: 700;
-  --text-weight-regular: 460;
-  --text-weight-semibold: 600;
   /* Tooltip background color. */
   --tooltip-bg: light-dark(var(--clr-gray-95), var(--clr-gray-10));
   /* Tooltip border color. */
