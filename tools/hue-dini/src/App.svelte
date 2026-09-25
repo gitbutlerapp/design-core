@@ -443,7 +443,7 @@
 	h1 {
 		margin: 0;
 		font-size: 1.4rem;
-		font-weight: var(--text-weight-semibold);
+		font-weight: var(--font-weight-semibold);
 		letter-spacing: -0.02em;
 	}
 
@@ -558,7 +558,7 @@
 		background: color-mix(in srgb, var(--clr-gray-0) 65%, transparent);
 		color: var(--clr-gray-100);
 		font-size: 0.7rem;
-		font-weight: var(--text-weight-semibold);
+		font-weight: var(--font-weight-semibold);
 		padding: 2px 6px;
 		border-radius: var(--radius-md);
 		pointer-events: none;

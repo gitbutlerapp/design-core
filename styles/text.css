@@ -1,71 +1,71 @@
 :root {
-	--fontfamily-mono: var(--text-fontfamily-mono), monospace;
-	--fontfamily-base: var(--text-fontfamily-base), sans-serif;
-	--fontfamily-accent: var(--text-fontfamily-accent), serif;
+	--fontfamily-mono: var(--font-family-mono), monospace;
+	--fontfamily-base: var(--font-family-base), sans-serif;
+	--fontfamily-accent: var(--font-family-accent), serif;
 }
 
 @layer text {
 	/* text Base Classes */
 	.text-11 {
-		font-weight: var(--text-weight-regular);
+		font-weight: var(--font-weight-regular);
 		font-size: 0.6875rem;
-		line-height: var(--text-lineheight-default);
+		line-height: var(--font-line-height-default);
 		font-family: var(--fontfamily-base);
 	}
 
 	.text-12 {
-		font-weight: var(--text-weight-regular);
+		font-weight: var(--font-weight-regular);
 		font-size: 0.75rem;
-		line-height: var(--text-lineheight-default);
+		line-height: var(--font-line-height-default);
 		font-family: var(--fontfamily-base);
 	}
 
 	.text-13 {
-		font-weight: var(--text-weight-regular);
+		font-weight: var(--font-weight-regular);
 		font-size: 0.8125rem;
-		line-height: var(--text-lineheight-default);
+		line-height: var(--font-line-height-default);
 		font-family: var(--fontfamily-base);
 	}
 
 	.text-14 {
-		font-weight: var(--text-weight-regular);
+		font-weight: var(--font-weight-regular);
 		font-size: 0.875rem;
-		line-height: var(--text-lineheight-default);
+		line-height: var(--font-line-height-default);
 		font-family: var(--fontfamily-base);
 	}
 
 	.text-15 {
-		font-weight: var(--text-weight-regular);
+		font-weight: var(--font-weight-regular);
 		font-size: 0.938rem;
-		line-height: var(--text-lineheight-default);
+		line-height: var(--font-line-height-default);
 		font-family: var(--fontfamily-base);
 	}
 
 	.text-16 {
-		font-weight: var(--text-weight-regular);
+		font-weight: var(--font-weight-regular);
 		font-size: 1rem;
-		line-height: var(--text-lineheight-default);
+		line-height: var(--font-line-height-default);
 		font-family: var(--fontfamily-base);
 	}
 
 	.text-accent-head {
 		font-weight: 400;
 		font-size: 3.875rem;
-		line-height: var(--text-lineheight-default);
+		line-height: var(--font-line-height-default);
 		font-family: var(--fontfamily-base);
 	}
 
 	/* MODIFIERS */
 	.text-body {
-		line-height: var(--text-lineheight-body);
+		line-height: var(--font-line-height-body);
 	}
 
 	.text-semibold {
-		font-weight: var(--text-weight-semibold);
+		font-weight: var(--font-weight-semibold);
 	}
 
 	.text-bold {
-		font-weight: var(--text-weight-bold);
+		font-weight: var(--font-weight-bold);
 	}
 
 	.text-monospace {

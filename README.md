@@ -83,9 +83,9 @@ Text classes are scoped to `@layer text`. The layer also sets three font-family 
 
 | Property              | Value                                     |
 | --------------------- | ----------------------------------------- |
-| `--fontfamily-base`   | `var(--text-fontfamily-base), sans-serif` |
-| `--fontfamily-mono`   | `var(--text-fontfamily-mono), monospace`  |
-| `--fontfamily-accent` | `var(--text-fontfamily-accent), serif`    |
+| `--fontfamily-base`   | `var(--font-family-base), sans-serif` |
+| `--fontfamily-mono`   | `var(--font-family-mono), monospace`  |
+| `--fontfamily-accent` | `var(--font-family-accent), serif`    |
 
 **Size classes** set `font-size`, `font-weight: regular`, `line-height`, and `font-family: base` as a self-contained unit:
 
@@ -103,11 +103,11 @@ Text classes are scoped to `@layer text`. The layer also sets three font-family 
 
 | Class             | Effect                                                                                     |
 | ----------------- | ------------------------------------------------------------------------------------------ |
-| `.text-semibold`  | `font-weight: var(--text-weight-semibold)`                                                 |
-| `.text-bold`      | `font-weight: var(--text-weight-bold)`                                                     |
+| `.text-semibold`  | `font-weight: var(--font-weight-semibold)`                                                 |
+| `.text-bold`      | `font-weight: var(--font-weight-bold)`                                                     |
 | `.text-italic`    | `font-style: italic`                                                                       |
 | `.text-monospace` | Switches to `var(--fontfamily-mono)`                                                       |
-| `.text-body`      | Switches to the looser `var(--text-lineheight-body)` line height                           |
+| `.text-body`      | Switches to the looser `var(--font-line-height-body)` line height                           |
 | `.text-balance`   | `text-wrap: balance` — ideal for short headings                                            |
 | `.text-pre`       | `white-space: pre-wrap` + `word-break: break-word` — preserves whitespace without overflow |
 
