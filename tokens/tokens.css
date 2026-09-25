@@ -199,14 +199,19 @@
   --padding-modal: var(--space-3xl);
   /* Inside a panel or pane, between its edge and its content. */
   --padding-panel: var(--space-2xl);
-  --radius-2xl: 0.75rem;
-  --radius-button: var(--radius-sm);
+  --radius-2xl: 0.875rem;
+  /* A card or bordered group. On the section ladder (14 → 10 → 6 → 2) it is two steps in, so a card 4px inside a 10 corner stays concentric. */
   --radius-card: var(--radius-md);
+  /* Controls: buttons, inputs, toggles, tags, and the rows inside a popup (its 8 minus a 4px inset). */
+  --radius-control: var(--radius-sm);
   /* As round as the element can get: a pill on a wide element, a circle on a square one. For badges, switches, tags, avatars. */
   --radius-full: 62.4375rem;
   --radius-lg: 0.5rem;
   --radius-md: 0.375rem;
+  /* Modals, dropdowns, the toolbox: every popup container. Rows inset 4px inside it take radius/control (4), so the corners stay concentric. */
   --radius-popup: var(--radius-lg);
+  /* A large panel of the app window: the changes list, the diff, the workspace. Things sitting 4px inside it take 10 (radius/xl), so the corners stay concentric. */
+  --radius-section: var(--radius-2xl);
   --radius-sm: 0.25rem;
   --radius-xl: 0.625rem;
   --radius-xs: 0.125rem;

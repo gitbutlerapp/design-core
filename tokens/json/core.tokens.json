@@ -964,7 +964,7 @@
       "2xl": {
         "$type": "dimension",
         "$value": {
-          "value": 12,
+          "value": 14,
           "unit": "px"
         },
         "$description": "",
@@ -972,10 +972,10 @@
           "mode": {}
         }
       },
-      "button": {
+      "control": {
         "$type": "dimension",
         "$value": "{core.radius.sm}",
-        "$description": "",
+        "$description": "Controls: buttons, inputs, toggles, tags, and the rows inside a popup (its 8 minus a 4px inset).",
         "$extensions": {
           "mode": {}
         }
@@ -983,7 +983,7 @@
       "card": {
         "$type": "dimension",
         "$value": "{core.radius.md}",
-        "$description": "",
+        "$description": "A card or bordered group. On the section ladder (14 → 10 → 6 → 2) it is two steps in, so a card 4px inside a 10 corner stays concentric.",
         "$extensions": {
           "mode": {}
         }
@@ -991,7 +991,7 @@
       "popup": {
         "$type": "dimension",
         "$value": "{core.radius.lg}",
-        "$description": "",
+        "$description": "Modals, dropdowns, the toolbox: every popup container. Rows inset 4px inside it take radius/control (4), so the corners stay concentric.",
         "$extensions": {
           "mode": {}
         }
@@ -1003,6 +1003,14 @@
           "unit": "px"
         },
         "$description": "As round as the element can get: a pill on a wide element, a circle on a square one. For badges, switches, tags, avatars.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "section": {
+        "$type": "dimension",
+        "$value": "{core.radius.2xl}",
+        "$description": "A large panel of the app window: the changes list, the diff, the workspace. Things sitting 4px inside it take 10 (radius/xl), so the corners stay concentric.",
         "$extensions": {
           "mode": {}
         }
@@ -1174,7 +1182,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-25T14:11:29.306Z"
+        "createdAt": "2026-09-25T20:20:05.111Z"
       }
     }
   }
