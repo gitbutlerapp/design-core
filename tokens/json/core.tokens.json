@@ -648,12 +648,12 @@
         }
       }
     },
-    "text": {
+    "font": {
       "weight": {
         "regular": {
           "$type": "fontWeight",
           "$value": 460,
-          "$description": "",
+          "$description": "Body text weight.",
           "$extensions": {
             "mode": {}
           }
@@ -661,7 +661,7 @@
         "semibold": {
           "$type": "fontWeight",
           "$value": 600,
-          "$description": "",
+          "$description": "Headings, labels and emphasis.",
           "$extensions": {
             "mode": {}
           }
@@ -669,17 +669,17 @@
         "bold": {
           "$type": "fontWeight",
           "$value": 700,
-          "$description": "",
+          "$description": "Strong emphasis; rarely needed in the app UI.",
           "$extensions": {
             "mode": {}
           }
         }
       },
-      "lineheight": {
+      "line-height": {
         "body": {
           "$type": "string",
           "$value": "160%",
-          "$description": "",
+          "$description": "Running text of more than one line: descriptions, markdown.",
           "$extensions": {
             "mode": {}
           }
@@ -687,7 +687,7 @@
         "default": {
           "$type": "string",
           "$value": "120%",
-          "$description": "",
+          "$description": "Single-line and short UI text: labels, buttons, rows.",
           "$extensions": {
             "mode": {}
           }
@@ -695,17 +695,17 @@
         "accent": {
           "$type": "string",
           "$value": "94%",
-          "$description": "",
+          "$description": "Brand display type.",
           "$extensions": {
             "mode": {}
           }
         }
       },
-      "fontfamily": {
+      "family": {
         "base": {
           "$type": "string",
           "$value": "Inter",
-          "$description": "",
+          "$description": "The UI font, for all interface text.",
           "$extensions": {
             "mode": {}
           }
@@ -713,7 +713,7 @@
         "mono": {
           "$type": "string",
           "$value": "Geist Mono",
-          "$description": "",
+          "$description": "Code, commit hashes, paths and other monospaced content.",
           "$extensions": {
             "mode": {}
           }
@@ -721,7 +721,7 @@
         "accent": {
           "$type": "string",
           "$value": "But Head",
-          "$description": "",
+          "$description": "Brand display type. Not for app UI.",
           "$extensions": {
             "mode": {}
           }
@@ -762,105 +762,146 @@
           "mode": {}
         }
       },
-      "layout": {
-        "xs": {
-          "$type": "dimension",
-          "$value": {
-            "value": 2,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+      "button-sm": {
+        "$type": "dimension",
+        "$value": "{core.size.tag}",
+        "$description": "Height of a small button or control.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "bar": {
+        "$type": "dimension",
+        "$value": {
+          "value": 36,
+          "unit": "px"
         },
-        "sm": {
-          "$type": "dimension",
-          "$value": {
-            "value": 4,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Height of a bar inside a popup: its search row or footer. Also a snackbar.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "header": {
+        "$type": "dimension",
+        "$value": {
+          "value": 44,
+          "unit": "px"
         },
-        "md": {
-          "$type": "dimension",
-          "$value": {
-            "value": 6,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Height of a section or panel header.",
+        "$extensions": {
+          "mode": {}
+        }
+      }
+    },
+    "space": {
+      "xs": {
+        "$type": "dimension",
+        "$value": {
+          "value": 2,
+          "unit": "px"
         },
-        "lg": {
-          "$type": "dimension",
-          "$value": {
-            "value": 8,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "sm": {
+        "$type": "dimension",
+        "$value": {
+          "value": 4,
+          "unit": "px"
         },
-        "xl": {
-          "$type": "dimension",
-          "$value": {
-            "value": 10,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "md": {
+        "$type": "dimension",
+        "$value": {
+          "value": 6,
+          "unit": "px"
         },
-        "2xl": {
-          "$type": "dimension",
-          "$value": {
-            "value": 12,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "lg": {
+        "$type": "dimension",
+        "$value": {
+          "value": 8,
+          "unit": "px"
         },
-        "3xl": {
-          "$type": "dimension",
-          "$value": {
-            "value": 16,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 10,
+          "unit": "px"
         },
-        "4xl": {
-          "$type": "dimension",
-          "$value": {
-            "value": 20,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "2xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 12,
+          "unit": "px"
         },
-        "5xl": {
-          "$type": "dimension",
-          "$value": {
-            "value": 24,
-            "unit": "px"
-          },
-          "$description": "",
-          "$extensions": {
-            "mode": {}
-          }
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "3xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "4xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "5xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$description": "Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "6xl": {
+        "$type": "dimension",
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$description": "The step after 5xl, for the largest gaps and insets.",
+        "$extensions": {
+          "mode": {}
         }
       }
     },
@@ -1040,6 +1081,90 @@
         }
       }
     },
+    "gap": {
+      "buttons": {
+        "$type": "dimension",
+        "$value": "{core.space.lg}",
+        "$description": "Between buttons in a row: a modal footer, a form's actions, a settings row. The row is right-aligned, primary last.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "fields": {
+        "$type": "dimension",
+        "$value": "{core.space.2xl}",
+        "$description": "Between form fields stacked in one form. A field is its label, control and hint together.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "label-field": {
+        "$type": "dimension",
+        "$value": "{core.space.md}",
+        "$description": "Between a field's label and its control, and between the control and its hint.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "icon-text": {
+        "$type": "dimension",
+        "$value": "{core.space.lg}",
+        "$description": "Between a leading icon and its text in a row or menu item. Buttons keep their own, tighter gap.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "toolbar": {
+        "$type": "dimension",
+        "$value": "{core.space.xs}",
+        "$description": "Between icon-only buttons packed into a toolbar or a header's actions.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "stack": {
+        "$type": "dimension",
+        "$value": "{core.space.2xl}",
+        "$description": "Between blocks stacked in a modal or panel: a title, a paragraph, a form, a group of settings.",
+        "$extensions": {
+          "mode": {}
+        }
+      }
+    },
+    "padding": {
+      "modal": {
+        "$type": "dimension",
+        "$value": "{core.space.3xl}",
+        "$description": "Inside a modal, on every side.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "panel": {
+        "$type": "dimension",
+        "$value": "{core.space.2xl}",
+        "$description": "Inside a panel or pane, between its edge and its content.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "card": {
+        "$type": "dimension",
+        "$value": "{core.space.3xl}",
+        "$description": "Inside a bordered card or a settings row.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "list-inset": {
+        "$type": "dimension",
+        "$value": "{core.space.sm}",
+        "$description": "Around a list of rows inside a popup or menu, so the first and last row's hover sits clear of the edge.",
+        "$extensions": {
+          "mode": {}
+        }
+      }
+    },
     "$extensions": {
       "tokens-bruecke-meta": {
         "useDTCG": true,
@@ -1049,7 +1174,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-21T21:53:05.298Z"
+        "createdAt": "2026-09-25T14:11:29.306Z"
       }
     }
   }
