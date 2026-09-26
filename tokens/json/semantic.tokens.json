@@ -478,7 +478,7 @@
         "border": {
           "$type": "color",
           "$value": "#00000012",
-          "$description": "",
+          "$description": "Border of a card or bordered group. Translucent, so it reads the same on bg/1, bg/2 or bg/3. shadow/card draws it as its ring.",
           "$extensions": {
             "mode": {
               "light": "#00000012",
@@ -1498,7 +1498,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-25T20:20:05.111Z"
+        "createdAt": "2026-09-26T15:12:37.116Z"
       }
     }
   }
