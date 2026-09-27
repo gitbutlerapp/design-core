@@ -6,9 +6,11 @@ import {
 } from "./scripts/terrazzo-css-helpers.mjs";
 
 export default defineConfig({
+	// Copies of tokens/json without the composed colors, which Terrazzo can't
+	// parse; scripts/postprocess-light-dark.mjs writes them before each build.
 	tokens: [
-		"./tokens/json/core.tokens.json",
-		"./tokens/json/semantic.tokens.json",
+		"./.terrazzo/core.tokens.json",
+		"./.terrazzo/semantic.tokens.json",
 	],
 	outDir: "./tokens",
 	plugins: [
