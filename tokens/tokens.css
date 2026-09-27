@@ -22,6 +22,8 @@
   --bg-purple: light-dark(var(--clr-purple-95), var(--clr-purple-5));
   /* Success background. Use for large card-like areas as a subtle positive highlight. Place only on bg/1 surfaces — too light for bg/2 or bg/3. */
   --bg-safe: light-dark(var(--clr-safe-95), var(--clr-safe-5));
+  /* The ground of the selected row in the list that has focus: solid, so the keyboard's place is unmistakable. Text on it takes fill/gray/fg. When focus leaves the list, the row falls back to bg/selected-inactive. */
+  --bg-selected: var(--fill-gray-bg);
   /* Warning background. Use for large card-like areas as a subtle caution highlight. Place only on bg/1 surfaces — too light for bg/2 or bg/3. */
   --bg-warn: light-dark(var(--clr-warn-95), var(--clr-warn-5));
   /* Strongest border. Reserved for hover states only — do not use as a default border. */
@@ -272,8 +274,8 @@
   --gap-toolbar: var(--space-xs);
   /* How much fill/gray/bg to mix into a surface on hover: a list row, a field. Mix it with color-mix over the surface, not as an overlay. */
   --opacity-bg-hover: 5%;
-  /* How much fill/gray/bg to mix into a selected row, so the selection stays legible when its list does not have focus. */
-  --opacity-bg-selected-blur: 10%;
+  /* How much fill/gray/bg a selected row keeps while its list doesn't have focus, so the selection stays legible from elsewhere. Used by bg/selected-inactive. */
+  --opacity-bg-selected-inactive: 10%;
   /* A disabled control or row, applied to the whole element. Keep its colors; the opacity alone says it is unavailable. */
   --opacity-disabled: 50%;
   /* Inside a bordered card or a settings row. */
@@ -476,6 +478,14 @@
   --size-header: 2.75rem;
   /* An icon's box: the glyph in a button, row, menu item or field. The icon stays this size; padding sets the size of what holds it. */
   --size-icon: 1rem;
+  /* Width of a large modal: a working surface, like the conflict resolver. Before reaching for it, ask whether the content wants a page. */
+  --size-modal-lg: 51.25rem;
+  /* Width of a medium modal: a pane that lays itself out, like settings. */
+  --size-modal-md: 40rem;
+  /* Width of a small modal, the default: a prompt with a field or a short list, and pickers. */
+  --size-modal-sm: 26.25rem;
+  /* Width of an xsmall modal: a one-line question and its buttons — "Discard 3 files?". */
+  --size-modal-xs: 20rem;
   /* Height of a tag or badge, and of compact controls that sit in a line of text or a row. A small button takes size/button-sm, which points here. */
   --size-tag: 1.25rem;
   /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
@@ -532,6 +542,16 @@
   --transition-medium: 150ms;
   /* Popup transition (150ms). Use for anything that opens over the app: modals, dropdowns, the toolbox, and the backdrop behind them. Always pair with easing/popup. Not for hover or press states. */
   --transition-popup: var(--transition-medium);
+  /* The ground under the pointer on anything without a fill of its own: a ghost button, a list or popup row, a tab. fill/gray/bg at opacity/bg-hover, so it tints whatever it sits on. */
+  --bg-hover: color-mix(in srgb, var(--fill-gray-bg) var(--opacity-bg-hover), transparent);
+  /* bg/hover's twin for a dark surface: the ground under the pointer on a ghost-inverted or outline-inverted control. scale/gray/100 at opacity/bg-hover. */
+  --bg-hover-invert: color-mix(in srgb, var(--scale-gray-100) var(--opacity-bg-hover), transparent);
+  /* The ground a selected row keeps while its list doesn't have focus — focus moved to the other list or the details pane — so the keyboard's place stays legible. fill/gray/bg at opacity/bg-selected-inactive. Text stays text/1. */
+  --bg-selected-inactive: color-mix(in srgb, var(--fill-gray-bg) var(--opacity-bg-selected-inactive), transparent);
+  /* The focus ring's color: the one outline for the keyboard's position, on every control. fill/gray/bg at 70%, drawn 1.5px, solid, outside the control. */
+  --border-focus: color-mix(in srgb, var(--fill-gray-bg) 70%, transparent);
+  /* The translucent line around an outline control and inside a split one: Button's outline variant and everything that borrows it (SwitchButton, ToggleGroup, Select's trigger), DropdownButton's separator. fill/gray/bg at 26%. */
+  --border-control: color-mix(in srgb, var(--fill-gray-bg) 26%, transparent);
   /* shadow vars */
   --shadow-sm: 0 4px 14px 0 var(--shadow-clr);
   --shadow-md: 0 6px 30px 0 var(--shadow-clr);
