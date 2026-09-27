@@ -39,7 +39,8 @@ which option was used.
 
 Credentials live in `.env` (gitignored): `FIGMA_API_KEY`, `FIGMA_FILE_KEY`.
 The exporter is the tokens-bruecke CLI at `/Users/pavellaptev/Documents/GitHub/figma-plugin/bin/cli.js`
-(same tool as the Figma plugin; `npx tokens-bruecke` also works).
+(same tool as the Figma plugin; `npx tokens-bruecke` also works). It must be 3.12 or later, or
+colors that alias another with their own opacity (`bg/hover` and the like) are left out of the export.
 
 Verify the token first — PATs expire every 90 days:
 

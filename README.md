@@ -162,8 +162,8 @@ npm run dev:tokens
 
 `npm run build` runs [`scripts/postprocess-light-dark.mjs`](./scripts/postprocess-light-dark.mjs), which:
 
-1. runs Terrazzo (`tz build`) over `core.tokens.json` and `semantic.tokens.json` — see [`terrazzo.config.js`](./terrazzo.config.js) — to write `tokens/tokens.css`;
-2. merges the `:root` and `:root.dark` blocks into single `light-dark(…)` declarations, so light and dark mode need no class switching;
+1. runs Terrazzo (`tz build`) over `core.tokens.json` and `semantic.tokens.json` — see [`terrazzo.config.js`](./terrazzo.config.js) — to write `tokens/tokens.css`. A color that aliases another and adds its own opacity (Figma's "opacity at scale") isn't valid DTCG, and Terrazzo rejects it, so [`scripts/composed-colors.mjs`](./scripts/composed-colors.mjs) first lifts those out of copies in `.terrazzo/`, and they come back in step 2 as `color-mix(in srgb, var(--base) var(--opacity), transparent)`, keeping both links;
+2. merges the `:root` and `:root.dark` blocks into single `light-dark(…)` declarations, so light and dark mode need no class switching, and adds the lifted colors;
 3. appends box-shadow custom properties generated from `fx.tokens.json` by [`scripts/generate-shadow-vars.mjs`](./scripts/generate-shadow-vars.mjs).
 4. writes each token's Figma description as a comment above its declaration, so `tokens.css` says when to use a token.
 
@@ -181,6 +181,7 @@ Aliases stay aliases: a variable that points at another in Figma comes out as `v
 
 Exports use the [tokens-bruecke](https://github.com/tokens-bruecke/figma-plugin) CLI, the
 same tool as the Figma plugin, in [DTCG 2025.10](https://www.designtokens.org/tr/2025.10/format/) format.
+It has to be 3.12 or later: older versions skip colors that alias another with their own opacity.
 
 Credentials go in a gitignored `.env` at the repo root:
 
