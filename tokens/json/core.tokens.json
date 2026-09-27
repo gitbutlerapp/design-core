@@ -791,6 +791,50 @@
         "$extensions": {
           "mode": {}
         }
+      },
+      "modal-xs": {
+        "$type": "dimension",
+        "$value": {
+          "value": 320,
+          "unit": "px"
+        },
+        "$description": "Width of an xsmall modal: a one-line question and its buttons — \"Discard 3 files?\".",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "modal-sm": {
+        "$type": "dimension",
+        "$value": {
+          "value": 420,
+          "unit": "px"
+        },
+        "$description": "Width of a small modal, the default: a prompt with a field or a short list, and pickers.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "modal-md": {
+        "$type": "dimension",
+        "$value": {
+          "value": 640,
+          "unit": "px"
+        },
+        "$description": "Width of a medium modal: a pane that lays itself out, like settings.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "modal-lg": {
+        "$type": "dimension",
+        "$value": {
+          "value": 820,
+          "unit": "px"
+        },
+        "$description": "Width of a large modal: a working surface, like the conflict resolver. Before reaching for it, ask whether the content wants a page.",
+        "$extensions": {
+          "mode": {}
+        }
       }
     },
     "space": {
@@ -972,6 +1016,17 @@
           "mode": {}
         }
       },
+      "full": {
+        "$type": "dimension",
+        "$value": {
+          "value": 999,
+          "unit": "px"
+        },
+        "$description": "As round as the element can get: a pill on a wide element, a circle on a square one. For badges, switches, tags, avatars.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
       "control": {
         "$type": "dimension",
         "$value": "{core.radius.sm}",
@@ -992,17 +1047,6 @@
         "$type": "dimension",
         "$value": "{core.radius.lg}",
         "$description": "Modals, dropdowns, the toolbox: every popup container. Rows inset 4px inside it take radius/control (4), so the corners stay concentric.",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "full": {
-        "$type": "dimension",
-        "$value": {
-          "value": 999,
-          "unit": "px"
-        },
-        "$description": "As round as the element can get: a pill on a wide element, a circle on a square one. For badges, switches, tags, avatars.",
         "$extensions": {
           "mode": {}
         }
@@ -1033,10 +1077,10 @@
           "mode": {}
         }
       },
-      "bg-selected-blur": {
+      "bg-selected-inactive": {
         "$type": "string",
         "$value": "10%",
-        "$description": "How much fill/gray/bg to mix into a selected row, so the selection stays legible when its list does not have focus.",
+        "$description": "How much fill/gray/bg a selected row keeps while its list doesn't have focus, so the selection stays legible from elsewhere. Used by bg/selected-inactive.",
         "$extensions": {
           "mode": {}
         }
@@ -1190,7 +1234,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-26T15:12:37.116Z"
+        "createdAt": "2026-09-27T19:51:21.634Z"
       }
     }
   }
