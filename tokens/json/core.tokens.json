@@ -820,7 +820,7 @@
           "value": 640,
           "unit": "px"
         },
-        "$description": "Width of a medium modal: a pane that lays itself out, like settings.",
+        "$description": "Width of a medium modal: a pane that lays itself out around one group.",
         "$extensions": {
           "mode": {}
         }
@@ -831,7 +831,7 @@
           "value": 820,
           "unit": "px"
         },
-        "$description": "Width of a large modal: a working surface, like the conflict resolver. Before reaching for it, ask whether the content wants a page.",
+        "$description": "Width of a large modal: settings, the conflict resolver, any pane with more than one group. Before reaching for it, ask whether the content wants a page.",
         "$extensions": {
           "mode": {}
         }
@@ -944,6 +944,48 @@
           "unit": "px"
         },
         "$description": "The step after 5xl, for the largest gaps and insets.",
+        "$extensions": {
+          "mode": {}
+        }
+      }
+    },
+    "padding": {
+      "modal": {
+        "$type": "dimension",
+        "$value": "{core.space.3xl}",
+        "$description": "Inside a modal, on every side.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "panel": {
+        "$type": "dimension",
+        "$value": "{core.space.2xl}",
+        "$description": "Inside a panel or pane, between its edge and its content.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "card": {
+        "$type": "dimension",
+        "$value": "{core.space.3xl}",
+        "$description": "Inside a bordered card or a settings row.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "menu": {
+        "$type": "dimension",
+        "$value": "{core.space.sm}",
+        "$description": "Around the rows inside a popup, menu, select or suggestion list, so the hover on the first and last row sits clear of the edge. 4px, so a row taking radius/control stays concentric with the popup.",
+        "$extensions": {
+          "mode": {}
+        }
+      },
+      "list": {
+        "$type": "dimension",
+        "$value": "{core.space.md}",
+        "$description": "Around the rows of a list on a page or in a panel, so their hover and selection sit clear of the edge. Roomier than padding/menu, since no rounded container needs its corners matched.",
         "$extensions": {
           "mode": {}
         }
@@ -1191,40 +1233,6 @@
         }
       }
     },
-    "padding": {
-      "modal": {
-        "$type": "dimension",
-        "$value": "{core.space.3xl}",
-        "$description": "Inside a modal, on every side.",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "panel": {
-        "$type": "dimension",
-        "$value": "{core.space.2xl}",
-        "$description": "Inside a panel or pane, between its edge and its content.",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "card": {
-        "$type": "dimension",
-        "$value": "{core.space.3xl}",
-        "$description": "Inside a bordered card or a settings row.",
-        "$extensions": {
-          "mode": {}
-        }
-      },
-      "list-inset": {
-        "$type": "dimension",
-        "$value": "{core.space.sm}",
-        "$description": "Around a list of rows inside a popup or menu, so the first and last row's hover sits clear of the edge.",
-        "$extensions": {
-          "mode": {}
-        }
-      }
-    },
     "$extensions": {
       "tokens-bruecke-meta": {
         "useDTCG": true,
@@ -1234,7 +1242,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-27T19:51:21.634Z"
+        "createdAt": "2026-09-28T09:50:00.316Z"
       }
     }
   }

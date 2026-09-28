@@ -280,8 +280,10 @@
   --opacity-disabled: 50%;
   /* Inside a bordered card or a settings row. */
   --padding-card: var(--space-3xl);
-  /* Around a list of rows inside a popup or menu, so the first and last row's hover sits clear of the edge. */
-  --padding-list-inset: var(--space-sm);
+  /* Around the rows of a list on a page or in a panel, so their hover and selection sit clear of the edge. Roomier than padding/menu, since no rounded container needs its corners matched. */
+  --padding-list: var(--space-md);
+  /* Around the rows inside a popup, menu, select or suggestion list, so the hover on the first and last row sits clear of the edge. 4px, so a row taking radius/control stays concentric with the popup. */
+  --padding-menu: var(--space-sm);
   /* Inside a modal, on every side. */
   --padding-modal: var(--space-3xl);
   /* Inside a panel or pane, between its edge and its content. */
@@ -478,9 +480,9 @@
   --size-header: 2.75rem;
   /* An icon's box: the glyph in a button, row, menu item or field. The icon stays this size; padding sets the size of what holds it. */
   --size-icon: 1rem;
-  /* Width of a large modal: a working surface, like the conflict resolver. Before reaching for it, ask whether the content wants a page. */
+  /* Width of a large modal: settings, the conflict resolver, any pane with more than one group. Before reaching for it, ask whether the content wants a page. */
   --size-modal-lg: 51.25rem;
-  /* Width of a medium modal: a pane that lays itself out, like settings. */
+  /* Width of a medium modal: a pane that lays itself out around one group. */
   --size-modal-md: 40rem;
   /* Width of a small modal, the default: a prompt with a field or a short list, and pickers. */
   --size-modal-sm: 26.25rem;
