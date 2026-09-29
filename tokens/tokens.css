@@ -292,7 +292,7 @@
   --radius-2xl: 0.875rem;
   /* A card or bordered group. On the section ladder (14 → 10 → 6 → 2) it is two steps in, so a card 4px inside a 10 corner stays concentric. */
   --radius-card: var(--radius-md);
-  /* Controls: buttons, inputs, toggles, tags, and the rows inside a popup (its 8 minus a 4px inset). */
+  /* Controls: buttons, inputs, selects, toggles, and the rows inside a popup (its 8 minus a 4px inset). Tags and badges take radius/full. */
   --radius-control: var(--radius-sm);
   /* As round as the element can get: a pill on a wide element, a circle on a square one. For badges, switches, tags, avatars. */
   --radius-full: 62.4375rem;
@@ -472,10 +472,10 @@
   --shadow-clr: light-dark(hsl(0 0.0% 0.0% / 0.1), hsl(0 0.0% 0.0% / 0.5));
   /* Height of a bar inside a popup: its search row or footer. Also a snackbar. */
   --size-bar: 2.25rem;
-  /* Height of a default button, and of the controls that sit beside one in a row, so the row lines up. */
-  --size-button: 1.75rem;
-  /* Height of a small button or control. */
-  --size-button-sm: var(--size-tag);
+  /* Height of a default control: a button, input, select or toggle, and of anything that sits beside one in a row, so the row lines up. */
+  --size-control: 1.75rem;
+  /* Height of a small control: a small button, and compact controls that sit in a line of text or a row. */
+  --size-control-sm: 1.25rem;
   /* Height of a section or panel header. */
   --size-header: 2.75rem;
   /* An icon's box: the glyph in a button, row, menu item or field. The icon stays this size; padding sets the size of what holds it. */
@@ -488,8 +488,8 @@
   --size-modal-sm: 26.25rem;
   /* Width of an xsmall modal: a one-line question and its buttons — "Discard 3 files?". */
   --size-modal-xs: 20rem;
-  /* Height of a tag or badge, and of compact controls that sit in a line of text or a row. A small button takes size/button-sm, which points here. */
-  --size-tag: 1.25rem;
+  /* Height of a tag or badge. Points at size/control-sm, so a tag lines up with a small button in the same row. Tags and badges are not controls; an interactive element takes size/control-sm. */
+  --size-tag: var(--size-control-sm);
   /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
   --space-2xl: 0.75rem;
   /* Step of the spacing scale. Prefer a gap/* or padding/* token when one names the job. */
