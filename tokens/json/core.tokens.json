@@ -742,30 +742,30 @@
       },
       "tag": {
         "$type": "dimension",
-        "$value": {
-          "value": 20,
-          "unit": "px"
-        },
-        "$description": "Height of a tag or badge, and of compact controls that sit in a line of text or a row. A small button takes size/button-sm, which points here.",
+        "$value": "{core.size.control-sm}",
+        "$description": "Height of a tag or badge. Points at size/control-sm, so a tag lines up with a small button in the same row. Tags and badges are not controls; an interactive element takes size/control-sm.",
         "$extensions": {
           "mode": {}
         }
       },
-      "button": {
+      "control": {
         "$type": "dimension",
         "$value": {
           "value": 28,
           "unit": "px"
         },
-        "$description": "Height of a default button, and of the controls that sit beside one in a row, so the row lines up.",
+        "$description": "Height of a default control: a button, input, select or toggle, and of anything that sits beside one in a row, so the row lines up.",
         "$extensions": {
           "mode": {}
         }
       },
-      "button-sm": {
+      "control-sm": {
         "$type": "dimension",
-        "$value": "{core.size.tag}",
-        "$description": "Height of a small button or control.",
+        "$value": {
+          "value": 20,
+          "unit": "px"
+        },
+        "$description": "Height of a small control: a small button, and compact controls that sit in a line of text or a row.",
         "$extensions": {
           "mode": {}
         }
@@ -1130,7 +1130,7 @@
       "control": {
         "$type": "dimension",
         "$value": "{core.radius.sm}",
-        "$description": "Controls: buttons, inputs, toggles, tags, and the rows inside a popup (its 8 minus a 4px inset).",
+        "$description": "Controls: buttons, inputs, selects, toggles, and the rows inside a popup (its 8 minus a 4px inset). Tags and badges take radius/full.",
         "$extensions": {
           "mode": {}
         }
@@ -1242,7 +1242,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-29T11:28:52.496Z"
+        "createdAt": "2026-09-29T18:00:22.059Z"
       }
     }
   }
