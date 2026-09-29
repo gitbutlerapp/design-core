@@ -281,7 +281,7 @@
   /* Inside a bordered card or a settings row. */
   --padding-card: var(--space-3xl);
   /* Around the rows of a list on a page or in a panel, so their hover and selection sit clear of the edge. Roomier than padding/menu, since no rounded container needs its corners matched. */
-  --padding-list: var(--space-md);
+  --padding-list: var(--space-lg);
   /* Around the rows inside a popup, menu, select or suggestion list, so the hover on the first and last row sits clear of the edge. 4px, so a row taking radius/control stays concentric with the popup. */
   --padding-menu: var(--space-sm);
   /* Inside a modal, on every side. */
