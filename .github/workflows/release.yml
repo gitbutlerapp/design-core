@@ -23,17 +23,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: pnpm/action-setup@v4
-        with:
-          version: latest
-
-      # No `cache: pnpm` here on purpose: when the version is already published
-      # the install step is skipped, and the post-job cache save then fails on a
+      # No cache here on purpose: when the version is already published the
+      # install step is skipped, and the post-job cache save then fails on a
       # missing path — reporting a red X for a run that did the right thing.
-      - uses: actions/setup-node@v4
+      - uses: pnpm/setup@5d160c5bc68a09337ad0d5654e237e03253b5879 # v1
         with:
-          node-version-file: .nvmrc
-          registry-url: https://registry.npmjs.org
+          cache: false
+          install: false
 
       - name: Read version
         id: version
@@ -46,7 +42,7 @@ jobs:
         env:
           VERSION: ${{ steps.version.outputs.version }}
         run: |
-          if npm view "@gitbutler/design-core@$VERSION" version >/dev/null 2>&1; then
+          if pnpm view "@gitbutler/design-core@$VERSION" version >/dev/null 2>&1; then
             echo "$VERSION is already on npm."
             echo "publish=false" >> "$GITHUB_OUTPUT"
           else
@@ -79,13 +75,13 @@ jobs:
             exit 1
           fi
 
-      # Publishing stays on the npm CLI even though deps come from pnpm:
-      # trusted publishing (OIDC) is an npm CLI feature. --ignore-scripts skips
-      # prepublishOnly, since the build already ran and was verified above.
+      # pnpm publishes with npm trusted publishing (OIDC), so no token and no
+      # npm CLI: the Node pnpm installs doesn't include npm. --ignore-scripts
+      # skips prepublishOnly, since the build already ran and was verified above.
       - name: Publish to npm
         id: publish
         if: steps.check.outputs.publish == 'true'
-        run: npm publish --ignore-scripts
+        run: pnpm publish --ignore-scripts --no-git-checks
 
       # Runs whenever the tag is missing and the version is on npm — either just
       # published above, or published by an earlier run that failed to tag.

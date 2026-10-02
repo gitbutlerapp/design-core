@@ -134,12 +134,12 @@ function postprocessTokens() {
 	}
 }
 
-const tzArgs = ["tz", "build"];
+const tzArgs = ["exec", "tz", "build"];
 if (isWatchMode) {
 	tzArgs.push("--watch");
 }
 
-const child = spawn("npx", tzArgs, {
+const child = spawn("pnpm", tzArgs, {
 	cwd: process.cwd(),
 	stdio: ["inherit", "pipe", "pipe"],
 });

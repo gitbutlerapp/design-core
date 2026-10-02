@@ -27,14 +27,11 @@ jobs:
             url: ${{ steps.deployment.outputs.page_url }}
         steps:
             - uses: actions/checkout@v4
-            - uses: pnpm/action-setup@v4
+            - uses: pnpm/setup@5d160c5bc68a09337ad0d5654e237e03253b5879 # v1
               with:
-                  version: 11
-            - uses: actions/setup-node@v4
-              with:
-                  node-version-file: .nvmrc
-                  cache: pnpm
+                  cache: true
                   cache-dependency-path: tools/hue-dini/pnpm-lock.yaml
+                  install: false
             - name: Install dependencies
               run: pnpm install
               working-directory: tools/hue-dini

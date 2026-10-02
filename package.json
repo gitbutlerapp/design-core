@@ -25,7 +25,7 @@
 	},
 	"scripts": {
 		"build": "node scripts/postprocess-light-dark.mjs && node scripts/check-style-vars.mjs",
-		"prepublishOnly": "npm run build",
+		"prepublishOnly": "pnpm run build",
 		"dev:tokens": "node scripts/postprocess-light-dark.mjs --watch",
 		"format": "prettier --write \"**/*.{css,ts,js}\"",
 		"format:check": "prettier --check \"**/*.{css,ts,js}\"",
@@ -46,5 +46,13 @@
 	],
 	"publishConfig": {
 		"access": "public"
+	},
+	"packageManager": "pnpm@12.8.1",
+	"devEngines": {
+		"runtime": {
+			"name": "node",
+			"version": "^24.0.0",
+			"onFail": "download"
+		}
 	}
 }
