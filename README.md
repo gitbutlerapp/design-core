@@ -149,18 +149,21 @@ export, and `tokens/tokens.css` is generated from it by the build.
 
 ### Building
 
+The repo pins pnpm (`packageManager`) and Node (`devEngines.runtime`) in `package.json`.
+`pnpm install` downloads that Node, so no separate Node version manager is needed.
+
 ```bash
-# Install dependencies
-npm install
+# Install dependencies and the pinned Node
+pnpm install
 
 # Build tokens.css from tokens/json
-npm run build
+pnpm run build
 
 # Rebuild on every token change
-npm run dev:tokens
+pnpm run dev:tokens
 ```
 
-`npm run build` runs [`scripts/postprocess-light-dark.mjs`](./scripts/postprocess-light-dark.mjs), which:
+`pnpm run build` runs [`scripts/postprocess-light-dark.mjs`](./scripts/postprocess-light-dark.mjs), which:
 
 1. runs Terrazzo (`tz build`) over `core.tokens.json` and `semantic.tokens.json` — see [`terrazzo.config.js`](./terrazzo.config.js) — to write `tokens/tokens.css`. A color that aliases another and adds its own opacity (Figma's "opacity at scale") isn't valid DTCG, and Terrazzo rejects it, so [`scripts/composed-colors.mjs`](./scripts/composed-colors.mjs) first lifts those out of copies in `.terrazzo/`, and they come back in step 2 as `color-mix(in srgb, var(--base) var(--opacity), transparent)`, keeping both links;
 2. merges the `:root` and `:root.dark` blocks into single `light-dark(…)` declarations, so light and dark mode need no class switching, and adds the lifted colors;
