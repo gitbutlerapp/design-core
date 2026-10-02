@@ -32,12 +32,8 @@ jobs:
       # missing path — reporting a red X for a run that did the right thing.
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version-file: .nvmrc
           registry-url: https://registry.npmjs.org
-
-      # Trusted publishing needs npm >= 11.5.1; Node 22 still ships npm 10.
-      - name: Update npm
-        run: npm install -g npm@latest
 
       - name: Read version
         id: version
