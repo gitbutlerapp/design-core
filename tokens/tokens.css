@@ -241,11 +241,11 @@
   /* Warning fill foreground. Use for icons and text on warning fills. */
   --fill-warn-fg: light-dark(var(--clr-warn-95), var(--clr-warn-90));
   /* Brand display type. Not for app UI. */
-  --font-family-accent: But Head;
+  --font-family-accent: "But Head";
   /* The UI font, for all interface text. */
-  --font-family-base: Inter;
+  --font-family-base: "Inter";
   /* Code, commit hashes, paths and other monospaced content. */
-  --font-family-mono: Geist Mono;
+  --font-family-mono: "Geist Mono";
   /* Brand display type. */
   --font-line-height-accent: 94%;
   /* Running text of more than one line: descriptions, markdown. */
@@ -483,7 +483,7 @@
   /* Width of a large modal: settings, the conflict resolver, any pane with more than one group. Before reaching for it, ask whether the content wants a page. */
   --size-modal-lg: 51.25rem;
   /* Width of a medium modal: a pane that lays itself out around one group. */
-  --size-modal-md: 40rem;
+  --size-modal-md: 32.5rem;
   /* Width of a small modal, the default: a prompt with a field or a short list, and pickers. */
   --size-modal-sm: 26.25rem;
   /* Width of an xsmall modal: a one-line question and its buttons — "Discard 3 files?". */
