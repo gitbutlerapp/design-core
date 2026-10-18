@@ -703,7 +703,7 @@
       },
       "family": {
         "base": {
-          "$type": "string",
+          "$type": "fontFamily",
           "$value": "Inter",
           "$description": "The UI font, for all interface text.",
           "$extensions": {
@@ -711,7 +711,7 @@
           }
         },
         "mono": {
-          "$type": "string",
+          "$type": "fontFamily",
           "$value": "Geist Mono",
           "$description": "Code, commit hashes, paths and other monospaced content.",
           "$extensions": {
@@ -719,7 +719,7 @@
           }
         },
         "accent": {
-          "$type": "string",
+          "$type": "fontFamily",
           "$value": "But Head",
           "$description": "Brand display type. Not for app UI.",
           "$extensions": {
@@ -817,7 +817,7 @@
       "modal-md": {
         "$type": "dimension",
         "$value": {
-          "value": 640,
+          "value": 520,
           "unit": "px"
         },
         "$description": "Width of a medium modal: a pane that lays itself out around one group.",
@@ -1242,7 +1242,7 @@
           "core",
           "semantic"
         ],
-        "createdAt": "2026-09-29T18:00:22.059Z"
+        "createdAt": "2026-10-18T15:16:12.088Z"
       }
     }
   }
