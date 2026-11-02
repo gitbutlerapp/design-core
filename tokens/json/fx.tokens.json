@@ -76,51 +76,6 @@
           }
         ]
       },
-      "card": {
-        "$type": "shadow",
-        "$value": [
-          {
-            "inset": false,
-            "color": "#0000001a",
-            "offsetX": {
-              "value": 0,
-              "unit": "px"
-            },
-            "offsetY": {
-              "value": 2,
-              "unit": "px"
-            },
-            "blur": {
-              "value": 4,
-              "unit": "px"
-            },
-            "spread": {
-              "value": 0,
-              "unit": "px"
-            }
-          },
-          {
-            "inset": false,
-            "color": "{semantic.component.card.border}",
-            "offsetX": {
-              "value": 0,
-              "unit": "px"
-            },
-            "offsetY": {
-              "value": 0,
-              "unit": "px"
-            },
-            "blur": {
-              "value": 0,
-              "unit": "px"
-            },
-            "spread": {
-              "value": 1,
-              "unit": "px"
-            }
-          }
-        ]
-      },
       "tooltip": {
         "$type": "shadow",
         "$value": [
