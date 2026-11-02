@@ -585,19 +585,6 @@
       }
     },
     "component": {
-      "card": {
-        "border": {
-          "$type": "color",
-          "$value": "#00000012",
-          "$description": "Border of a card or bordered group. Translucent, so it reads the same on bg/1, bg/2 or bg/3. shadow/card draws it as its ring.",
-          "$extensions": {
-            "mode": {
-              "light": "#00000012",
-              "dark": "#ffffff33"
-            }
-          }
-        }
-      },
       "commit": {
         "local": {
           "$type": "color",
