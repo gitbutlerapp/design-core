@@ -81,23 +81,26 @@ The reset is scoped to `@layer reset` to avoid specificity conflicts with applic
 
 Text classes are scoped to `@layer text`. The layer also sets three font-family custom properties on `:root`:
 
-| Property              | Value                                     |
-| --------------------- | ----------------------------------------- |
+| Property              | Value                                 |
+| --------------------- | ------------------------------------- |
 | `--fontfamily-base`   | `var(--font-family-base), sans-serif` |
 | `--fontfamily-mono`   | `var(--font-family-mono), monospace`  |
 | `--fontfamily-accent` | `var(--font-family-accent), serif`    |
 
 **Size classes** set `font-size`, `font-weight: regular`, `line-height`, and `font-family: base` as a self-contained unit:
 
-| Class               | Font size                                 |
-| ------------------- | ----------------------------------------- |
-| `.text-11`          | 11px (0.6875rem)                          |
-| `.text-12`          | 12px (0.75rem)                            |
-| `.text-13`          | 13px (0.8125rem)                          |
-| `.text-14`          | 14px (0.875rem)                           |
-| `.text-15`          | 15px (0.938rem)                           |
-| `.text-16`          | 16px (1rem)                               |
-| `.text-accent-head` | 62px (3.875rem) — display / brand heading |
+| Class               | Font size                                          |
+| ------------------- | -------------------------------------------------- |
+| `.text-11`          | 11px (0.6875rem)                                   |
+| `.text-12`          | 12px (0.75rem)                                     |
+| `.text-13`          | 13px (0.8125rem)                                   |
+| `.text-14`          | 14px (0.875rem)                                    |
+| `.text-15`          | 15px (0.938rem)                                    |
+| `.text-16`          | 16px (1rem)                                        |
+| `.text-accent-head` | 62px (3.875rem) — display / brand heading          |
+| `.text-h1`          | 20px (1.25rem), semibold, 130% — markdown heading  |
+| `.text-h2`          | 18px (1.125rem), semibold, 130% — markdown heading |
+| `.text-h3`          | 16px (1rem), semibold, 130% — markdown heading     |
 
 **Modifier classes** are designed to be composed on top of a size class:
 
@@ -107,7 +110,7 @@ Text classes are scoped to `@layer text`. The layer also sets three font-family 
 | `.text-bold`      | `font-weight: var(--font-weight-bold)`                                                     |
 | `.text-italic`    | `font-style: italic`                                                                       |
 | `.text-monospace` | Switches to `var(--fontfamily-mono)`                                                       |
-| `.text-body`      | Switches to the looser `var(--font-line-height-body)` line height                           |
+| `.text-body`      | Switches to the looser `var(--font-line-height-body)` line height                          |
 | `.text-balance`   | `text-wrap: balance` — ideal for short headings                                            |
 | `.text-pre`       | `white-space: pre-wrap` + `word-break: break-word` — preserves whitespace without overflow |
 

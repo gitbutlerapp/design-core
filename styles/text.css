@@ -55,6 +55,28 @@
 		font-family: var(--fontfamily-base);
 	}
 
+	/* Markdown headings, as Figma's Markdown/H1–H3 styles */
+	.text-h1 {
+		font-weight: var(--font-weight-semibold);
+		font-size: 1.25rem;
+		line-height: var(--font-line-height-heading);
+		font-family: var(--fontfamily-base);
+	}
+
+	.text-h2 {
+		font-weight: var(--font-weight-semibold);
+		font-size: 1.125rem;
+		line-height: var(--font-line-height-heading);
+		font-family: var(--fontfamily-base);
+	}
+
+	.text-h3 {
+		font-weight: var(--font-weight-semibold);
+		font-size: 1rem;
+		line-height: var(--font-line-height-heading);
+		font-family: var(--fontfamily-base);
+	}
+
 	/* MODIFIERS */
 	.text-body {
 		line-height: var(--font-line-height-body);
