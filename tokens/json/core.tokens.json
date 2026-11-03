@@ -1055,6 +1055,14 @@
         "$extensions": {
           "mode": {}
         }
+      },
+      "row": {
+        "$type": "dimension",
+        "$value": "{core.space.2xl}",
+        "$description": "At the sides of a row inside a card, between the card edge and the row content: DescriptionList and Table rows.",
+        "$extensions": {
+          "mode": {}
+        }
       }
     },
     "radius": {
