@@ -250,6 +250,8 @@
   --font-line-height-body: 160%;
   /* Single-line and short UI text: labels, buttons, rows. */
   --font-line-height-default: 120%;
+  /* Headings in rendered markdown, so a wrapped heading reads as one. */
+  --font-line-height-heading: 130%;
   /* Strong emphasis; rarely needed in the app UI. */
   --font-weight-bold: 700;
   /* Body text weight. */

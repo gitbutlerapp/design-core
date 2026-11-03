@@ -699,6 +699,14 @@
           "$extensions": {
             "mode": {}
           }
+        },
+        "heading": {
+          "$type": "string",
+          "$value": "130%",
+          "$description": "Headings in rendered markdown, so a wrapped heading reads as one.",
+          "$extensions": {
+            "mode": {}
+          }
         }
       },
       "family": {
