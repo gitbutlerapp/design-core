@@ -288,6 +288,8 @@
   --padding-modal: var(--space-3xl);
   /* Inside a panel or pane, between its edge and its content. */
   --padding-panel: var(--space-2xl);
+  /* At the sides of a row inside a card, between the card edge and the row content: DescriptionList and Table rows. */
+  --padding-row: var(--space-2xl);
   /* Step of the radius scale. Prefer radius/section, which points here and names the job. */
   --radius-2xl: 0.875rem;
   /* A card or bordered group. On the section ladder (14 → 10 → 6 → 2) it is two steps in, so a card 4px inside a 10 corner stays concentric. */
