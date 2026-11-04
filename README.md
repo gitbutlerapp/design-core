@@ -1,5 +1,14 @@
 # @gitbutler/design-core
 
+> [!IMPORTANT]
+> **This package has moved** to [`packages/design-core`](https://github.com/gitbutlerapp/gitbutler/tree/master/packages/design-core) in the [gitbutlerapp/gitbutler](https://github.com/gitbutlerapp/gitbutler) monorepo, and is no longer published to npm. This repo is archived; its history up to 11.3.0 stays here. To use the package outside the monorepo, pin a commit:
+>
+> ```json
+> "@gitbutler/design-core": "github:gitbutlerapp/gitbutler#<sha>&path:packages/design-core"
+> ```
+>
+> [hue-dini](./tools/hue-dini) stays in this repo.
+
 Design tokens and fonts for GitButler applications. This package provides CSS custom properties, design tokens in JSON format, and web fonts used across GitButler products.
 
 ## Installation
