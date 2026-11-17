@@ -232,9 +232,6 @@ git push origin "$(node -p "require('./package.json').version")"
 npm view @gitbutler/design-core version    # should match
 ```
 
-Pushing `tokens/tokens.css` triggers `.github/workflows/deploy-hue-dini.yml`, which
-redeploys the hue-dini palette site to GitHub Pages (it is styled with these tokens).
-
 ## Report back
 
 When you stop at step 6, tell the user in one block: the new version and the bump level

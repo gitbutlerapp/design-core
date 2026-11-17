@@ -6,8 +6,6 @@
 > ```json
 > "@gitbutler/design-core": "github:gitbutlerapp/gitbutler#<sha>&path:packages/design-core"
 > ```
->
-> [hue-dini](./tools/hue-dini) stays in this repo.
 
 Design tokens and fonts for GitButler applications. This package provides CSS custom properties, design tokens in JSON format, and web fonts used across GitButler products.
 
@@ -258,24 +256,9 @@ git push origin main && git push --tags
 ```
 
 `prepublishOnly` rebuilds the CSS, so a published package always matches its committed
-JSON. Pushing `tokens/tokens.css` also redeploys the hue-dini site via
-[`.github/workflows/deploy-hue-dini.yml`](./.github/workflows/deploy-hue-dini.yml).
+JSON.
 
 The whole sequence — export, no-op check, build, bump, commit, tag — is automated as a
 Claude Code skill in [`.claude/skills/release-tokens/`](./.claude/skills/release-tokens/).
 Run it with `/release-tokens`; it stops before `npm publish`, which stays manual because
 npm 2FA requires a one-time code.
-
-## Color Tool
-
-[hue-dini](./tools/hue-dini) is the tool used to preview and export the GitButler color palette. It applies a single shared luminance scale across all hues — gray, accent, and semantic — so shades at the same step feel visually equivalent regardless of hue.
-
-**Live:** https://gitbutlerapp.github.io/design-core/
-
-```bash
-cd tools/hue-dini
-pnpm install
-pnpm dev
-```
-
-See [tools/hue-dini/README.md](./tools/hue-dini/README.md) for more details.
